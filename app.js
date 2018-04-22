@@ -41,8 +41,9 @@ var getData = function(drugFile, drugName){
     $('div[id="overview"]').find('article > div > div').each(function (index, element) {
         section.push($(element).text());
     });
-
+    var sideEffectObj = {};
     var cleanSideEffectList = []; 
+    var patientNumber;
     var sideEffectString = section[4].toString();
     var sideEffectlist = sideEffectString.split(":");
     sideEffectlist.forEach((curr,index,all) =>{
@@ -52,13 +53,17 @@ var getData = function(drugFile, drugName){
         }
     });
     cleanSideEffectList.forEach((curr,index,all) => {
-        var test = curr.match(/\d+/)[0];
-        //var test2 = test.match((/(\d)\d*?\1/g));
-        //var test3 = test2.toString().match(/(\d)\d*?\1/g);  
-        console.log(test);
+        var patientNumberRepeated = curr.match(/\d+/)[0];
+        patientNumber = patientNumberRepeated.slice(0,(patientNumberRepeated.length/2));
+        var numberIndex = curr.indexOf(patientNumberRepeated);
+        cleanSideEffectList[index] = curr.slice(0,numberIndex);
+        sideEffectObj[cleanSideEffectList[index]] = patientNumber;
     })
     //console.log(cleanSideEffectList);
-    scrapedData[drugName] = cleanSideEffectList;
+    var showIndex = cleanSideEffectList[cleanSideEffectList.length-1].indexOf("Show");
+    cleanSideEffectList[cleanSideEffectList.length-1] = cleanSideEffectList[cleanSideEffectList.length-1].slice(0,showIndex)
+    
+    scrapedData[drugName] = sideEffectObj;
 };
 
 app.showData = function(){
