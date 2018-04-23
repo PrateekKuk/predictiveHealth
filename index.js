@@ -21,6 +21,7 @@ var addButtonClicked = function(){
     var drugDiv = document.getElementById("drugs-container");
     drugDiv.classList.remove("hide");
     getAllSideEffects(drug);
+    updateSideEffectsDiv();
 }
 var getDrug = function(drugName){
     var drugNameClean = drugName.toLowerCase().replace(" ","");
@@ -82,6 +83,9 @@ var removeDrug = function(drug,drugName) {
     if(drugDiv.childElementCount == 0){
         var drugDiv = document.getElementById("drugs-container");
         drugDiv.classList.add("hide");
+
+        var resultsDiv = document.getElementById("results-container");
+        resultsDiv.classList.add("hide");
     }
     removeSideEffectsFromCount(drug);
 }
@@ -123,6 +127,22 @@ var removeSideEffectsFromCount = function(drug){
         }
     }
     console.log(sideEffectCount);
+    updateSideEffectsDiv();
 }
 
 
+var updateSideEffectsDiv = function(){
+    
+    var sideEffectListDiv = document.getElementById("regimen-side-effects");
+    sideEffectListDiv.innerHTML = "";
+
+    var resultsDiv = document.getElementById("results-container");
+    resultsDiv.classList.remove("hide");
+
+    var allSideEffects = Object.keys(sideEffectCount);
+    for(var i=0;i<allSideEffects.length;i++){
+        if(sideEffectCount[allSideEffects[i]] != 0){
+            sideEffectListDiv.innerHTML += allSideEffects[i];
+        }
+    }
+}
