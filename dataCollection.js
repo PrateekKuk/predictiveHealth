@@ -6,20 +6,15 @@ var rp = require('request-promise');
 var minify = require('html-minifier').minify;
 var request_sync = require('sync-request');
 var fs = require('fs');
+var dataURLs = require('./dataUrls.js');
 
 var dataCollection = {};
 var scrapedData = [];
-dataCollection.urls = [];
-dataCollection.urls.push({name:"Metformin",url:'https://www.patientslikeme.com/treatments/show/221'}); 
-dataCollection.urls.push({name:"Insulin Glargine", url: "https://www.patientslikeme.com/treatments/show/8306"});
-dataCollection.urls.push({name:"Advil", url: "https://www.patientslikeme.com/treatments/show/319"});
-
-//TODO maybe use promises and dont need to store the HTML files in a folder, do a .then and add to 
-//the data collection object
 
 dataCollection.parsingUrls = function(){
-    //create html page for each url
-    dataCollection.urls.forEach((urlInfo, index, urls)=> {
+    
+    //downloading html page for each url
+    dataURLs.forEach((urlInfo, index, urls)=> {
         //asnyc
         //var eachPageRequest = request(urlInfo.url).pipe(fs.createWriteStream('drugs/'+ urlInfo.name + ".html"));
        
@@ -27,6 +22,28 @@ dataCollection.parsingUrls = function(){
         var eachPageRequest = request_sync('GET',urlInfo.url);
         fs.writeFileSync('drugs/'+ urlInfo.name + ".html",eachPageRequest.getBody().toString());
     });
+
+
+    //trying to scrape using promises
+    // dataCollection.urls.forEach((urlInfo, index, urls)=> {
+        
+    //     var indexPageRequestOptions = {
+    //         uri: urlInfo.url,
+    //         transform: function(body){
+    //             return cheerio.load(body);
+    //         }
+    //     };
+    
+    //     rp(indexPageRequestOptions)
+    //         .then(function($){
+    //             console.log("processing:"+urlInfo.name);
+    //             getData($,urlInfo.name)
+    //         })
+    //         .catch(function(){
+    //             console.log("request-promise failed");
+    //         });
+    // });
+
 };
 
 dataCollection.processDataFiles = function(){
@@ -52,9 +69,6 @@ var getData = function(drugFile, drugName){
     var sideEffectName = [];
     var sideEffectPercents = [];
 
-    // $('div[id="overview"]').find('article > div > div > div').each(function (index, element) {
-    //     section.push($(element).html());
-    // });
     $('div').each((index,element) => {
         if($(element).hasClass('content-section')){
             section.push($(element).html());
