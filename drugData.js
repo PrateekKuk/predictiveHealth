@@ -1,0 +1,1 @@
+var data =[{"Insulin Glargine":{" Low blood sugar (hypoglycemia)":"12"," Weight gain":"10"," Nausea":"4"," Reactive hypoglycemia":"4"," Burning pain at injection site":"3"," Dry mouth":"2"}},{"metformin":{" Diarrhea":"197"," Nausea":"66"," Stomach pain":"32"," Upset stomach":"21"," Loose bowel movements":"19"," Low blood sugar (hypoglycemia)":"12"}}]

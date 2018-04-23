@@ -1,3 +1,4 @@
+//this is where all the scraping and calculation of side-effect likelihood happens
 var fetch = require('node-fetch');
 var cheerio = require('cheerio');
 var request = require('request');
@@ -5,16 +6,17 @@ var rp = require('request-promise');
 var minify = require('html-minifier').minify;
 var request_sync = require('sync-request');
 var fs = require('fs');
+
 var app = {};
-var scrapedData = {};
-var urls = [];
-urls.push({name:"metformin",url:'https://www.patientslikeme.com/treatments/show/221'}); 
-urls.push({name:"Insulin Glargine", url: "https://www.patientslikeme.com/treatments/show/8306"});
+var scrapedData = [];
+app.urls = [];
+app.urls.push({name:"metformin",url:'https://www.patientslikeme.com/treatments/show/221'}); 
+app.urls.push({name:"Insulin Glargine", url: "https://www.patientslikeme.com/treatments/show/8306"});
 
 
 app.parsingUrls = function(){
     //create html page for each url
-    urls.forEach((urlInfo, index, urls)=> {
+    app.urls.forEach((urlInfo, index, urls)=> {
         var eachPageRequest = request(urlInfo.url).pipe(fs.createWriteStream('drugs/'+ urlInfo.name + ".html"));
     });
 };
@@ -64,11 +66,21 @@ var getData = function(drugFile, drugName){
     cleanSideEffectList[cleanSideEffectList.length-1] = cleanSideEffectList[cleanSideEffectList.length-1].slice(0,showIndex)
     
     //scrapedData.push([drugName]); //= sideEffectObj;
-    scrapedData[drugName] = sideEffectObj;
+    var objTmp = {};
+    objTmp[drugName] = sideEffectObj;
+    scrapedData.push(objTmp);
+    writeDataToFile();
 };
 
-app.showData = function(){
-    console.log(JSON.stringify(scrapedData));
+
+var writeDataToFile = function(){
+    var scrapedDataJSON = JSON.stringify(scrapedData);
+    //var cleaned = scrapedDataJSON.Replace("\\", "");
+    fs.writeFileSync("drugData.js",'var data ='+scrapedDataJSON,"utf8");
+    showData(scrapedDataJSON);
 }
 
+var showData = function(scrapedDataJSON){
+    console.log(scrapedDataJSON);
+}
 module.exports = app;
