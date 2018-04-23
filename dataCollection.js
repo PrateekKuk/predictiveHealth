@@ -16,8 +16,13 @@ dataCollection.urls.push({name:"Insulin Glargine", url: "https://www.patientslik
 
 dataCollection.parsingUrls = function(){
     //create html page for each url
-    app.urls.forEach((urlInfo, index, urls)=> {
-        var eachPageRequest = request(urlInfo.url).pipe(fs.createWriteStream('drugs/'+ urlInfo.name + ".html"));
+    dataCollection.urls.forEach((urlInfo, index, urls)=> {
+        //asnyc
+        //var eachPageRequest = request(urlInfo.url).pipe(fs.createWriteStream('drugs/'+ urlInfo.name + ".html"));
+       
+        //sync
+        var eachPageRequest = request_sync('GET',urlInfo.url);
+        fs.writeFileSync('drugs/'+ urlInfo.name + ".html",eachPageRequest.getBody().toString());
     });
 };
 
@@ -68,6 +73,7 @@ var getData = function(drugFile, drugName){
     //scrapedData.push([drugName]); //= sideEffectObj;
     var objTmp = {};
     objTmp[drugName] = sideEffectObj;
+    console.log(objTmp);
     scrapedData.push(objTmp);
     writeDataToFile();
 };

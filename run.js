@@ -1,6 +1,6 @@
 var dataCollection = require('./dataCollection.js');
 
-//app.parsingUrls();
+dataCollection.parsingUrls();
 dataCollection.processDataFiles();
 
 
