@@ -28,6 +28,10 @@
 	}; */
 }
 
+.navbar-container{
+    margin-bottom:20px;
+}
+
 
 .search-form{
 
@@ -36,7 +40,6 @@
 }
 
 .search-box-container{
-	margin-top:20px;
 	margin-bottom:10px;
 }
 
@@ -45,21 +48,12 @@
 }
 
 .back-button-container{
-      margin-top:10px;
       margin-left:4px;
       margin-bottom: 10px;
   }
   
-.custom-button-prop{
-	margin-bottom: 10px;
-	background-color: var(--color-theme-blue);
-	border-color:var(--color-theme-blue);
-	color:var(--color-white);
-}
-.custom-button-prop:hover{
-	margin-bottom: 10px;
-	background-color: var(--color-theme-blue-hover);
-	border-color:var(--color-theme-blue);
+.drugs-body{
+    margin-left:20px;
 }
 .custom-card{
     width: 18rem;
