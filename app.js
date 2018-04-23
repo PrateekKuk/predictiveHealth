@@ -63,11 +63,12 @@ var getData = function(drugFile, drugName){
     var showIndex = cleanSideEffectList[cleanSideEffectList.length-1].indexOf("Show");
     cleanSideEffectList[cleanSideEffectList.length-1] = cleanSideEffectList[cleanSideEffectList.length-1].slice(0,showIndex)
     
+    //scrapedData.push([drugName]); //= sideEffectObj;
     scrapedData[drugName] = sideEffectObj;
 };
 
 app.showData = function(){
-    console.log(scrapedData);
+    console.log(JSON.stringify(scrapedData));
 }
 
 module.exports = app;
