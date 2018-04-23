@@ -1,2 +1,4 @@
 # predictiveHealth
-1.001 Final Project
+This is a MVP app that allows you to check the likelihood of experiencing the most common side-effects of certain drugs. This app is unique in the sense that it shows you the likelihood of experiencing side-effects based on your whole regimen. So, if you take 3 pills that have the same side-effect, your chances of experiencing that side-effect increase. We calculate the percent likelihood a side-effect occuring using Nayes-Bayes and are using data from patientslikeme.com.
+
+To the run the app, download the folder. Then in terminal, run "node run.js". Then simply open index.html to begin using our app. 
