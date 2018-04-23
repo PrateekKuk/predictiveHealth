@@ -1,0 +1,66 @@
+:root {
+	--color-light-gray: hsl(220, 10%, 85%);
+	--color-red: hsl(0, 80%, 48%);
+	--color-light-red: rgba(255,117,138,1);
+	--color-yellow: gold;
+	--color-green: hsl(85, 90%, 37%);
+	--color-light-green: rgba(129, 249, 118, 1);
+	--color-orange: hsl(30, 100%, 50%);
+	--color-blue: hsl(210, 80%, 45%);
+	--color-purple: purple;
+	--color-white:white;
+	--color-black:black;
+	--color-dark-gray: #787878;
+	--color-theme-blue:#4257b2;
+	--color-theme-light-blue:rgba(66,87,178,0.5);
+	--color-theme-blue-hover:#c9ceeb;
+	--color-card-details: rgba(0,0,0,.03);
+	--fade-duration: 0.5s;
+
+}
+
+@media (max-width:450px){
+	/* :root{
+	}; */
+}
+@media (max-width:750px){
+	/* :root{
+	}; */
+}
+
+
+.search-form{
+
+	justify-content:center;
+	margin-top:2em;
+}
+
+.search-box-container{
+	margin-top:20px;
+	margin-bottom:10px;
+}
+
+.hide{
+	display:none;
+}
+
+.back-button-container{
+      margin-top:10px;
+      margin-left:4px;
+      margin-bottom: 10px;
+  }
+  
+.custom-button-prop{
+	margin-bottom: 10px;
+	background-color: var(--color-theme-blue);
+	border-color:var(--color-theme-blue);
+	color:var(--color-white);
+}
+.custom-button-prop:hover{
+	margin-bottom: 10px;
+	background-color: var(--color-theme-blue-hover);
+	border-color:var(--color-theme-blue);
+}
+.custom-card{
+    width: 18rem;
+}

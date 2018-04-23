@@ -10,7 +10,7 @@ var fs = require('fs');
 var app = {};
 var scrapedData = [];
 app.urls = [];
-app.urls.push({name:"metformin",url:'https://www.patientslikeme.com/treatments/show/221'}); 
+app.urls.push({name:"Metformin",url:'https://www.patientslikeme.com/treatments/show/221'}); 
 app.urls.push({name:"Insulin Glargine", url: "https://www.patientslikeme.com/treatments/show/8306"});
 
 

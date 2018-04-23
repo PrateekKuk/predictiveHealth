@@ -9,19 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css">
     
-    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-
     <title>Predictive Health</title>
-    <script>
-        window.onload = function() {
-	        addPageElements();
-        }
-    </script>
   </head>
 
   <body>
@@ -30,35 +18,41 @@
 		HTML markup for top bar
      -->
      <!-- Image and text -->
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar navbar-dark bg-dark sticky-top navbar-expand-lg">
         <a class="navbar-brand" href="#">
             <i class="fas fa-briefcase-medical"></i> Predictive Health
         </a>
     </nav>
 
-  <br>
+    </br>
+    <!--
+        HTML markup for choosing drugs
+        TODO: as you click buttons/drugs the results below update
+            so, each button will need a onclick to a function, but that button's id should be the drug name
+ 	-->
+    <div id="search-container" class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form class="">
+                    <div class="ui-widget">
+                        <input id="tags" class="form-control search-box-container" type="search" placeholder="Search our database to add to regimen" aria-label="Search">
+                    </div>
+                </form>
+            </div>
+         </div>
+     </div>
 
 	<!--
         HTML markup for choosing drugs
         TODO: as you click buttons/drugs the results below update
             so, each button will need a onclick to a function, but that button's id should be the drug name
  	-->
-
+     <div id="drugs-container" class="container-fluid" style="display:none">
+     </div>
 
 	<!--
 		HTML markup for side-effects results  code
  	-->
-
- 	 <div id="drugs-container" class="container-fluid">
-        <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src=".../100px180/" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-        </div>
-	</div>
 
    <div id="results-container" class="container-fluid">
   </div>
@@ -66,13 +60,23 @@
 
 	<!--
 		loading script references
- 	-->
+     -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
 
-	
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+         crossorigin="anonymous"></script>  
+     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+ 
     <script src="drugData.js"></script>
     <script src="index.js"></script>
 
-
+    <script>
+        window.onload = function() {
+            addPageElements();
+        }
+    </script>
 
   </body>
 </html>
