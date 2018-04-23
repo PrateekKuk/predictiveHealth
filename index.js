@@ -30,11 +30,12 @@ var getDrug = function(drugName){
 var makeDrugCard = function(drug){
     
     var drugDiv = document.getElementById("drugs-body");
-    var drugName = Object.keys(drug).toString().replace(" ","");
+    var drugNameWithSpace = Object.keys(drug).toString();
+    var drugNameNoSpace = Object.keys(drug).toString().replace(" ","");
     var drugCard = document.createElement("div");
-    drugCard.setAttribute("id", drugName);
+    drugCard.setAttribute("id", drugNameNoSpace);
     drugCard.classList.add("card");
-    drugCard.classList.add("col-md-2");
+    drugCard.classList.add("col-md-4");
     drugCard.classList.add("custom-card");      
     drugDiv.appendChild(drugCard);
 
@@ -49,7 +50,10 @@ var makeDrugCard = function(drug){
 
     var cardInfo = document.createElement("p");
     cardInfo.classList.add("card-text");
-    cardInfo.innerHTML = drug.toString();
+    var sideEffectsObj = drug[drugNameWithSpace];
+    var sideEffectsList = Object.keys(sideEffectsObj).toString();
+    console.log(sideEffectsList);
+    cardInfo.innerHTML = "Side Effects:" + "</br>" + sideEffectsList;
     cardBody.appendChild(cardInfo);
 
     var removeButton = document.createElement("button");
@@ -60,7 +64,7 @@ var makeDrugCard = function(drug){
     removeButton.innerHTML = "Remove";
     cardBody.appendChild(removeButton);
     removeButton.onclick = function() {
-        removeDrug(drugName);
+        removeDrug(drugNameNoSpace);
       };
 }
 
