@@ -70,5 +70,11 @@ $("#search").autocomplete({
 
 var removeDrug = function(drugName) {
     $("#"+drugName).remove();
+    var drugDiv = document.getElementById("drugs-body");
+    if(drugDiv.childElementCount == 0){
+        var drugDiv = document.getElementById("drugs-container");
+        drugDiv.classList.add("hide");
+    }
 }
+
 
