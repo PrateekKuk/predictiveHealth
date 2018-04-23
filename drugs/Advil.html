@@ -2,17 +2,17 @@
 <html lang="en" class=" no-js">
 <head>
 
-<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"3ee98a9739","applicationID":"58764","transactionName":"cglXQEANXllVExdAE1QHTVlXDEZGHxJQWxY=","queueTime":0,"applicationTime":125,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"3ee98a9739","applicationID":"58764","transactionName":"cglXQEANXllVExdAE1QHTVlXDEZGHxJQWxY=","queueTime":0,"applicationTime":225,"agent":""}</script>
 <script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"Vg4GV0VWAAQGUA=="};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(18)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(18)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(18)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(18)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(x?x.then(a):w?w(a):(E=-E,O.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(18)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var b=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,b),b.prototype=p.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var x=m&&m.resolve();if(!w&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],16:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],17:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],18:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=h(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([g,e,r,a]),a}}function p(t,n){v[t]=h(t).concat(n)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var v={},y={},g={on:p,emit:e,get:m,listeners:h,context:n,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(15),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!x++){var t=b.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=l.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(15),u=t("ee"),d=window,l=d.document,p="addEventListener",h="attachEvent",m=d.XMLHttpRequest,w=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},g=m&&w&&w[p]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:v,features:{},xhrWrappable:g};t(12),l[p]?(l[p]("DOMContentLoaded",i,!1),d[p]("load",r,!1)):(l[h]("onreadystatechange",o),d[h]("onload",r)),c("mark",["firstbyte",s],null,"api");var x=0,E=t(17)},{}]},{},["loader",2,10,4,3]);</script>
-<title>PatientsLikeMe | Metformin report for  patients like you</title>
+<title>PatientsLikeMe | Ibuprofen report for  patients like you</title>
 <meta charset="UTF-8">
 <meta content="8scufJGxU9JCHew1yOlfXYXtd73pybYP2xyel8v3GjQ" name="google-site-verification">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta content="PatientsLikeMe" name="application-name">
 <meta content="PatientsLikeMe | Treatments" property="og:title">
 <meta content="https://dy82vckl8b34w.cloudfront.net/assets/open_graph/treatments-d1efa6a6ae8fcf07f3b802aa8c172740f214dfb5ea77367ba0225a3a63fa2006.png" property="og:image">
-<meta content="Metformin: Find the most comprehensive real-world treatment information on Metformin at PatientsLikeMe. 2625 patients with fibromyalgia, multiple sclerosis, major depressive disorder, generalized anxiety disorder, diabetes type 2, systemic lupus erythematosus, post-traumatic stress disorder, bipolar disorder, Parkinson's disease, panic disorder, rheumatoid arthritis, high blood pressure (hypertension), myalgic encephalomyelitis/chronic fatigue syndrome, persistent depressive disorder (dysthymia), amyotrophic lateral sclerosis, epilepsy, migraine, hypothyroidism, osteoarthritis, traumatic brain injury, attention deficit/hyperactivity disorder, bipolar II disorder, asthma, social anxiety disorder, high cholesterol (hypercholesterolemia), irritable bowel syndrome, idiopathic pulmonary fibrosis, gastroesophageal reflux disease, bipolar I disorder or psoriasis currently take Metformin." property="og:description">
-<meta content="Metformin: Find the most comprehensive real-world treatment information on Metformin at PatientsLikeMe. 2625 patients with fibromyalgia, multiple sclerosis, major depressive disorder, generalized anxiety disorder, diabetes type 2, systemic lupus erythematosus, post-traumatic stress disorder, bipolar disorder, Parkinson's disease, panic disorder, rheumatoid arthritis, high blood pressure (hypertension), myalgic encephalomyelitis/chronic fatigue syndrome, persistent depressive disorder (dysthymia), amyotrophic lateral sclerosis, epilepsy, migraine, hypothyroidism, osteoarthritis, traumatic brain injury, attention deficit/hyperactivity disorder, bipolar II disorder, asthma, social anxiety disorder, high cholesterol (hypercholesterolemia), irritable bowel syndrome, idiopathic pulmonary fibrosis, gastroesophageal reflux disease, bipolar I disorder or psoriasis currently take Metformin." name="description">
+<meta content="Ibuprofen: Find the most comprehensive real-world treatment information on Ibuprofen at PatientsLikeMe. 2198 patients with fibromyalgia, multiple sclerosis, major depressive disorder, generalized anxiety disorder, diabetes type 2, systemic lupus erythematosus, post-traumatic stress disorder, bipolar disorder, Parkinson's disease, panic disorder, rheumatoid arthritis, high blood pressure (hypertension), myalgic encephalomyelitis/chronic fatigue syndrome, persistent depressive disorder (dysthymia), amyotrophic lateral sclerosis, epilepsy, migraine, hypothyroidism, osteoarthritis, traumatic brain injury, attention deficit/hyperactivity disorder, bipolar II disorder, asthma, social anxiety disorder, high cholesterol (hypercholesterolemia), irritable bowel syndrome, idiopathic pulmonary fibrosis, gastroesophageal reflux disease, bipolar I disorder or psoriasis currently take Ibuprofen." property="og:description">
+<meta content="Ibuprofen: Find the most comprehensive real-world treatment information on Ibuprofen at PatientsLikeMe. 2198 patients with fibromyalgia, multiple sclerosis, major depressive disorder, generalized anxiety disorder, diabetes type 2, systemic lupus erythematosus, post-traumatic stress disorder, bipolar disorder, Parkinson's disease, panic disorder, rheumatoid arthritis, high blood pressure (hypertension), myalgic encephalomyelitis/chronic fatigue syndrome, persistent depressive disorder (dysthymia), amyotrophic lateral sclerosis, epilepsy, migraine, hypothyroidism, osteoarthritis, traumatic brain injury, attention deficit/hyperactivity disorder, bipolar II disorder, asthma, social anxiety disorder, high cholesterol (hypercholesterolemia), irritable bowel syndrome, idiopathic pulmonary fibrosis, gastroesophageal reflux disease, bipolar I disorder or psoriasis currently take Ibuprofen." name="description">
 <link href="/apple-touch-icon.png?v=1023171" rel="apple-touch-icon-precomposed">
 <link href="/apple-touch-icon.png?v=1023171" rel="apple-touch-icon" sizes="180x180">
 <link href="/favicon-32x32.png?v=1023171" rel="icon" sizes="32x32" type="image/png">
@@ -23,7 +23,7 @@
 <meta content="#ffffff" name="theme-color">
 <link href="/android-chrome-512x512.png?v=1023171" rel="image_src" type="image/png">
 
-<link href="https://www.patientslikeme.com/treatments/show/221-metformin-side-effects-and-efficacy" rel="canonical">
+<link href="https://www.patientslikeme.com/treatments/show/56-ibuprofen-side-effects-and-efficacy" rel="canonical">
 <script>
   window.queued_functions = [];
   window.$ = function(f) {
@@ -41,7 +41,7 @@
   var MTIProjectId='19cc9a7d-3df0-4312-b847-b9c6508a6bce';
 </script>
 <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="l4zJTEYJc7X2rxe+EsZjORo7GY9HTjzAWXf/xhbyU/y2ekli9GaD+gzRk6cpJBmIMciz/fFfGweZ3sfP2mhmJA==" />
+<meta name="csrf-token" content="EHQKW/6j7odFgpTh0fB511FPtC21wDiEdV1mcGc1TnfQDuX9MxRAP64g1oFCXnIEZWyku3dbziOAZinA/jyrmA==" />
 <script>
   window.PLM = window.PLM || {};
   window.PLM['RAILS_CONTROLLER'] = "treatments";
@@ -86,7 +86,7 @@
     ga('set', 'dimension3', '-1');
   
     // metric_guid. Scope: user
-    ga('set', 'dimension4', '63006b92-c08e-4409-bb4b-967371c3dbc0');
+    ga('set', 'dimension4', '63b71e37-8f0f-470e-a198-eddb91017041');
   
     // Before adding new custom page variables, you'll need to set them up in the
     // Google Analytics UI to get an assigned index to use in this code.
@@ -250,7 +250,7 @@ PatientsLikeMe ®
 <ul>
 <li class="toolbar-title">
 <h1>
-<span itemprop="name">Metformin</span> treatment report
+<span itemprop="name">Ibuprofen</span> treatment report
 </h1>
 </li>
 </ul>
@@ -265,10 +265,10 @@ PatientsLikeMe ®
 <nav class="columns medium-24" id="treatment-report-tabs">
 <ul class="margin-top-none tabs" role="tablist">
 <li class="overview">
-<a aria-controls="overview" class="yah" href="/treatments/show/221-metformin-side-effects-and-efficacy?brand=f">Overview</a>
+<a aria-controls="overview" class="yah" href="/treatments/show/56-ibuprofen-side-effects-and-efficacy?brand=f">Overview</a>
 </li>
 <li class="evaluations">
-<a aria-controls="evaluations" href="/treatment_evaluations/browse?brand=f&amp;id=221-metformin-side-effects-and-efficacy">Individual patient evaluations</a>
+<a aria-controls="evaluations" href="/treatment_evaluations/browse?brand=f&amp;id=56-ibuprofen-side-effects-and-efficacy">Individual patient evaluations</a>
 </li>
 
 </ul>
@@ -282,10 +282,10 @@ PatientsLikeMe ®
 <nav data-popup-type="menu" id="treatment-report-dropdown" style="display:none">
 <ul class="toc-menu">
 <li class="overview">
-<a aria-controls="overview" class="yah" href="/treatments/show/221-metformin-side-effects-and-efficacy?brand=f">Overview</a>
+<a aria-controls="overview" class="yah" href="/treatments/show/56-ibuprofen-side-effects-and-efficacy?brand=f">Overview</a>
 </li>
 <li class="evaluations">
-<a aria-controls="evaluations" href="/treatment_evaluations/browse?brand=f&amp;id=221-metformin-side-effects-and-efficacy">Individual patient evaluations</a>
+<a aria-controls="evaluations" href="/treatment_evaluations/browse?brand=f&amp;id=56-ibuprofen-side-effects-and-efficacy">Individual patient evaluations</a>
 </li>
 
 </ul>
@@ -298,37 +298,67 @@ PatientsLikeMe ®
 <div class="row">
 <div class="columns large-15 medium-15">
 <header id="summary">
-<h2>What is Metformin?</h2>
+<h2>What is Ibuprofen?</h2>
 </header>
 <p class="margin-vertical-none">
 <strong>Category:</strong>
-<a href="/treatments/browse?cat=1">Prescription Drugs</a>
+<a href="/treatments/browse?cat=2">Over the Counter Drugs</a>
 </p>
 <p class="show toggle">
 <strong>Most popular types:</strong>
 <span class="comma-separated">
-<a href="/treatments/show/2326-glucophage-side-effects-and-efficacy?brand=t">Glucophage</a>
-<a href="/treatments/show/8242-metformin-er-side-effects-and-efficacy?brand=t">Metformin ER</a>
-<a href="/treatments/show/17272-diabex-side-effects-and-efficacy?brand=t">Diabex</a>
-<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/13276-glucophage-xr-side-effects-and-efficacy?brand=t">Glucophage XR</a>
-<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/16338-apometformin-side-effects-and-efficacy?brand=t">Apo-Metformin</a>
-<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/3954-glumetza-side-effects-and-efficacy?brand=t">Glumetza</a>
-<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/25652-glucophage-sr-side-effects-and-efficacy?brand=t">Glucophage SR</a>
-<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/14701-pmsmetformin-side-effects-and-efficacy?brand=t">PMS-Metformin</a>
-<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/5279-ratiometformin-side-effects-and-efficacy?brand=t">Ratio-Metformin</a>
-<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/25607-diaformin-side-effects-and-efficacy?brand=t">Diaformin</a>
-<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/22301-glycon-side-effects-and-efficacy?brand=t">Glycon</a>
-<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/9769-fortamet-side-effects-and-efficacy?brand=t">Fortamet</a>
-<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/17081-riomet-side-effects-and-efficacy?brand=t">Riomet</a>
-<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/25822-merckformin-xr-side-effects-and-efficacy?brand=t">Merckformin XR</a>
-<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/26065-stagid-side-effects-and-efficacy?brand=t">Stagid</a>
-<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/26086-cetapin-side-effects-and-efficacy?brand=t">Cetapin</a>
+<a href="/treatments/show/319-advil-side-effects-and-efficacy?brand=t">Advil</a>
+<a href="/treatments/show/1095-motrin-side-effects-and-efficacy?brand=t">Motrin</a>
+<a href="/treatments/show/7587-advil-liquigel-side-effects-and-efficacy?brand=t">Advil Liqui-Gel</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/3764-equate-ibuprofen-side-effects-and-efficacy?brand=t">Equate Ibuprofen</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/2066-dollar-store-ibuprofen-side-effects-and-efficacy?brand=t">Dollar Store Ibuprofen</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/9581-motrin-ib-side-effects-and-efficacy?brand=t">Motrin IB</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/15246-advil-extra-strength-side-effects-and-efficacy?brand=t">Advil Extra Strength</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/2457-nurofen-side-effects-and-efficacy?brand=t">Nurofen</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/5546-brufen-side-effects-and-efficacy?brand=t">Brufen</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/2134-kirkland-ibuprofen-side-effects-and-efficacy?brand=t">Kirkland Ibuprofen</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/9875-walgreens-ibuprofen-side-effects-and-efficacy?brand=t">Walgreens Ibuprofen</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/4921-advil-migraine-side-effects-and-efficacy?brand=t">Advil Migraine</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/6461-costco-ibuprofen-side-effects-and-efficacy?brand=t">Costco Ibuprofen</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/5577-target-ibuprofen-side-effects-and-efficacy?brand=t">Target Ibuprofen</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/20862-cvs-ibuprofen-side-effects-and-efficacy?brand=t">CVS Ibuprofen</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/7208-walmart-ibuprofen-side-effects-and-efficacy?brand=t">Walmart Ibuprofen</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/25328-brufen-retard-side-effects-and-efficacy?brand=t">Brufen Retard</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/10559-ibuprofen-soft-gels-side-effects-and-efficacy?brand=t">Ibuprofen Soft Gels</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/2541-members-mark-ibuprofen-side-effects-and-efficacy?brand=t">Member&#39;s Mark Ibuprofen</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/13741-motrin-migraine-pain-side-effects-and-efficacy?brand=t">Motrin Migraine Pain</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/18248-phorpain-gel-side-effects-and-efficacy?brand=t">Phorpain gel</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/22554-advil-muscle-and-joint-side-effects-and-efficacy?brand=t">Advil Muscle and Joint</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/20194-american-fare-ibuprofen-side-effects-and-efficacy?brand=t">American Fare Ibuprofen</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/2642-equaline-brand-ibuprofen-side-effects-and-efficacy?brand=t">Equaline Brand Ibuprofen</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/4259-ibalgin-side-effects-and-efficacy?brand=t">Ibalgin</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/5604-midol-side-effects-and-efficacy?brand=t">Midol</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/27638-ibufen-side-effects-and-efficacy?brand=t">Ibufen</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/20446-ibuprofen-5-gel-side-effects-and-efficacy?brand=t">Ibuprofen 5% gel</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/23712-burana-slow-side-effects-and-efficacy?brand=t">Burana Slow</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/22323-childrens-ibuprofen-berry-side-effects-and-efficacy?brand=t">Childrens Ibuprofen Berry</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/11938-hannaford-ibuprofen-side-effects-and-efficacy?brand=t">Hannaford Ibuprofen</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/18288-meijer-brand-ibuprofen-side-effects-and-efficacy?brand=t">Meijer Brand Ibuprofen</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/25650-nuprin-side-effects-and-efficacy?brand=t">Nuprin</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/17969-nurofen-liquid-soft-capsules-side-effects-and-efficacy?brand=t">Nurofen liquid soft capsules</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/6845-perifar-side-effects-and-efficacy?brand=t">Perifar</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/25034-buscofem-side-effects-and-efficacy?brand=t">Buscofem</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/25037-busco-ibuprofren-side-effects-and-efficacy?brand=t">Busco Ibuprofren</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/26386-deep-relief-cream-side-effects-and-efficacy?brand=t">Deep Relief cream</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/19356-ibubeta-400-akut-side-effects-and-efficacy?brand=t">Ibubeta 400 Akut</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/26083-ibupain-side-effects-and-efficacy?brand=t">Ibupain</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/20486-ibuprofen-10-gel-side-effects-and-efficacy?brand=t">Ibuprofen 10% gel</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/25427-ibuprofen-suppositories-side-effects-and-efficacy?brand=t">Ibuprofen suppositories</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/2525-life-brand-ibuprofen-side-effects-and-efficacy?brand=t">Life Brand Ibuprofen</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/25038-quadrax-side-effects-and-efficacy?brand=t">Quadrax</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/11430-quality-choice-ibuprofen-side-effects-and-efficacy?brand=t">Quality Choice Ibuprofen</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/25035-tomaflex-side-effects-and-efficacy?brand=t">Tomaflex</a>
 </span>
 <a class="content-toggle" data-toggle-content-selector=".treatment-report-other-brand" data-toggled-text="Show top 3" data-fn-click="toggle_content" href="#">Show all</a>
 </p>
 <span itemprop="isProprietary" style="display:none">false</span>
 <p itemprop="description">
-Metformin an antidiabetic agent used for the management of type 2 diabetes mellitus (noninsulin dependent, NIDDM) as monotherapy when hyperglycemia (high blood sugar) cannot be managed with diet and exercise alone.
+Ibuprofen is a nonsteroidal anti-inflammatory (NSAID) drug used to relieve pain and swelling. It is thought to have lower levels of side effects than other NSAIDS and is widely found throughout over-the-counter painkiller medications. 
 </p>
 </div>
 <div class="columns large-9 medium-9">
@@ -337,7 +367,7 @@ Metformin an antidiabetic agent used for the management of type 2 diabetes melli
 </span>
 <span class="flag-content">
 <p>
-<a href="/patients?s%5Bexclude_deceased%5D=true&amp;s%5Bt%5D=221">See patients taking Metformin</a>
+<a href="/patients?s%5Bexclude_deceased%5D=true&amp;s%5Bt%5D=56">See patients taking Ibuprofen</a>
 </p>
 </span>
 </div>
@@ -362,105 +392,105 @@ Metformin an antidiabetic agent used for the management of type 2 diabetes melli
 <th>Perceived Effectiveness</th>
 </tr>
 </thead>
-<tbody class="ajax-target compacted" data-url="/treatments/221/additional_purpose_rows">
-<tr class="top-n yah-receiver" data-yah-key="purpose" data-yah-value="conditions-50" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
+<tbody class="ajax-target compacted" data-url="/treatments/56/additional_purpose_rows">
+<tr class="top-n yah-receiver" data-yah-key="purpose" data-yah-value="symptoms-6" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-<a href="/conditions/50"><span itemprop="name">Diabetes type 2</span>
+<a href="/symptoms/show/6"><span itemprop="name">Pain</span>
 </a></th>
 <td class="numeric">
-<a title="See patients who are taking or have taken Metformin for this purpose" href="/patients/treatment/221?treatment_purpose_condition=50">2,658</a>
+<a title="See patients who are taking or have taken Ibuprofen for this purpose" href="/patients/treatment/319?treatment_purpose_symptom=6">1,367</a>
 </td>
 <td class="numeric">
-<a title="See all evaluations with this purpose" href="/treatment_evaluations/browse?brand=false&amp;condition_id=50&amp;id=221">963</a>
+<a title="See all evaluations with this purpose" href="/treatment_evaluations/browse?brand=false&amp;id=56&amp;symptom_id=6">438</a>
 </td>
 <td class="efficacy">
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item bg-efficacy-major" style="width: 33.443708609271525%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=50&amp;id=221&amp;value=4"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 303 evaluations from 266 patients with major perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-moderate" style="width: 35.43046357615894%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=50&amp;id=221&amp;value=3"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 321 evaluations from 292 patients with moderate perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-slight" style="width: 12.803532008830022%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=50&amp;id=221&amp;value=2"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 116 evaluations from 112 patients with slight perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-none" style="width: 6.512141280353201%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=50&amp;id=221&amp;value=1"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 59 evaluations from 57 patients with none perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-cant_tell" style="width: 11.810154525386313%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=50&amp;id=221&amp;value=0"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 107 evaluations from 98 patients with unknown perceived effectiveness</small></a></li></ul>
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item bg-efficacy-major" style="width: 13.189448441247002%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=56&amp;symptom_id=6&amp;value=4"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 55 evaluations from 48 patients with major perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-moderate" style="width: 48.44124700239808%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=56&amp;symptom_id=6&amp;value=3"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 202 evaluations from 163 patients with moderate perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-slight" style="width: 30.93525179856115%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=56&amp;symptom_id=6&amp;value=2"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 129 evaluations from 116 patients with slight perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-none" style="width: 4.316546762589928%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=56&amp;symptom_id=6&amp;value=1"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 18 evaluations from 17 patients with none perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-cant_tell" style="width: 3.117505995203837%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=56&amp;symptom_id=6&amp;value=0"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 13 evaluations from 13 patients with unknown perceived effectiveness</small></a></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-yah-key="purpose" data-yah-value="conditions-171" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
+<tr class="top-n yah-receiver" data-yah-key="purpose" data-yah-value="conditions-135" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-<a href="/conditions/171"><span itemprop="name">Polycystic ovary syndrome</span>
+<a href="/conditions/135"><span itemprop="name">Migraine</span>
 </a></th>
 <td class="numeric">
-<a title="See patients who are taking or have taken Metformin for this purpose" href="/patients/treatment/221?treatment_purpose_condition=171">265</a>
+<a title="See patients who are taking or have taken Ibuprofen for this purpose" href="/patients/treatment/319?treatment_purpose_condition=135">698</a>
 </td>
 <td class="numeric">
-<a title="See all evaluations with this purpose" href="/treatment_evaluations/browse?brand=false&amp;condition_id=171&amp;id=221">106</a>
+<a title="See all evaluations with this purpose" href="/treatment_evaluations/browse?brand=false&amp;condition_id=135&amp;id=56">181</a>
 </td>
 <td class="efficacy">
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item bg-efficacy-major" style="width: 22.54901960784314%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=171&amp;id=221&amp;value=4"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 23 evaluations from 12 patients with major perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-moderate" style="width: 30.392156862745097%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=171&amp;id=221&amp;value=3"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 31 evaluations from 21 patients with moderate perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-slight" style="width: 11.764705882352942%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=171&amp;id=221&amp;value=2"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 12 evaluations from 10 patients with slight perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-none" style="width: 6.862745098039215%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=171&amp;id=221&amp;value=1"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 7 evaluations from 7 patients with none perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-cant_tell" style="width: 28.431372549019606%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=171&amp;id=221&amp;value=0"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 29 evaluations from 27 patients with unknown perceived effectiveness</small></a></li></ul>
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item bg-efficacy-major" style="width: 7.407407407407407%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=135&amp;id=56&amp;value=4"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 10 evaluations from 9 patients with major perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-moderate" style="width: 34.81481481481482%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=135&amp;id=56&amp;value=3"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 47 evaluations from 44 patients with moderate perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-slight" style="width: 33.333333333333336%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=135&amp;id=56&amp;value=2"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 45 evaluations from 43 patients with slight perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-none" style="width: 19.25925925925926%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=135&amp;id=56&amp;value=1"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 26 evaluations from 25 patients with none perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-cant_tell" style="width: 5.185185185185185%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=135&amp;id=56&amp;value=0"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 7 evaluations from 5 patients with unknown perceived effectiveness</small></a></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-yah-key="purpose" data-yah-value="conditions-815" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
+<tr class="top-n yah-receiver" data-yah-key="purpose" data-yah-value="conditions-224" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-<a href="/conditions/815"><span itemprop="name">Prediabetes</span>
+<a href="/conditions/224"><span itemprop="name">Degenerative disc disease</span>
 </a></th>
 <td class="numeric">
-<a title="See patients who are taking or have taken Metformin for this purpose" href="/patients/treatment/221?treatment_purpose_condition=815">119</a>
+<a title="See patients who are taking or have taken Ibuprofen for this purpose" href="/patients/treatment/319?treatment_purpose_condition=224">419</a>
 </td>
 <td class="numeric">
-<a title="See all evaluations with this purpose" href="/treatment_evaluations/browse?brand=false&amp;condition_id=815&amp;id=221">67</a>
+<a title="See all evaluations with this purpose" href="/treatment_evaluations/browse?brand=false&amp;condition_id=224&amp;id=56">147</a>
 </td>
 <td class="efficacy">
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item bg-efficacy-major" style="width: 33.333333333333336%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=815&amp;id=221&amp;value=4"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 14 evaluations from 14 patients with major perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-moderate" style="width: 35.714285714285715%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=815&amp;id=221&amp;value=3"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 15 evaluations from 14 patients with moderate perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-slight" style="width: 11.904761904761905%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=815&amp;id=221&amp;value=2"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 5 evaluations from 5 patients with slight perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-none" style="width: 0.0%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=815&amp;id=221&amp;value=1"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 0 evaluations from 0 patients with none perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-cant_tell" style="width: 19.047619047619047%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=815&amp;id=221&amp;value=0"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 8 evaluations from 8 patients with unknown perceived effectiveness</small></a></li></ul>
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item bg-efficacy-major" style="width: 3.9682539682539684%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=224&amp;id=56&amp;value=4"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 5 evaluations from 4 patients with major perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-moderate" style="width: 38.095238095238095%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=224&amp;id=56&amp;value=3"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 48 evaluations from 38 patients with moderate perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-slight" style="width: 35.714285714285715%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=224&amp;id=56&amp;value=2"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 45 evaluations from 43 patients with slight perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-none" style="width: 14.285714285714286%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=224&amp;id=56&amp;value=1"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 18 evaluations from 16 patients with none perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-cant_tell" style="width: 7.936507936507937%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=224&amp;id=56&amp;value=0"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 10 evaluations from 10 patients with unknown perceived effectiveness</small></a></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-yah-key="purpose" data-yah-value="symptoms-2065" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
+<tr class="top-n yah-receiver" data-yah-key="purpose" data-yah-value="symptoms-575" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-<a href="/symptoms/show/2065"><span itemprop="name">Elevated blood sugar (hyperglycemia)</span>
+<a href="/symptoms/show/575"><span itemprop="name">Headaches</span>
 </a></th>
 <td class="numeric">
-<a title="See patients who are taking or have taken Metformin for this purpose" href="/patients/treatment/221?treatment_purpose_symptom=2065">26</a>
+<a title="See patients who are taking or have taken Ibuprofen for this purpose" href="/patients/treatment/319?treatment_purpose_symptom=575">231</a>
 </td>
 <td class="numeric">
-<a title="See all evaluations with this purpose" href="/treatment_evaluations/browse?brand=false&amp;id=221&amp;symptom_id=2065">48</a>
+<a title="See all evaluations with this purpose" href="/treatment_evaluations/browse?brand=false&amp;id=56&amp;symptom_id=575">80</a>
 </td>
 <td class="efficacy">
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item bg-efficacy-major" style="width: 23.68421052631579%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=221&amp;symptom_id=2065&amp;value=4"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 9 evaluations from 6 patients with major perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-moderate" style="width: 28.94736842105263%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=221&amp;symptom_id=2065&amp;value=3"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 11 evaluations from 2 patients with moderate perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-slight" style="width: 18.42105263157895%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=221&amp;symptom_id=2065&amp;value=2"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 7 evaluations from 2 patients with slight perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-none" style="width: 2.6315789473684212%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=221&amp;symptom_id=2065&amp;value=1"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 1 evaluation from 1 patient with none perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-cant_tell" style="width: 26.31578947368421%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=221&amp;symptom_id=2065&amp;value=0"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 10 evaluations from 2 patients with unknown perceived effectiveness</small></a></li></ul>
-</td>
-</tr>
-<tr class="top-n yah-receiver" data-yah-key="purpose" data-yah-value="symptoms-12768" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
-<th scope="row">
-<span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-<a href="/symptoms/show/12768"><span itemprop="name">Insulin resistance</span>
-</a></th>
-<td class="numeric">
-<a title="See patients who are taking or have taken Metformin for this purpose" href="/patients/treatment/221?treatment_purpose_symptom=12768">20</a>
-</td>
-<td class="numeric">
-<a title="See all evaluations with this purpose" href="/treatment_evaluations/browse?brand=false&amp;id=221&amp;symptom_id=12768">8</a>
-</td>
-<td class="efficacy">
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item bg-efficacy-major" style="width: 25.0%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=221&amp;symptom_id=12768&amp;value=4"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 2 evaluations from 2 patients with major perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-moderate" style="width: 25.0%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=221&amp;symptom_id=12768&amp;value=3"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 2 evaluations from 2 patients with moderate perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-slight" style="width: 0.0%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=221&amp;symptom_id=12768&amp;value=2"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 0 evaluations from 0 patients with slight perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-none" style="width: 12.5%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=221&amp;symptom_id=12768&amp;value=1"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 1 evaluation from 1 patient with none perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-cant_tell" style="width: 37.5%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=221&amp;symptom_id=12768&amp;value=0"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item bg-efficacy-major" style="width: 38.35616438356164%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=56&amp;symptom_id=575&amp;value=4"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 28 evaluations from 14 patients with major perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-moderate" style="width: 34.24657534246575%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=56&amp;symptom_id=575&amp;value=3"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 25 evaluations from 21 patients with moderate perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-slight" style="width: 20.54794520547945%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=56&amp;symptom_id=575&amp;value=2"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 15 evaluations from 15 patients with slight perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-none" style="width: 2.73972602739726%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=56&amp;symptom_id=575&amp;value=1"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 2 evaluations from 2 patients with none perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-cant_tell" style="width: 4.109589041095891%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=56&amp;symptom_id=575&amp;value=0"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
 See 3 evaluations from 3 patients with unknown perceived effectiveness</small></a></li></ul>
+</td>
+</tr>
+<tr class="top-n yah-receiver" data-yah-key="purpose" data-yah-value="conditions-446" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
+<th scope="row">
+<span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
+<a href="/conditions/446"><span itemprop="name">Tension headache</span>
+</a></th>
+<td class="numeric">
+<a title="See patients who are taking or have taken Ibuprofen for this purpose" href="/patients/treatment/319?treatment_purpose_condition=446">134</a>
+</td>
+<td class="numeric">
+<a title="See all evaluations with this purpose" href="/treatment_evaluations/browse?brand=false&amp;condition_id=446&amp;id=56">45</a>
+</td>
+<td class="efficacy">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item bg-efficacy-major" style="width: 13.88888888888889%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=446&amp;id=56&amp;value=4"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 5 evaluations from 5 patients with major perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-moderate" style="width: 50.0%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=446&amp;id=56&amp;value=3"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 18 evaluations from 17 patients with moderate perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-slight" style="width: 19.444444444444443%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=446&amp;id=56&amp;value=2"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 7 evaluations from 6 patients with slight perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-none" style="width: 11.11111111111111%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=446&amp;id=56&amp;value=1"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 4 evaluations from 3 patients with none perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-cant_tell" style="width: 5.555555555555555%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=446&amp;id=56&amp;value=0"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 2 evaluations from 2 patients with unknown perceived effectiveness</small></a></li></ul>
 </td>
 </tr>
 
@@ -468,7 +498,7 @@ See 3 evaluations from 3 patients with unknown perceived effectiveness</small></
 </table>
 <p class="show toggle">
 <a class="content-toggle" data-fn-click="treatment_report_section.toggle_compacted" href="#">Show all
-<strong>67 reasons taken</strong>
+<strong>301 reasons taken</strong>
 <span class="loading" style="display: none;"></span>
 </a></p>
 <p class="hide toggle" style="display: none;">
@@ -502,13 +532,13 @@ Can&#39;t tell
 </div>
 
 <div class="glass-panel">
-<a href="/patients/treatment/221-metformin-side-effects-and-efficacy">See
+<a href="/patients/treatment/56-ibuprofen-side-effects-and-efficacy">See
 all
 <strong>
-3,472 patients
+3,984 patients
 
 </strong>
-<span>that have taken Metformin</span>
+<span>that have taken Ibuprofen</span>
 </a></div>
 <div class="content-section section-panel">
 <h2>Side effects</h2>
@@ -538,11 +568,11 @@ Side effects as an overall problem
 Severe
 </td>
 <td class="numeric">
-<a href="/treatment_evaluations/browse?attribute=side_effects&amp;brand=false&amp;id=221&amp;value=4">138</a>
+<a href="/treatment_evaluations/browse?attribute=side_effects&amp;brand=false&amp;id=56&amp;value=4">62</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item scale-color-severe" style="width: 12.244897959183673%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=side_effects&amp;brand=false&amp;id=221&amp;value=4"><small class="is-tooltip" role="tooltip">
-138</small></a></li></ul>
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item scale-color-severe" style="width: 6.288032454361055%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=side_effects&amp;brand=false&amp;id=56&amp;value=4"><small class="is-tooltip" role="tooltip">
+62</small></a></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="overall_side_effects" data-yah-value="3">
@@ -551,11 +581,11 @@ Severe
 Moderate
 </td>
 <td class="numeric">
-<a href="/treatment_evaluations/browse?attribute=side_effects&amp;brand=false&amp;id=221&amp;value=3">180</a>
+<a href="/treatment_evaluations/browse?attribute=side_effects&amp;brand=false&amp;id=56&amp;value=3">100</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item scale-color-severe" style="width: 15.971606033717835%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=side_effects&amp;brand=false&amp;id=221&amp;value=3"><small class="is-tooltip" role="tooltip">
-180</small></a></li></ul>
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item scale-color-severe" style="width: 10.141987829614605%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=side_effects&amp;brand=false&amp;id=56&amp;value=3"><small class="is-tooltip" role="tooltip">
+100</small></a></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="overall_side_effects" data-yah-value="2">
@@ -564,11 +594,11 @@ Moderate
 Mild
 </td>
 <td class="numeric">
-<a href="/treatment_evaluations/browse?attribute=side_effects&amp;brand=false&amp;id=221&amp;value=2">230</a>
+<a href="/treatment_evaluations/browse?attribute=side_effects&amp;brand=false&amp;id=56&amp;value=2">164</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item scale-color-severe" style="width: 20.408163265306122%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=side_effects&amp;brand=false&amp;id=221&amp;value=2"><small class="is-tooltip" role="tooltip">
-230</small></a></li></ul>
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item scale-color-severe" style="width: 16.63286004056795%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=side_effects&amp;brand=false&amp;id=56&amp;value=2"><small class="is-tooltip" role="tooltip">
+164</small></a></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="overall_side_effects" data-yah-value="1">
@@ -577,11 +607,11 @@ Mild
 None
 </td>
 <td class="numeric">
-<a href="/treatment_evaluations/browse?attribute=side_effects&amp;brand=false&amp;id=221&amp;value=1">579</a>
+<a href="/treatment_evaluations/browse?attribute=side_effects&amp;brand=false&amp;id=56&amp;value=1">660</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item scale-color-severe" style="width: 51.37533274179237%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=side_effects&amp;brand=false&amp;id=221&amp;value=1"><small class="is-tooltip" role="tooltip">
-579</small></a></li></ul>
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item scale-color-severe" style="width: 66.93711967545639%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=side_effects&amp;brand=false&amp;id=56&amp;value=1"><small class="is-tooltip" role="tooltip">
+660</small></a></li></ul>
 </td>
 </tr>
 </tbody>
@@ -589,9 +619,9 @@ None
 </div>
 <div class="columns medium-12" data-widget="treatment_report_section">
 <h3 class="tertiary-title">
-Commonly reported side effects and conditions associated with Metformin
+Commonly reported side effects and conditions associated with Ibuprofen
 </h3>
-<table class="tbl-default-layout tbl-divided" summary="Side effects of Metformin">
+<table class="tbl-default-layout tbl-divided" summary="Side effects of Ibuprofen">
 <col class="small-10">
 <col class="small-4">
 <col class="small-10">
@@ -602,47 +632,19 @@ Commonly reported side effects and conditions associated with Metformin
 <th></th>
 </tr>
 </thead>
-<tbody class="ajax-target compacted" data-url="/treatments/221/additional_side_effect_rows">
-<tr class="top-n yah-receiver" data-yah-key="side_effect" data-yah-value="symptoms-263" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
-<th scope="row">
-<span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-<a href="/symptoms/show/263"><span itemprop="name">Diarrhea</span>
-</a></th>
-<td class="numeric">
-197
-</td>
-<td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 35.55956678700361%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
-<small class="is-tooltip" role="tooltip">
-197</small></span></li></ul>
-</td>
-</tr>
-<tr class="top-n yah-receiver" data-yah-key="side_effect" data-yah-value="symptoms-57" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
-<th scope="row">
-<span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-<a href="/symptoms/show/57"><span itemprop="name">Nausea</span>
-</a></th>
-<td class="numeric">
-66
-</td>
-<td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 11.913357400722022%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
-<small class="is-tooltip" role="tooltip">
-66</small></span></li></ul>
-</td>
-</tr>
+<tbody class="ajax-target compacted" data-url="/treatments/56/additional_side_effect_rows">
 <tr class="top-n yah-receiver" data-yah-key="side_effect" data-yah-value="symptoms-572" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
 <a href="/symptoms/show/572"><span itemprop="name">Stomach pain</span>
 </a></th>
 <td class="numeric">
-32
+65
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 5.776173285198556%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 21.172638436482085%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-32</small></span></li></ul>
+65</small></span></li></ul>
 </td>
 </tr>
 <tr class="top-n yah-receiver" data-yah-key="side_effect" data-yah-value="symptoms-2349" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
@@ -651,40 +653,68 @@ Commonly reported side effects and conditions associated with Metformin
 <a href="/symptoms/show/2349"><span itemprop="name">Upset stomach</span>
 </a></th>
 <td class="numeric">
-21
+48
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 3.7906137184115525%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 15.635179153094462%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-21</small></span></li></ul>
+48</small></span></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-yah-key="side_effect" data-yah-value="symptoms-2706" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
+<tr class="top-n yah-receiver" data-yah-key="side_effect" data-yah-value="symptoms-57" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-<a href="/symptoms/show/2706"><span itemprop="name">Loose bowel movements</span>
+<a href="/symptoms/show/57"><span itemprop="name">Nausea</span>
 </a></th>
 <td class="numeric">
-19
+16
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 3.4296028880866425%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 5.2117263843648205%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-19</small></span></li></ul>
+16</small></span></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-yah-key="side_effect" data-yah-value="symptoms-1829" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
+<tr class="top-n yah-receiver" data-yah-key="side_effect" data-yah-value="conditions-603" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-<a href="/symptoms/show/1829"><span itemprop="name">Low blood sugar (hypoglycemia)</span>
+<a href="/conditions/603"><span itemprop="name">Gastric ulcer</span>
 </a></th>
 <td class="numeric">
-12
+11
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 2.1660649819494586%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 3.583061889250814%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-12</small></span></li></ul>
+11</small></span></li></ul>
+</td>
+</tr>
+<tr class="top-n yah-receiver" data-yah-key="side_effect" data-yah-value="symptoms-158" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
+<th scope="row">
+<span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
+<a href="/symptoms/show/158"><span itemprop="name">Acid reflux</span>
+</a></th>
+<td class="numeric">
+10
+</td>
+<td>
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 3.257328990228013%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<small class="is-tooltip" role="tooltip">
+10</small></span></li></ul>
+</td>
+</tr>
+<tr class="top-n yah-receiver" data-yah-key="side_effect" data-yah-value="symptoms-181" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
+<th scope="row">
+<span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
+<a href="/symptoms/show/181"><span itemprop="name">Bruising</span>
+</a></th>
+<td class="numeric">
+8
+</td>
+<td>
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 2.6058631921824102%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<small class="is-tooltip" role="tooltip">
+8</small></span></li></ul>
 </td>
 </tr>
 
@@ -692,7 +722,7 @@ Commonly reported side effects and conditions associated with Metformin
 </table>
 <p class="show toggle">
 <a class="content-toggle" data-fn-click="treatment_report_section.toggle_compacted" href="#">Show all
-<strong>184 reported side effects</strong>
+<strong>120 reported side effects</strong>
 <span class="loading" style="display: none;"></span>
 </a></p>
 <p class="hide toggle" style="display: none;">
@@ -708,7 +738,7 @@ Commonly reported side effects and conditions associated with Metformin
 <div class="columns medium-12">
 <div data-widget="treatment_report_section">
 <h2>Dosages</h2>
-<p class="helptext">Based on patients currently taking Metformin</p>
+<p class="helptext">Based on patients currently taking Ibuprofen</p>
 <table class="tbl-default-layout tbl-divided">
 <colgroup>
 <col class="medium-10">
@@ -722,145 +752,145 @@ Commonly reported side effects and conditions associated with Metformin
 <th></th>
 </tr>
 </thead>
-<tbody class="ajax-target compacted" data-url="/treatments/221/additional_dosage_rows">
-<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="500 mg twice daily">
+<tbody class="ajax-target compacted" data-url="/treatments/56/additional_dosage_rows">
+<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="2 200mg as needed">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-500 mg twice daily
+2 200mg as needed
 </th>
 <td class="numeric">
-<a title="See patients who are currently taking Metformin at this dosage" href="/patients/treatment/221?dosage_string=500+mg+twice+daily&amp;stopped=false">102</a>
+<a title="See patients who are currently taking Ibuprofen at this dosage" href="/patients/treatment/319?dosage_string=2+200mg+as+needed&amp;stopped=false">66</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 18.613138686131386%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 14.072494669509595%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-102</small></span></li></ul>
+66</small></span></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="500 mg daily">
+<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="200mg as needed">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-500 mg daily
+200mg as needed
 </th>
 <td class="numeric">
-<a title="See patients who are currently taking Metformin at this dosage" href="/patients/treatment/221?dosage_string=500+mg+daily&amp;stopped=false">75</a>
+<a title="See patients who are currently taking Ibuprofen at this dosage" href="/patients/treatment/319?dosage_string=200mg+as+needed&amp;stopped=false">49</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 13.686131386861314%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 10.447761194029852%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-75</small></span></li></ul>
+49</small></span></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="1,000 mg twice daily">
+<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="3 200mg as needed">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-1,000 mg twice daily
+3 200mg as needed
 </th>
 <td class="numeric">
-<a title="See patients who are currently taking Metformin at this dosage" href="/patients/treatment/221?dosage_string=1000+mg+twice+daily&amp;stopped=false">71</a>
+<a title="See patients who are currently taking Ibuprofen at this dosage" href="/patients/treatment/319?dosage_string=3+200mg+as+needed&amp;stopped=false">38</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 12.956204379562044%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 8.102345415778252%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-71</small></span></li></ul>
+38</small></span></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="1,000 mg twice daily">
+<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="800mg as needed">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-1,000 mg twice daily
+800mg as needed
 </th>
 <td class="numeric">
-<a title="See patients who are currently taking Metformin at this dosage" href="/patients/treatment/221?dosage_string=1%2C000+mg+twice+daily&amp;stopped=false">58</a>
+<a title="See patients who are currently taking Ibuprofen at this dosage" href="/patients/treatment/319?dosage_string=800mg+as+needed&amp;stopped=false">32</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 10.583941605839415%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 6.823027718550106%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-58</small></span></li></ul>
+32</small></span></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="2,000 mg daily">
+<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="4 200mg as needed">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-2,000 mg daily
+4 200mg as needed
 </th>
 <td class="numeric">
-<a title="See patients who are currently taking Metformin at this dosage" href="/patients/treatment/221?dosage_string=2000+mg+daily&amp;stopped=false">58</a>
+<a title="See patients who are currently taking Ibuprofen at this dosage" href="/patients/treatment/319?dosage_string=4+200mg+as+needed&amp;stopped=false">25</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 10.583941605839415%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 5.330490405117271%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-58</small></span></li></ul>
+25</small></span></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="1,000 mg daily">
+<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="800 mg three times daily">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-1,000 mg daily
+800 mg three times daily
 </th>
 <td class="numeric">
-<a title="See patients who are currently taking Metformin at this dosage" href="/patients/treatment/221?dosage_string=1000+mg+daily&amp;stopped=false">57</a>
+<a title="See patients who are currently taking Ibuprofen at this dosage" href="/patients/treatment/319?dosage_string=800+mg+three+times+daily&amp;stopped=false">20</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 10.401459854014599%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 4.264392324093817%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-57</small></span></li></ul>
+20</small></span></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="1,000 mg daily">
+<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="400 mg daily">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-1,000 mg daily
+400 mg daily
 </th>
 <td class="numeric">
-<a title="See patients who are currently taking Metformin at this dosage" href="/patients/treatment/221?dosage_string=1%2C000+mg+daily&amp;stopped=false">12</a>
+<a title="See patients who are currently taking Ibuprofen at this dosage" href="/patients/treatment/319?dosage_string=400+mg+daily&amp;stopped=false">19</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 2.18978102189781%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 4.051172707889126%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-12</small></span></li></ul>
+19</small></span></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="1,500 mg daily">
+<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="200 mg daily">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-1,500 mg daily
+200 mg daily
 </th>
 <td class="numeric">
-<a title="See patients who are currently taking Metformin at this dosage" href="/patients/treatment/221?dosage_string=1500+mg+daily&amp;stopped=false">12</a>
+<a title="See patients who are currently taking Ibuprofen at this dosage" href="/patients/treatment/319?dosage_string=200+mg+daily&amp;stopped=false">17</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 2.18978102189781%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 3.624733475479744%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-12</small></span></li></ul>
+17</small></span></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="2 x 1,000 mg twice daily">
+<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="800 mg daily">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-2 x 1,000 mg twice daily
+800 mg daily
 </th>
 <td class="numeric">
-<a title="See patients who are currently taking Metformin at this dosage" href="/patients/treatment/221?dosage_string=2+x+1%2C000+mg+twice+daily&amp;stopped=false">12</a>
+<a title="See patients who are currently taking Ibuprofen at this dosage" href="/patients/treatment/319?dosage_string=800+mg+daily&amp;stopped=false">13</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 2.18978102189781%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 2.771855010660981%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-12</small></span></li></ul>
+13</small></span></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="850 mg daily">
+<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="800 mg twice daily">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-850 mg daily
+800 mg twice daily
 </th>
 <td class="numeric">
-<a title="See patients who are currently taking Metformin at this dosage" href="/patients/treatment/221?dosage_string=850+mg+daily&amp;stopped=false">10</a>
+<a title="See patients who are currently taking Ibuprofen at this dosage" href="/patients/treatment/319?dosage_string=800+mg+twice+daily&amp;stopped=false">13</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 1.8248175182481752%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 2.771855010660981%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-10</small></span></li></ul>
+13</small></span></li></ul>
 </td>
 </tr>
 
@@ -868,7 +898,7 @@ Commonly reported side effects and conditions associated with Metformin
 </table>
 <p class="show toggle">
 <a class="content-toggle" data-fn-click="treatment_report_section.toggle_compacted" href="#">See all
-<strong>45 dosages</strong>
+<strong>83 dosages</strong>
 <span class="loading" style="display: none;"></span>
 </a></p>
 <p class="hide toggle" style="display: none;">
@@ -879,7 +909,7 @@ Commonly reported side effects and conditions associated with Metformin
 
 </div>
 <div class="columns medium-12">
-<h2>Why patients stopped taking Metformin</h2>
+<h2>Why patients stopped taking Ibuprofen</h2>
 <p class="helptext">Multiple reasons could be selected</p>
 <table class="tbl-default-layout tbl-divided">
 <colgroup>
@@ -893,32 +923,18 @@ Commonly reported side effects and conditions associated with Metformin
 <th></th>
 </thead>
 <tbody>
-<tr class="yah-receiver" data-yah-key="stop_reason" data-yah-value="5">
-<th scope="row">
-<span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-Side effects too severe
-</th>
-<td class="numeric">
-<a title="See patients who stopped taking Metformin for this reason" href="/patients/treatment/221?stop_reason=5">205</a>
-</td>
-<td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 43.1578947368421%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
-<small class="is-tooltip" role="tooltip">
-205</small></span></li></ul>
-</td>
-</tr>
 <tr class="yah-receiver" data-yah-key="stop_reason" data-yah-value="4">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
 Doctor&#39;s advice
 </th>
 <td class="numeric">
-<a title="See patients who stopped taking Metformin for this reason" href="/patients/treatment/221?stop_reason=4">173</a>
+<a title="See patients who stopped taking Ibuprofen for this reason" href="/patients/treatment/319?stop_reason=4">317</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 36.421052631578945%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 33.403582718651215%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-173</small></span></li></ul>
+317</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="stop_reason" data-yah-value="1">
@@ -927,12 +943,12 @@ Doctor&#39;s advice
 Did not seem to work
 </th>
 <td class="numeric">
-<a title="See patients who stopped taking Metformin for this reason" href="/patients/treatment/221?stop_reason=1">96</a>
+<a title="See patients who stopped taking Ibuprofen for this reason" href="/patients/treatment/319?stop_reason=1">284</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 20.210526315789473%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 29.926238145416228%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-96</small></span></li></ul>
+284</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="stop_reason" data-yah-value="6">
@@ -941,12 +957,26 @@ Did not seem to work
 Other
 </th>
 <td class="numeric">
-<a title="See patients who stopped taking Metformin for this reason" href="/patients/treatment/221?stop_reason=6">74</a>
+<a title="See patients who stopped taking Ibuprofen for this reason" href="/patients/treatment/319?stop_reason=6">228</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 15.578947368421053%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 24.025289778714438%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-74</small></span></li></ul>
+228</small></span></li></ul>
+</td>
+</tr>
+<tr class="yah-receiver" data-yah-key="stop_reason" data-yah-value="5">
+<th scope="row">
+<span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
+Side effects too severe
+</th>
+<td class="numeric">
+<a title="See patients who stopped taking Ibuprofen for this reason" href="/patients/treatment/319?stop_reason=5">187</a>
+</td>
+<td>
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 19.70495258166491%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<small class="is-tooltip" role="tooltip">
+187</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="stop_reason" data-yah-value="7">
@@ -955,12 +985,12 @@ Other
 Course of treatment ended
 </th>
 <td class="numeric">
-<a title="See patients who stopped taking Metformin for this reason" href="/patients/treatment/221?stop_reason=7">49</a>
+<a title="See patients who stopped taking Ibuprofen for this reason" href="/patients/treatment/319?stop_reason=7">96</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 10.31578947368421%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 10.1159114857745%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-49</small></span></li></ul>
+96</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="stop_reason" data-yah-value="3">
@@ -969,12 +999,12 @@ Course of treatment ended
 Personal research
 </th>
 <td class="numeric">
-<a title="See patients who stopped taking Metformin for this reason" href="/patients/treatment/221?stop_reason=3">17</a>
+<a title="See patients who stopped taking Ibuprofen for this reason" href="/patients/treatment/319?stop_reason=3">40</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 3.5789473684210527%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 4.214963119072708%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-17</small></span></li></ul>
+40</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="stop_reason" data-yah-value="8">
@@ -983,12 +1013,12 @@ Personal research
 Change in health plan coverage
 </th>
 <td class="numeric">
-<a title="See patients who stopped taking Metformin for this reason" href="/patients/treatment/221?stop_reason=8">12</a>
+<a title="See patients who stopped taking Ibuprofen for this reason" href="/patients/treatment/319?stop_reason=8">9</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 2.526315789473684%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 0.9483667017913593%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-12</small></span></li></ul>
+9</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="stop_reason" data-yah-value="2">
@@ -997,23 +1027,23 @@ Change in health plan coverage
 Expense
 </th>
 <td class="numeric">
-<a title="See patients who stopped taking Metformin for this reason" href="/patients/treatment/221?stop_reason=2">10</a>
+<a title="See patients who stopped taking Ibuprofen for this reason" href="/patients/treatment/319?stop_reason=2">8</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 2.1052631578947367%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 0.8429926238145417%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-10</small></span></li></ul>
+8</small></span></li></ul>
 </td>
 </tr>
 </tbody>
 </table>
 
-<a href="/patients/treatment/221-metformin-side-effects-and-efficacy?stopped=true">See
+<a href="/patients/treatment/56-ibuprofen-side-effects-and-efficacy?stopped=true">See
 all
-<strong>475 patients</strong>
+<strong>949 patients</strong>
 
 who&#39;ve
-stopped taking Metformin
+stopped taking Ibuprofen
 </a></div>
 </div>
 </div>
@@ -1022,7 +1052,7 @@ stopped taking Metformin
 <div class="row">
 <div class="columns medium-12">
 <h3 class="tertiary-title">
-Currently taking Metformin
+Currently taking Ibuprofen
 </h3>
 <table class="tbl-default-layout tbl-divided">
 <colgroup>
@@ -1036,16 +1066,30 @@ Currently taking Metformin
 <th></th>
 </thead>
 <tbody>
+<tr class="yah-receiver" data-yah-key="duration_current" data-yah-value="0">
+<th scope="row">
+<span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
+Less than 1 month
+</th>
+<td class="numeric">
+<a title="See patients who have been taking Ibuprofen for this long" href="/patients/treatment/319?max_duration=2629746&amp;min_duration=0">2</a>
+</td>
+<td>
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 0.41841004184100417%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<small class="is-tooltip" role="tooltip">
+2</small></span></li></ul>
+</td>
+</tr>
 <tr class="yah-receiver" data-yah-key="duration_current" data-yah-value="2629746">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
 1 - 6 months
 </th>
 <td class="numeric">
-<a title="See patients who have been taking Metformin for this long" href="/patients/treatment/221?max_duration=15778476&amp;min_duration=2629746">13</a>
+<a title="See patients who have been taking Ibuprofen for this long" href="/patients/treatment/319?max_duration=15778476&amp;min_duration=2629746">13</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 2.3465703971119134%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 2.719665271966527%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
 13</small></span></li></ul>
 </td>
@@ -1056,12 +1100,12 @@ Currently taking Metformin
 6 months - 1 year
 </th>
 <td class="numeric">
-<a title="See patients who have been taking Metformin for this long" href="/patients/treatment/221?max_duration=31556952&amp;min_duration=15778476">33</a>
+<a title="See patients who have been taking Ibuprofen for this long" href="/patients/treatment/319?max_duration=31556952&amp;min_duration=15778476">18</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 5.956678700361011%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 3.7656903765690375%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-33</small></span></li></ul>
+18</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="duration_current" data-yah-value="31556952">
@@ -1070,12 +1114,12 @@ Currently taking Metformin
 1 - 2 years
 </th>
 <td class="numeric">
-<a title="See patients who have been taking Metformin for this long" href="/patients/treatment/221?max_duration=63113904&amp;min_duration=31556952">64</a>
+<a title="See patients who have been taking Ibuprofen for this long" href="/patients/treatment/319?max_duration=63113904&amp;min_duration=31556952">32</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 11.552346570397113%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 6.694560669456067%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-64</small></span></li></ul>
+32</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="duration_current" data-yah-value="63113904">
@@ -1084,12 +1128,12 @@ Currently taking Metformin
 2 - 5 years
 </th>
 <td class="numeric">
-<a title="See patients who have been taking Metformin for this long" href="/patients/treatment/221?max_duration=157784760&amp;min_duration=63113904">138</a>
+<a title="See patients who have been taking Ibuprofen for this long" href="/patients/treatment/319?max_duration=157784760&amp;min_duration=63113904">84</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 24.90974729241877%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 17.573221757322177%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-138</small></span></li></ul>
+84</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="duration_current" data-yah-value="157784760">
@@ -1098,12 +1142,12 @@ Currently taking Metformin
 5 - 10 years
 </th>
 <td class="numeric">
-<a title="See patients who have been taking Metformin for this long" href="/patients/treatment/221?max_duration=315569520&amp;min_duration=157784760">165</a>
+<a title="See patients who have been taking Ibuprofen for this long" href="/patients/treatment/319?max_duration=315569520&amp;min_duration=157784760">126</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 29.783393501805055%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 26.359832635983263%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-165</small></span></li></ul>
+126</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="duration_current" data-yah-value="315569520">
@@ -1112,12 +1156,12 @@ Currently taking Metformin
 10 years or more
 </th>
 <td class="numeric">
-<a title="See patients who have been taking Metformin for this long" href="/patients/treatment/221?min_duration=315569520">141</a>
+<a title="See patients who have been taking Ibuprofen for this long" href="/patients/treatment/319?min_duration=315569520">203</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 25.451263537906136%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 42.46861924686193%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-141</small></span></li></ul>
+203</small></span></li></ul>
 </td>
 </tr>
 </tbody>
@@ -1126,7 +1170,7 @@ Currently taking Metformin
 </div>
 <div class="columns medium-12">
 <h3 class="tertiary-title">
-Stopped taking Metformin
+Stopped taking Ibuprofen
 </h3>
 <table class="tbl-default-layout tbl-divided">
 <colgroup>
@@ -1146,12 +1190,12 @@ Stopped taking Metformin
 Less than 1 month
 </th>
 <td class="numeric">
-<a title="See patients who took Metformin for this long" href="/patients/treatment/221?max_duration=2629746&amp;min_duration=0&amp;stopped=true">76</a>
+<a title="See patients who took Ibuprofen for this long" href="/patients/treatment/319?max_duration=2629746&amp;min_duration=0&amp;stopped=true">171</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 16.0%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 18.01896733403583%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-76</small></span></li></ul>
+171</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="duration_stopped" data-yah-value="2629746">
@@ -1160,12 +1204,12 @@ Less than 1 month
 1 - 6 months
 </th>
 <td class="numeric">
-<a title="See patients who took Metformin for this long" href="/patients/treatment/221?max_duration=15778476&amp;min_duration=2629746&amp;stopped=true">96</a>
+<a title="See patients who took Ibuprofen for this long" href="/patients/treatment/319?max_duration=15778476&amp;min_duration=2629746&amp;stopped=true">142</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 20.210526315789473%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 14.963119072708114%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-96</small></span></li></ul>
+142</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="duration_stopped" data-yah-value="15778476">
@@ -1174,12 +1218,12 @@ Less than 1 month
 6 months - 1 year
 </th>
 <td class="numeric">
-<a title="See patients who took Metformin for this long" href="/patients/treatment/221?max_duration=31556952&amp;min_duration=15778476&amp;stopped=true">46</a>
+<a title="See patients who took Ibuprofen for this long" href="/patients/treatment/319?max_duration=31556952&amp;min_duration=15778476&amp;stopped=true">106</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 9.68421052631579%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 11.169652265542677%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-46</small></span></li></ul>
+106</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="duration_stopped" data-yah-value="31556952">
@@ -1188,12 +1232,12 @@ Less than 1 month
 1 - 2 years
 </th>
 <td class="numeric">
-<a title="See patients who took Metformin for this long" href="/patients/treatment/221?max_duration=63113904&amp;min_duration=31556952&amp;stopped=true">61</a>
+<a title="See patients who took Ibuprofen for this long" href="/patients/treatment/319?max_duration=63113904&amp;min_duration=31556952&amp;stopped=true">95</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 12.842105263157896%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 10.010537407797681%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-61</small></span></li></ul>
+95</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="duration_stopped" data-yah-value="63113904">
@@ -1202,12 +1246,12 @@ Less than 1 month
 2 - 5 years
 </th>
 <td class="numeric">
-<a title="See patients who took Metformin for this long" href="/patients/treatment/221?max_duration=157784760&amp;min_duration=63113904&amp;stopped=true">102</a>
+<a title="See patients who took Ibuprofen for this long" href="/patients/treatment/319?max_duration=157784760&amp;min_duration=63113904&amp;stopped=true">140</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 21.473684210526315%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 14.752370916754478%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-102</small></span></li></ul>
+140</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="duration_stopped" data-yah-value="157784760">
@@ -1216,12 +1260,12 @@ Less than 1 month
 5 - 10 years
 </th>
 <td class="numeric">
-<a title="See patients who took Metformin for this long" href="/patients/treatment/221?max_duration=315569520&amp;min_duration=157784760&amp;stopped=true">64</a>
+<a title="See patients who took Ibuprofen for this long" href="/patients/treatment/319?max_duration=315569520&amp;min_duration=157784760&amp;stopped=true">120</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 13.473684210526315%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 12.644889357218124%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-64</small></span></li></ul>
+120</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="duration_stopped" data-yah-value="315569520">
@@ -1230,12 +1274,12 @@ Less than 1 month
 10 years or more
 </th>
 <td class="numeric">
-<a title="See patients who took Metformin for this long" href="/patients/treatment/221?min_duration=315569520&amp;stopped=true">34</a>
+<a title="See patients who took Ibuprofen for this long" href="/patients/treatment/319?min_duration=315569520&amp;stopped=true">182</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 7.157894736842105%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 19.17808219178082%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-34</small></span></li></ul>
+182</small></span></li></ul>
 </td>
 </tr>
 </tbody>
@@ -1269,12 +1313,12 @@ Always
 
 </th>
 <td class="numeric">
-<a href="/treatment_evaluations/browse?attribute=adherence&amp;brand=false&amp;id=221&amp;value=3">821</a>
+<a href="/treatment_evaluations/browse?attribute=adherence&amp;brand=false&amp;id=56&amp;value=3">406</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 72.84826974267968%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 41.1764705882353%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-821 evaluations from 695 patients</small></span></li></ul>
+406 evaluations from 338 patients</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="adherence" data-yah-value="2">
@@ -1285,12 +1329,12 @@ Usually
 
 </th>
 <td class="numeric">
-<a href="/treatment_evaluations/browse?attribute=adherence&amp;brand=false&amp;id=221&amp;value=2">199</a>
+<a href="/treatment_evaluations/browse?attribute=adherence&amp;brand=false&amp;id=56&amp;value=2">291</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 17.657497781721386%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 29.5131845841785%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-199 evaluations from 170 patients</small></span></li></ul>
+291 evaluations from 268 patients</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="adherence" data-yah-value="1">
@@ -1301,12 +1345,12 @@ Sometimes
 
 </th>
 <td class="numeric">
-<a href="/treatment_evaluations/browse?attribute=adherence&amp;brand=false&amp;id=221&amp;value=1">31</a>
+<a href="/treatment_evaluations/browse?attribute=adherence&amp;brand=false&amp;id=56&amp;value=1">203</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 2.750665483584738%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 20.58823529411765%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-31 evaluations from 31 patients</small></span></li></ul>
+203 evaluations from 179 patients</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="adherence" data-yah-value="0">
@@ -1317,12 +1361,12 @@ Never
 taken as prescribed
 </th>
 <td class="numeric">
-<a href="/treatment_evaluations/browse?attribute=adherence&amp;brand=false&amp;id=221&amp;value=0">76</a>
+<a href="/treatment_evaluations/browse?attribute=adherence&amp;brand=false&amp;id=56&amp;value=0">86</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 6.743566992014197%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 8.72210953346856%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-76 evaluations from 68 patients</small></span></li></ul>
+86 evaluations from 75 patients</small></span></li></ul>
 </td>
 </tr>
 </tbody>
@@ -1351,12 +1395,12 @@ hard to take
 
 </th>
 <td class="numeric">
-<a href="/treatment_evaluations/browse?attribute=burden&amp;brand=false&amp;id=221&amp;value=3">68</a>
+<a href="/treatment_evaluations/browse?attribute=burden&amp;brand=false&amp;id=56&amp;value=3">15</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 6.033717834960071%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 1.5212981744421907%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-68 evaluations from 63 patients</small></span></li></ul>
+15 evaluations from 15 patients</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="burden" data-yah-value="2">
@@ -1367,12 +1411,12 @@ hard to take
 
 </th>
 <td class="numeric">
-<a href="/treatment_evaluations/browse?attribute=burden&amp;brand=false&amp;id=221&amp;value=2">110</a>
+<a href="/treatment_evaluations/browse?attribute=burden&amp;brand=false&amp;id=56&amp;value=2">53</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 9.760425909494232%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 5.37525354969574%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-110 evaluations from 108 patients</small></span></li></ul>
+53 evaluations from 51 patients</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="burden" data-yah-value="1">
@@ -1383,12 +1427,12 @@ hard to take
 
 </th>
 <td class="numeric">
-<a href="/treatment_evaluations/browse?attribute=burden&amp;brand=false&amp;id=221&amp;value=1">204</a>
+<a href="/treatment_evaluations/browse?attribute=burden&amp;brand=false&amp;id=56&amp;value=1">144</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 18.101153504880212%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 14.60446247464503%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-204 evaluations from 168 patients</small></span></li></ul>
+144 evaluations from 132 patients</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="burden" data-yah-value="0">
@@ -1399,12 +1443,12 @@ hard to take
 
 </th>
 <td class="numeric">
-<a href="/treatment_evaluations/browse?attribute=burden&amp;brand=false&amp;id=221&amp;value=0">745</a>
+<a href="/treatment_evaluations/browse?attribute=burden&amp;brand=false&amp;id=56&amp;value=0">774</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 66.10470275066548%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 78.49898580121703%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-745 evaluations from 630 patients</small></span></li></ul>
+774 evaluations from 614 patients</small></span></li></ul>
 </td>
 </tr>
 </tbody>
@@ -1437,12 +1481,12 @@ $200+
 
 </th>
 <td class="numeric">
-<a href="/treatment_evaluations/browse?attribute=cost&amp;brand=false&amp;id=221&amp;value=5">8</a>
+<a href="/treatment_evaluations/browse?attribute=cost&amp;brand=false&amp;id=56&amp;value=5">2</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 0.709849157054126%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 0.2028397565922921%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-8 evaluations from 8 patients</small></span></li></ul>
+2 evaluations from 1 patient</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="cost" data-yah-value="4">
@@ -1453,12 +1497,12 @@ $100-199
 
 </th>
 <td class="numeric">
-<a href="/treatment_evaluations/browse?attribute=cost&amp;brand=false&amp;id=221&amp;value=4">6</a>
+<a href="/treatment_evaluations/browse?attribute=cost&amp;brand=false&amp;id=56&amp;value=4">1</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 0.5323868677905945%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 0.10141987829614604%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-6 evaluations from 6 patients</small></span></li></ul>
+1 evaluation from 1 patient</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="cost" data-yah-value="3">
@@ -1469,12 +1513,12 @@ $50-99
 
 </th>
 <td class="numeric">
-<a href="/treatment_evaluations/browse?attribute=cost&amp;brand=false&amp;id=221&amp;value=3">9</a>
+<a href="/treatment_evaluations/browse?attribute=cost&amp;brand=false&amp;id=56&amp;value=3">5</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 0.7985803016858918%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 0.5070993914807302%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-9 evaluations from 8 patients</small></span></li></ul>
+5 evaluations from 5 patients</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="cost" data-yah-value="2">
@@ -1485,12 +1529,12 @@ $25-49
 
 </th>
 <td class="numeric">
-<a href="/treatment_evaluations/browse?attribute=cost&amp;brand=false&amp;id=221&amp;value=2">39</a>
+<a href="/treatment_evaluations/browse?attribute=cost&amp;brand=false&amp;id=56&amp;value=2">33</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 3.460514640638864%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 3.3468559837728193%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-39 evaluations from 33 patients</small></span></li></ul>
+33 evaluations from 29 patients</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="cost" data-yah-value="1">
@@ -1501,12 +1545,12 @@ $25-49
 
 </th>
 <td class="numeric">
-<a href="/treatment_evaluations/browse?attribute=cost&amp;brand=false&amp;id=221&amp;value=1">585</a>
+<a href="/treatment_evaluations/browse?attribute=cost&amp;brand=false&amp;id=56&amp;value=1">532</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 51.90771960958296%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 53.9553752535497%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-585 evaluations from 478 patients</small></span></li></ul>
+532 evaluations from 394 patients</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="cost" data-yah-value="0">
@@ -1517,12 +1561,12 @@ Not specified
 
 </th>
 <td class="numeric">
-<a href="/treatment_evaluations/browse?attribute=cost&amp;brand=false&amp;id=221&amp;value=0">480</a>
+<a href="/treatment_evaluations/browse?attribute=cost&amp;brand=false&amp;id=56&amp;value=0">413</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 42.59094942324756%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 41.886409736308316%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-480 evaluations from 410 patients</small></span></li></ul>
+413 evaluations from 365 patients</small></span></li></ul>
 </td>
 </tr>
 </tbody>
@@ -1541,7 +1585,7 @@ Not specified
 Patients
 <strong>started</strong>
 taking
-Metformin
+Ibuprofen
 <strong>after stopping:</strong>
 </p>
 <table class="tbl-default-layout tbl-divided">
@@ -1557,106 +1601,61 @@ Metformin
 <th></th>
 </tr>
 </thead>
-<tbody class="ajax-target compacted" data-url="/treatments/221/additional_treatment_switch_rows?direction=switched_from">
-<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_from_treatment" data-yah-value="1456" foo="bar">
+<tbody class="ajax-target compacted" data-url="/treatments/56/additional_treatment_switch_rows?direction=switched_from">
+<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_from_treatment" data-yah-value="884" foo="bar">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-Glipizide
+Meloxicam
 <small class="comma-delimited">
-(<span>Glipizide ER</span>)
+(<span>Mobic</span>)
 </small>
 </th>
 <td class="numeric">
-9
+1
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 17.647058823529413%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 50.0%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-9</small></span></li></ul>
+1</small></span></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_from_treatment" data-yah-value="1420" foo="bar">
+<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_from_treatment" data-yah-value="522" foo="bar">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-Glimepiride
+Methadone
 <small class="comma-delimited">
-(<span>Amaryl</span>)
+(<span>Methadose</span>)
 </small>
 </th>
 <td class="numeric">
-6
+1
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 11.764705882352942%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 50.0%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-6</small></span></li></ul>
+1</small></span></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_from_treatment" data-yah-value="386" foo="bar">
+<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_from_treatment" data-yah-value="782" foo="bar">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-Glyburide
+Morphine
 <small class="comma-delimited">
-(<span>Glynase PresTab</span>)
+(<span>Morphine ER</span>)
 </small>
 </th>
 <td class="numeric">
-6
+1
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 11.764705882352942%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 50.0%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-6</small></span></li></ul>
-</td>
-</tr>
-<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_from_treatment" data-yah-value="8306" foo="bar">
-<th scope="row">
-<span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-Insulin Glargine
-<small class="comma-delimited">
-(<span>Lantus</span>)
-</small>
-</th>
-<td class="numeric">
-6
-</td>
-<td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 11.764705882352942%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
-<small class="is-tooltip" role="tooltip">
-6</small></span></li></ul>
-</td>
-</tr>
-<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_from_treatment" data-yah-value="3136" foo="bar">
-<th scope="row">
-<span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-Pioglitazone
-<small class="comma-delimited">
-(<span>Actos</span>)
-</small>
-</th>
-<td class="numeric">
-4
-</td>
-<td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 7.8431372549019605%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
-<small class="is-tooltip" role="tooltip">
-4</small></span></li></ul>
+1</small></span></li></ul>
 </td>
 </tr>
 
 </tbody>
 </table>
-<p class="show toggle">
-<a class="content-toggle" data-fn-click="treatment_report_section.toggle_compacted" href="#">Show all
-<strong>20 treatments</strong>
-patients report switching from
-<span class="loading" style="display: none;"></span>
-</a></p>
-<p class="hide toggle" style="display: none;">
-<a class="content-toggle is-open" data-fn-click="treatment_report_section.toggle_compacted" href="#">Show top
-<strong>5 treatments</strong>
-patients report switching from
-</a></p>
 </div>
 
 </div>
@@ -1666,7 +1665,7 @@ patients report switching from
 Patients
 <strong>stopped</strong>
 taking
-Metformin
+Ibuprofen
 and
 <strong>switched to:</strong>
 </p>
@@ -1683,90 +1682,90 @@ and
 <th></th>
 </tr>
 </thead>
-<tbody class="ajax-target compacted" data-url="/treatments/221/additional_treatment_switch_rows?direction=switched_to">
-<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_to_treatment" data-yah-value="1456" foo="bar">
+<tbody class="ajax-target compacted" data-url="/treatments/56/additional_treatment_switch_rows?direction=switched_to">
+<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_to_treatment" data-yah-value="884" foo="bar">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-Glipizide
+Meloxicam
 <small class="comma-delimited">
-(<span>Glipizide ER</span>)
+(<span>Mobic</span>)
 </small>
 </th>
 <td class="numeric">
-18
+3
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 16.9811320754717%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 33.333333333333336%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-18</small></span></li></ul>
+3</small></span></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_to_treatment" data-yah-value="1420" foo="bar">
+<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_to_treatment" data-yah-value="402" foo="bar">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-Glimepiride
+Naproxen Prescription
 <small class="comma-delimited">
-(<span>Amaryl</span>)
+(<span>Naprosyn</span>)
 </small>
 </th>
 <td class="numeric">
-13
+3
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 12.264150943396226%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 33.333333333333336%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-13</small></span></li></ul>
+3</small></span></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_to_treatment" data-yah-value="8306" foo="bar">
+<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_to_treatment" data-yah-value="15536" foo="bar">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-Insulin Glargine
+Celecoxib
 <small class="comma-delimited">
-(<span>Lantus</span>)
+(<span>Celebrex</span>)
 </small>
 </th>
 <td class="numeric">
-13
+1
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 12.264150943396226%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 11.11111111111111%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-13</small></span></li></ul>
+1</small></span></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_to_treatment" data-yah-value="5457" foo="bar">
+<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_to_treatment" data-yah-value="1531" foo="bar">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-Sitagliptin
+Codeine-acetaminophen (paracetamol)
 <small class="comma-delimited">
-(<span>Januvia</span>)
+(<span>Tylenol with Codeine #3</span>)
 </small>
 </th>
 <td class="numeric">
-12
+1
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 11.320754716981131%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 11.11111111111111%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-12</small></span></li></ul>
+1</small></span></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_to_treatment" data-yah-value="5458" foo="bar">
+<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_to_treatment" data-yah-value="181" foo="bar">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-Sitagliptin-metformin
+Diazepam
 <small class="comma-delimited">
-(<span>Janumet</span>)
+(<span>Valium</span>)
 </small>
 </th>
 <td class="numeric">
-12
+1
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 11.320754716981131%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 11.11111111111111%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-12</small></span></li></ul>
+1</small></span></li></ul>
 </td>
 </tr>
 
@@ -1774,7 +1773,7 @@ Sitagliptin-metformin
 </table>
 <p class="show toggle">
 <a class="content-toggle" data-fn-click="treatment_report_section.toggle_compacted" href="#">Show all
-<strong>31 treatments</strong>
+<strong>7 treatments</strong>
 patients report switching to
 <span class="loading" style="display: none;"></span>
 </a></p>
@@ -1791,7 +1790,7 @@ patients report switching to
 <div class="content-panel">
 <small class="helptext">
 Last updated:
-<time datetime="2018-04-23T17:00:20+00:00">April 23, 2018</time>
+<time datetime="2018-04-23T16:50:29+00:00">April 23, 2018</time>
 </small>
 
 </div>
@@ -1802,31 +1801,31 @@ Last updated:
 Patient Evaluations
 </h2>
 <p>
-<a href="/treatment_evaluations/browse?brand=f&amp;id=221-metformin-side-effects-and-efficacy">See all
+<a href="/treatment_evaluations/browse?brand=f&amp;id=56-ibuprofen-side-effects-and-efficacy">See all
 <strong>
-926
+789
 patient
 evaluations
 </strong>
 </a></p>
 <hr>
 <div class="media-object margin-bottom">
-<div class="media-item"><a class="avatar-link" id="avatar-TheWorshipper" href="//s3.amazonaws.com/uploads.patientslikeme.com/avatars/11071-original.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180423%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20180423T051633Z&amp;X-Amz-Expires=604800&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=c89fb2d7af187c07e4a8cc8c56f794e039e9f3595052d6103e9d7563f34611e6"><img title="TheWorshipper" src="//s3.amazonaws.com/uploads.patientslikeme.com/avatars/11071-thumb.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180423%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20180423T051633Z&amp;X-Amz-Expires=604800&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=e086df5f9af7073c47ef3ce553db4c90a541ded1da90e06f6eae1553bcfe06a5" alt="11071 thumb" /></a></div>
+<div class="media-item"><a class="avatar-link" id="avatar-reikihh" href="//s3.amazonaws.com/uploads.patientslikeme.com/avatars/6571-original.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180423%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20180423T201446Z&amp;X-Amz-Expires=604800&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=3d356cc5f8960d7f8da73b0815b90abc9c6d0235c156aa959951a5e6384ebc89"><img title="reikihh" src="//s3.amazonaws.com/uploads.patientslikeme.com/avatars/6571-thumb.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180423%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20180423T201446Z&amp;X-Amz-Expires=604800&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=3f12ada67f2e36a60a8c39491fa01340ba9a374a34fa3875eed458be11ad9005" alt="6571 thumb" /></a></div>
 <div class="media-content">
-<h2><a href="/members/50120">TheWorshipper</a></h2>
+<h2><a href="/members/31587">reikihh</a></h2>
 <p>
-500 mg twice daily
+600 mg three times daily
 <br>
-since Oct 25, 2017
+since Mar 15, 2017
 </p>
 </div>
 </div>
 <ul class="user-eval-summary">
 <li class="efficacy margin-bottom-quarter">
-<span class="led-light led-light-off"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
+<span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-off"></span>
 Perceived effectiveness
-<span class="purpose">for diabetes type 2:</span>
-<strong>Can&#39;t tell</strong>
+<span class="purpose">for pain:</span>
+<strong>Moderate</strong>
 </li>
 <li class="side-effects margin-bottom">
 <span class="led-light led-light-side-effects"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
@@ -1834,29 +1833,27 @@ Side effects:
 <strong>None</strong>
 </li>
 <li class="advice">
-<strong>Advice/Tips</strong>
-I can&#39;t tell if the Metformin helps or not.
-<a href="/treatment_evaluations/217251">See full evaluation</a>
+<a href="/treatment_evaluations/199044">See full evaluation</a>
 </li>
 </ul>
 <hr>
 <div class="media-object margin-bottom">
-<div class="media-item"><a class="avatar-link" id="avatar-charkimber" href="//s3.amazonaws.com/uploads.patientslikeme.com/avatars/50769-original.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180423%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20180423T051633Z&amp;X-Amz-Expires=604800&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=3731e4d0f338a148c1f3e8866f9ec49ae80b182cf3582b3fb01bcfc77658d23c"><img title="charkimber" src="//s3.amazonaws.com/uploads.patientslikeme.com/avatars/50769-thumb.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180423%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20180423T051633Z&amp;X-Amz-Expires=604800&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=6d748ce70bef14cba80a01c8041027f4b3225e87b4f07da1f104ef7d201f7395" alt="50769 thumb" /></a></div>
+<div class="media-item"><a class="avatar-link" id="avatar-Leapndolphin" href="//s3.amazonaws.com/uploads.patientslikeme.com/avatars/95043-original.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180423%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20180423T201446Z&amp;X-Amz-Expires=604800&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=aea9c97fda9da4a5c6b1ba933c07880efbf4fee219d524de569f605b5137fab7"><img title="Leapndolphin" src="//s3.amazonaws.com/uploads.patientslikeme.com/avatars/95043-thumb.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180423%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20180423T201446Z&amp;X-Amz-Expires=604800&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=8d44a211549fa5c3c3e5c5c9de03ca4f661181842212721332e3dabf3e9b3f23" alt="95043 thumb" /></a></div>
 <div class="media-content">
-<h2><a href="/members/249923">charkimber</a></h2>
+<h2><a href="/members/602103">Leapndolphin</a></h2>
 <p>
-2000 mg daily
+800mg as needed
 <br>
-since Jan 18, 2017
+since Feb 19, 2017
 </p>
 </div>
 </div>
 <ul class="user-eval-summary">
 <li class="efficacy margin-bottom-quarter">
-<span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span>
+<span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-off"></span>
 Perceived effectiveness
-<span class="purpose">for diabetes type 2:</span>
-<strong>Major</strong>
+<span class="purpose">for menstrual cramps:</span>
+<strong>Moderate</strong>
 </li>
 <li class="side-effects margin-bottom">
 <span class="led-light led-light-side-effects"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
@@ -1864,29 +1861,27 @@ Side effects:
 <strong>None</strong>
 </li>
 <li class="advice">
-<strong>Advice/Tips</strong>
-Advice don&#39;t stop this medication just because you can&#39;t afford it. Find a way. I did this and my A1c went from 6.7 to 8.4.  So my doctor put me on a higher ...
-<a href="/treatment_evaluations/190394">See full evaluation</a>
+<a href="/treatment_evaluations/195973">See full evaluation</a>
 </li>
 </ul>
 <hr>
 <div class="media-object margin-bottom">
-<div class="media-item"><a class="avatar-link" id="avatar-Bibs4me" href="//s3.amazonaws.com/uploads.patientslikeme.com/avatars/75708-original.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180423%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20180423T051633Z&amp;X-Amz-Expires=604800&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=0e8fe369da696b168a3f67dd5a96cbbda5f4b700cc3619205ee4e9868c257243"><img title="Bibs4me" src="//s3.amazonaws.com/uploads.patientslikeme.com/avatars/75708-thumb.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180423%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20180423T051633Z&amp;X-Amz-Expires=604800&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=cc2eedf9849c4105426608b6cbe0a6d4a9029e498bfd0096a004bf4b5bc2dd26" alt="75708 thumb" /></a></div>
+<div class="media-item"><a class="avatar-link" id="avatar-zoomer" href="//s3.amazonaws.com/uploads.patientslikeme.com/avatars/60535-original.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180423%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20180423T201446Z&amp;X-Amz-Expires=604800&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=99d9f57bd0b000d0394c68f4d87068fc17b56ca78db0e4be07cb45b5384a0ae1"><img title="zoomer" src="//s3.amazonaws.com/uploads.patientslikeme.com/avatars/60535-thumb.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180423%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20180423T201446Z&amp;X-Amz-Expires=604800&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=96f6938df3e6fa4590469409d56e3aca24605de5746e6212fd02e0c0447cec36" alt="60535 thumb" /></a></div>
 <div class="media-content">
-<h2><a href="/members/139312">Bibs4me</a></h2>
+<h2><a href="/members/50054">zoomer</a></h2>
 <p>
-500 mg twice daily
+800mg as needed
 <br>
-since Nov 11, 2016
+since Feb 06, 2017
 </p>
 </div>
 </div>
 <ul class="user-eval-summary">
 <li class="efficacy margin-bottom-quarter">
-<span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span>
+<span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-off"></span>
 Perceived effectiveness
-<span class="purpose">for diabetes type 2:</span>
-<strong>Major</strong>
+<span class="purpose">for degenerative disc disease:</span>
+<strong>Moderate</strong>
 </li>
 <li class="side-effects margin-bottom">
 <span class="led-light led-light-side-effects"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
@@ -1894,9 +1889,7 @@ Side effects:
 <strong>None</strong>
 </li>
 <li class="advice">
-<strong>Advice/Tips</strong>
-I have a Morning/Night 7 day pill box I fill up every Sunday Night.
-<a href="/treatment_evaluations/183948">See full evaluation</a>
+<a href="/treatment_evaluations/193786">See full evaluation</a>
 </li>
 </ul>
 
@@ -1904,12 +1897,12 @@ I have a Morning/Night 7 day pill box I fill up every Sunday Night.
 </aside>
 <aside class="glass-panel margin-top" role="complementary">
 <div class="sidebar" id="sect-forum-sidebar">
-<h2>What are people saying about Metformin?</h2>
+<h2>What are people saying about Ibuprofen?</h2>
 <p>
 There are
-<strong>31 topics</strong>
+<strong>21 topics</strong>
 in our forum about
-Metformin.
+Ibuprofen.
 </p>
 <p>
 <a href="/users/sign_in">Sign in</a>
@@ -1930,33 +1923,33 @@ to view the forums.
 <div class="row" id="filters-wrapper">
 <div class="filters_results columns large-16 medium-16">
 <h2>
-60 patient evaluations
+99 patient evaluations
 for
-Metformin
+Ibuprofen
 </h2>
 </div>
 <div class="filters_sort_by columns large-8 medium-8 align-right">
 Sort by:
 <a data-popup-id="evaluations-sort-by" class="button menu-opener" data-fn-click="open_popup" href="#">Most recent</a>
 <ul data-popup-type="menu" data-popup-width="150" id="evaluations-sort-by" style="display: none">
-<li><a href="/treatments/show/221-metformin-side-effects-and-efficacy?sort=helpfulness#evaluations">Helpfulness</a></li>
-<li><a href="/treatments/show/221-metformin-side-effects-and-efficacy?sort=most-recent#evaluations">Most Recent</a></li>
+<li><a href="/treatments/show/56-ibuprofen-side-effects-and-efficacy?sort=helpfulness#evaluations">Helpfulness</a></li>
+<li><a href="/treatments/show/56-ibuprofen-side-effects-and-efficacy?sort=most-recent#evaluations">Most Recent</a></li>
 </ul>
 </div>
 </div>
 </div>
-<div data-treatment-id="221" id="evaluations-list">
+<div data-treatment-id="56" id="evaluations-list">
 <div class="content-panel">
 <div class="evaluation-group is-divided">
 <div class="row padding-vertical margin-top">
 <div class="columns medium-5">
-<div data-react-class="ProfileSummaryPropsContainer" data-react-props="{&quot;profileUrl&quot;:&quot;/members/50120&quot;,&quot;showUsername&quot;:true,&quot;avatarUrl&quot;:&quot;//s3.amazonaws.com/uploads.patientslikeme.com/avatars/11071-thumb.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180423%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20180423T051633Z\u0026X-Amz-Expires=604800\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=e086df5f9af7073c47ef3ce553db4c90a541ded1da90e06f6eae1553bcfe06a5&quot;,&quot;briefBio&quot;:&quot;I worship (hold in high esteem); truth, forgiveness, compassion, endurance, patience, mercy, grace, charity, tenderness, strength, wisdom, kindness, justice ...&quot;,&quot;country&quot;:&quot;United States&quot;,&quot;currentUserId&quot;:null,&quot;deceased&quot;:false,&quot;deleted&quot;:false,&quot;firstDiagnosisDate&quot;:2007,&quot;fullAvatarUrl&quot;:&quot;//s3.amazonaws.com/uploads.patientslikeme.com/avatars/11071-full.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180423%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20180423T051633Z\u0026X-Amz-Expires=604800\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=29d24c3d1bd3847b9a188e8c5323f58725a173d4307077dde7785bb9bddb9570&quot;,&quot;genders&quot;:[],&quot;isAdmin&quot;:false,&quot;isSignedIn&quot;:false,&quot;lastActivityTime&quot;:&quot;about 1 hour ago&quot;,&quot;preferredPronouns&quot;:&quot;male&quot;,&quot;primaryConditionName&quot;:&quot;schizoaffective disorder&quot;,&quot;secondaryConditionNames&quot;:[&quot;bipolar II disorder&quot;,&quot;major depressive disorder&quot;,&quot;schizophrenia&quot;,&quot;bipolar disorder&quot;,&quot;diabetes type 2&quot;,&quot;obstructive sleep apnea&quot;,&quot;obesity&quot;,&quot;high blood pressure (hypertension)&quot;,&quot;borderline personality disorder&quot;,&quot;gastroesophageal reflux disease&quot;,&quot;erectile dysfunction&quot;,&quot;psychosis disorder&quot;,&quot;generalized anxiety disorder&quot;,&quot;vitamin B12 deficiency&quot;,&quot;degenerative disc disease&quot;,&quot;carpal tunnel syndrome&quot;,&quot;plantar fasciitis&quot;,&quot;residual schizophrenia&quot;,&quot;paranoid schizophrenia&quot;,&quot;hypogonadism&quot;,&quot;bipolar I disorder&quot;,&quot;nail fungus&quot;,&quot;insomnia&quot;,&quot;high cholesterol (hypercholesterolemia)&quot;,&quot;heavy metal toxicity&quot;,&quot;chronic mercury poisoning&quot;,&quot;umbilical hernia&quot;,&quot;twisted bowel (intestinal volvulus)&quot;,&quot;rheumatoid arthritis&quot;,&quot;asthma&quot;,&quot;allergic asthma&quot;,&quot;lymphoma of the conjunctiva&quot;,&quot;concussion&quot;],&quot;sex&quot;:&quot;M&quot;,&quot;state&quot;:&quot;CA&quot;,&quot;title&quot;:&quot;&quot;,&quot;userAge&quot;:60,&quot;userId&quot;:50120,&quot;userIsFollowing&quot;:false,&quot;userName&quot;:&quot;TheWorshipper&quot;}"></div>
+<div data-react-class="ProfileSummaryPropsContainer" data-react-props="{&quot;profileUrl&quot;:&quot;/members/31587&quot;,&quot;showUsername&quot;:true,&quot;avatarUrl&quot;:&quot;//s3.amazonaws.com/uploads.patientslikeme.com/avatars/6571-thumb.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180423%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20180423T050109Z\u0026X-Amz-Expires=604800\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=753af04f67260d645bbd5f2c7cc9494e7840e3e67c294e1514b7caf5e201f04b&quot;,&quot;briefBio&quot;:&quot;I have known I had Parkinson&#39;s disease since 2000. I wasn&#39;t diagnosed until May 2004. I am as active as I can be \u0026 have many interests.&quot;,&quot;country&quot;:&quot;United States&quot;,&quot;currentUserId&quot;:null,&quot;deceased&quot;:false,&quot;deleted&quot;:false,&quot;firstDiagnosisDate&quot;:2004,&quot;fullAvatarUrl&quot;:&quot;//s3.amazonaws.com/uploads.patientslikeme.com/avatars/6571-full.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180423%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20180423T050109Z\u0026X-Amz-Expires=604800\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=ebee9e6ef0b7d72309b172b3b80c3f1d5fc37c24c586b6ee9a8a73ac437457fb&quot;,&quot;genders&quot;:[],&quot;isAdmin&quot;:false,&quot;isSignedIn&quot;:false,&quot;lastActivityTime&quot;:&quot;1 day ago&quot;,&quot;preferredPronouns&quot;:null,&quot;primaryConditionName&quot;:&quot;Parkinson&#39;s disease&quot;,&quot;secondaryConditionNames&quot;:[&quot;restless legs syndrome&quot;,&quot;fibromyalgia&quot;,&quot;dysautonomia&quot;,&quot;essential tremor&quot;,&quot;glaucoma&quot;,&quot;cellulitis&quot;,&quot;major depressive disorder&quot;,&quot;post-traumatic stress disorder&quot;,&quot;osteoporosis&quot;],&quot;sex&quot;:&quot;F&quot;,&quot;state&quot;:&quot;ME&quot;,&quot;title&quot;:&quot;&quot;,&quot;userAge&quot;:71,&quot;userId&quot;:31587,&quot;userIsFollowing&quot;:false,&quot;userName&quot;:&quot;reikihh&quot;}"></div>
 
 </div>
 <div class="eval-details columns medium-19">
 <h3 class="tertiary-title">
-Oct 25, 2017
-<span class="helptext">(Started Jan 01, 2013)</span>
+Mar 15, 2017
+<span class="helptext">(Started Jun 30, 2000)</span>
 </h3>
 <div class="margin-bottom-quarter"><ul class="okgo">
 <li>
@@ -1965,9 +1958,9 @@ Oct 25, 2017
 <span>Effectiveness</span>
 </div>
 <div class="columns small-16 medium-18 large-20">
-<span class="led-light led-light-off"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
-Can&#39;t tell
-<span class="helptext">(for diabetes type 2)</span>
+<span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-off"></span>
+Moderate
+<span class="helptext">(for pain)</span>
 </div>
 </div>
 </li>
@@ -1988,8 +1981,8 @@ None
 <span>Adherence</span>
 </div>
 <div class="columns small-16 medium-18 large-20">
-<span class="led-light led-light-adherence"></span><span class="led-light led-light-adherence"></span><span class="led-light led-light-adherence"></span><span class="led-light led-light-adherence"></span>
-Always
+<span class="led-light led-light-adherence"></span><span class="led-light led-light-adherence"></span><span class="led-light led-light-adherence"></span><span class="led-light led-light-off"></span>
+Usually
 </div>
 </div>
 </li>
@@ -1999,8 +1992,8 @@ Always
 <span>Burden</span>
 </div>
 <div class="columns small-16 medium-18 large-20">
-<span class="led-light led-light-burden"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
-Not at all hard to take
+<span class="led-light led-light-burden"></span><span class="led-light led-light-burden"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
+A little hard to take
 </div>
 </div>
 </li>
@@ -2008,12 +2001,8 @@ Not at all hard to take
 </div>
 <div class="margin-bottom-quarter">
 <strong>Dosage:</strong>
-500 mg
-Twice daily
-</div>
-<div class="margin-bottom-quarter">
-<strong>Advice & Tips:</strong>
-I can&#39;t tell if the Metformin helps or not.
+600 mg
+Three times daily
 </div>
 <div class="margin-bottom-quarter">
 <strong>Cost:</strong>
@@ -2036,13 +2025,13 @@ I can&#39;t tell if the Metformin helps or not.
 <div class="evaluation-group is-divided">
 <div class="row padding-vertical margin-top">
 <div class="columns medium-5">
-<div data-react-class="ProfileSummaryPropsContainer" data-react-props="{&quot;profileUrl&quot;:&quot;/members/249923&quot;,&quot;showUsername&quot;:true,&quot;avatarUrl&quot;:&quot;//s3.amazonaws.com/uploads.patientslikeme.com/avatars/50769-thumb.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180423%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20180423T051633Z\u0026X-Amz-Expires=604800\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=6d748ce70bef14cba80a01c8041027f4b3225e87b4f07da1f104ef7d201f7395&quot;,&quot;briefBio&quot;:null,&quot;country&quot;:&quot;United States&quot;,&quot;currentUserId&quot;:null,&quot;deceased&quot;:false,&quot;deleted&quot;:false,&quot;firstDiagnosisDate&quot;:2006,&quot;fullAvatarUrl&quot;:&quot;//s3.amazonaws.com/uploads.patientslikeme.com/avatars/50769-full.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180423%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20180423T051633Z\u0026X-Amz-Expires=604800\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=9415b855c2300e912e2751b1d50150e9d518a70d4e88b22cc3243a995e42e6e0&quot;,&quot;genders&quot;:[],&quot;isAdmin&quot;:false,&quot;isSignedIn&quot;:false,&quot;lastActivityTime&quot;:&quot;4 days ago&quot;,&quot;preferredPronouns&quot;:null,&quot;primaryConditionName&quot;:&quot;bipolar II disorder&quot;,&quot;secondaryConditionNames&quot;:[&quot;psoriasis&quot;,&quot;diabetes type 2&quot;,&quot;asthma&quot;,&quot;gastroesophageal reflux disease&quot;,&quot;high blood pressure (hypertension)&quot;,&quot;generalized anxiety disorder&quot;,&quot;bursitis&quot;,&quot;non-progressive mild cognitive impairment&quot;,&quot;vitamin D deficiency&quot;,&quot;borderline personality disorder&quot;],&quot;sex&quot;:&quot;F&quot;,&quot;state&quot;:&quot;MN&quot;,&quot;title&quot;:null,&quot;userAge&quot;:58,&quot;userId&quot;:249923,&quot;userIsFollowing&quot;:false,&quot;userName&quot;:&quot;charkimber&quot;}"></div>
+<div data-react-class="ProfileSummaryPropsContainer" data-react-props="{&quot;profileUrl&quot;:&quot;/members/602103&quot;,&quot;showUsername&quot;:true,&quot;avatarUrl&quot;:&quot;//s3.amazonaws.com/uploads.patientslikeme.com/avatars/95043-thumb.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180423%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20180423T050109Z\u0026X-Amz-Expires=604800\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=7f3890a1001d1e6ca05fb87a9425580c8768adb268b0138b4a9a23a030727117&quot;,&quot;briefBio&quot;:&quot;I was in a car accident that resulted in both legs and an arm being paralyzed.  I live in a nursing home as a result of these injuries.  I am very lonely.&quot;,&quot;country&quot;:&quot;United States&quot;,&quot;currentUserId&quot;:null,&quot;deceased&quot;:false,&quot;deleted&quot;:false,&quot;firstDiagnosisDate&quot;:2006,&quot;fullAvatarUrl&quot;:&quot;//s3.amazonaws.com/uploads.patientslikeme.com/avatars/95043-full.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180423%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20180423T050109Z\u0026X-Amz-Expires=604800\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=0b27daff403638efcfe288d0a3ef02ca800d6b4cb552d546ada03695b2096169&quot;,&quot;genders&quot;:[],&quot;isAdmin&quot;:false,&quot;isSignedIn&quot;:false,&quot;lastActivityTime&quot;:&quot;about 3 hours ago&quot;,&quot;preferredPronouns&quot;:null,&quot;primaryConditionName&quot;:&quot;bipolar disorder&quot;,&quot;secondaryConditionNames&quot;:[&quot;spinal cord injury&quot;,&quot;car accident&quot;,&quot;traumatic brain injury&quot;],&quot;sex&quot;:&quot;F&quot;,&quot;state&quot;:&quot;TN&quot;,&quot;title&quot;:null,&quot;userAge&quot;:43,&quot;userId&quot;:602103,&quot;userIsFollowing&quot;:false,&quot;userName&quot;:&quot;Leapndolphin&quot;}"></div>
 
 </div>
 <div class="eval-details columns medium-19">
 <h3 class="tertiary-title">
-Jan 18, 2017
-<span class="helptext">(Started Jun 30, 2004)</span>
+Feb 19, 2017
+<span class="helptext">(Started Feb 16, 2017)</span>
 </h3>
 <div class="margin-bottom-quarter"><ul class="okgo">
 <li>
@@ -2051,9 +2040,9 @@ Jan 18, 2017
 <span>Effectiveness</span>
 </div>
 <div class="columns small-16 medium-18 large-20">
-<span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span>
-Major
-<span class="helptext">(for diabetes type 2)</span>
+<span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-off"></span>
+Moderate
+<span class="helptext">(for menstrual cramps)</span>
 </div>
 </div>
 </li>
@@ -2094,12 +2083,12 @@ Not at all hard to take
 </div>
 <div class="margin-bottom-quarter">
 <strong>Dosage:</strong>
-2000 mg
-Daily
+
+As needed
 </div>
 <div class="margin-bottom-quarter">
-<strong>Advice & Tips:</strong>
-Advice don&#39;t stop this medication just because you can&#39;t afford it. Find a way. I did this and my A1c went from 6.7 to 8.4.  So my doctor put me on a higher dose. So far my history of blood sugar results keep low and consistent. 
+<strong>Cost:</strong>
+&lt; $25 monthly
 </div>
 <hr>
 <ul class="list-inline" data-widget="helpful_marks">
@@ -2118,13 +2107,13 @@ Advice don&#39;t stop this medication just because you can&#39;t afford it. Find
 <div class="evaluation-group is-divided">
 <div class="row padding-vertical margin-top">
 <div class="columns medium-5">
-<div data-react-class="ProfileSummaryPropsContainer" data-react-props="{&quot;profileUrl&quot;:&quot;/members/139312&quot;,&quot;showUsername&quot;:true,&quot;avatarUrl&quot;:&quot;//s3.amazonaws.com/uploads.patientslikeme.com/avatars/75708-thumb.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180423%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20180423T051633Z\u0026X-Amz-Expires=604800\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=cc2eedf9849c4105426608b6cbe0a6d4a9029e498bfd0096a004bf4b5bc2dd26&quot;,&quot;briefBio&quot;:null,&quot;country&quot;:&quot;United States&quot;,&quot;currentUserId&quot;:null,&quot;deceased&quot;:false,&quot;deleted&quot;:false,&quot;firstDiagnosisDate&quot;:2006,&quot;fullAvatarUrl&quot;:&quot;//s3.amazonaws.com/uploads.patientslikeme.com/avatars/75708-full.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180423%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20180423T051633Z\u0026X-Amz-Expires=604800\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=843efa93ab26051af2533ab6b878225386aa9e7ac633a4eadddf77c430d53f29&quot;,&quot;genders&quot;:[],&quot;isAdmin&quot;:false,&quot;isSignedIn&quot;:false,&quot;lastActivityTime&quot;:&quot;6 days ago&quot;,&quot;preferredPronouns&quot;:null,&quot;primaryConditionName&quot;:&quot;diabetes type 2&quot;,&quot;secondaryConditionNames&quot;:[&quot;high blood pressure (hypertension)&quot;],&quot;sex&quot;:&quot;M&quot;,&quot;state&quot;:&quot;OH&quot;,&quot;title&quot;:null,&quot;userAge&quot;:48,&quot;userId&quot;:139312,&quot;userIsFollowing&quot;:false,&quot;userName&quot;:&quot;Bibs4me&quot;}"></div>
+<div data-react-class="ProfileSummaryPropsContainer" data-react-props="{&quot;profileUrl&quot;:&quot;/members/50054&quot;,&quot;showUsername&quot;:true,&quot;avatarUrl&quot;:&quot;//s3.amazonaws.com/uploads.patientslikeme.com/avatars/60535-thumb.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180423%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20180423T050109Z\u0026X-Amz-Expires=604800\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=184a1a9d528a2c983c9dd94dba74168840ddd8f62f5a4cac9268859b33b7e8f4&quot;,&quot;briefBio&quot;:null,&quot;country&quot;:&quot;United States&quot;,&quot;currentUserId&quot;:null,&quot;deceased&quot;:false,&quot;deleted&quot;:false,&quot;firstDiagnosisDate&quot;:1995,&quot;fullAvatarUrl&quot;:&quot;//s3.amazonaws.com/uploads.patientslikeme.com/avatars/60535-full.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180423%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20180423T050109Z\u0026X-Amz-Expires=604800\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=f330c422234d0a26426302dedf0a4b65398ecd9ed12454df2bda6c42ebc52c98&quot;,&quot;genders&quot;:[],&quot;isAdmin&quot;:false,&quot;isSignedIn&quot;:false,&quot;lastActivityTime&quot;:&quot;12 minutes ago&quot;,&quot;preferredPronouns&quot;:null,&quot;primaryConditionName&quot;:&quot;bipolar I disorder&quot;,&quot;secondaryConditionNames&quot;:[&quot;attention deficit/hyperactivity disorder&quot;,&quot;alcohol use disorder&quot;,&quot;drug use disorder&quot;,&quot;tobacco use disorder&quot;,&quot;generalized anxiety disorder&quot;,&quot;major depressive disorder&quot;,&quot;post-traumatic stress disorder&quot;,&quot;social anxiety disorder&quot;,&quot;bipolar disorder&quot;,&quot;tardive dyskinesia&quot;,&quot;hypothyroidism&quot;,&quot;degenerative disc disease&quot;,&quot;binge eating disorder&quot;],&quot;sex&quot;:&quot;F&quot;,&quot;state&quot;:&quot;AK&quot;,&quot;title&quot;:&quot;&quot;,&quot;userAge&quot;:62,&quot;userId&quot;:50054,&quot;userIsFollowing&quot;:false,&quot;userName&quot;:&quot;zoomer&quot;}"></div>
 
 </div>
 <div class="eval-details columns medium-19">
 <h3 class="tertiary-title">
-Nov 11, 2016
-<span class="helptext">(Started Jan 15, 2014)</span>
+Feb  6, 2017
+<span class="helptext">(Started Mar 25, 2012)</span>
 </h3>
 <div class="margin-bottom-quarter"><ul class="okgo">
 <li>
@@ -2133,9 +2122,9 @@ Nov 11, 2016
 <span>Effectiveness</span>
 </div>
 <div class="columns small-16 medium-18 large-20">
-<span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span>
-Major
-<span class="helptext">(for diabetes type 2)</span>
+<span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-off"></span>
+Moderate
+<span class="helptext">(for degenerative disc disease)</span>
 </div>
 </div>
 </li>
@@ -2156,8 +2145,8 @@ None
 <span>Adherence</span>
 </div>
 <div class="columns small-16 medium-18 large-20">
-<span class="led-light led-light-adherence"></span><span class="led-light led-light-adherence"></span><span class="led-light led-light-adherence"></span><span class="led-light led-light-adherence"></span>
-Always
+<span class="led-light led-light-adherence"></span><span class="led-light led-light-adherence"></span><span class="led-light led-light-adherence"></span><span class="led-light led-light-off"></span>
+Usually
 </div>
 </div>
 </li>
@@ -2176,16 +2165,8 @@ Not at all hard to take
 </div>
 <div class="margin-bottom-quarter">
 <strong>Dosage:</strong>
-500 mg
-Twice daily
-</div>
-<div class="margin-bottom-quarter">
-<strong>Advice & Tips:</strong>
-I have a Morning/Night 7 day pill box I fill up every Sunday Night.
-</div>
-<div class="margin-bottom-quarter">
-<strong>Cost:</strong>
-&lt; $25 monthly
+
+As needed
 </div>
 <hr>
 <ul class="list-inline" data-widget="helpful_marks">
@@ -2208,15 +2189,15 @@ I have a Morning/Night 7 day pill box I fill up every Sunday Night.
 <div class="columns large-8 medium-8 align-left">
 <small class="helptext">
 Last updated:
-<time datetime="2018-04-23T05:16:33+00:00">April 23, 2018</time>
+<time datetime="2018-04-23T05:01:09+00:00">April 23, 2018</time>
 </small>
 
 </div>
 <div class="columns large-16 medium-16">
 <span class="padding-horizontal">
-Showing 3 of 60 patient evaluations for Metformin
+Showing 3 of 99 patient evaluations for Ibuprofen
 </span>
-<div class="pagination inline-block"><a class="icon-only is-not-rwd previous_page" disabled="true"><span class="icon icon-director-left">Previous page</span></a> <em class="current">1</em> <a rel="next" href="/treatments/show/221?page=2&amp;size=3#evaluations">2</a> <a href="/treatments/show/221?page=3&amp;size=3#evaluations">3</a> <span class="gap">&hellip;</span> <a href="/treatments/show/221?page=20&amp;size=3#evaluations">20</a> <a class="icon-only is-not-rwd next_page" rel="next" href="/treatments/show/221?page=2&amp;size=3#evaluations"><span class="icon icon-director-right">Next page</span></a></div>
+<div class="pagination inline-block"><a class="icon-only is-not-rwd previous_page" disabled="true"><span class="icon icon-director-left">Previous page</span></a> <em class="current">1</em> <a rel="next" href="/treatments/show/4259-ibalgin-side-effects-and-efficacy?page=2&amp;size=3#evaluations">2</a> <a href="/treatments/show/4259-ibalgin-side-effects-and-efficacy?page=3&amp;size=3#evaluations">3</a> <span class="gap">&hellip;</span> <a href="/treatments/show/4259-ibalgin-side-effects-and-efficacy?page=33&amp;size=3#evaluations">33</a> <a class="icon-only is-not-rwd next_page" rel="next" href="/treatments/show/4259-ibalgin-side-effects-and-efficacy?page=2&amp;size=3#evaluations"><span class="icon icon-director-right">Next page</span></a></div>
 </div>
 </div>
 </div>
@@ -2356,7 +2337,7 @@ PatientsLikeMe ®
   [].forEach(function(metric, index) {
     var event = metric[0];
     var params = metric[1];
-    var uniqid = "a6a29c2c-f679-4f5e-bb20-8625c57a552e-" + index;
+    var uniqid = "03421314-3ff3-4410-9fe3-a620aee4afbf-" + index;
     if (window.sessionStorage['metric_event-' + uniqid] === undefined) {
       window.sessionStorage['metric_event-' + uniqid] = true;
       var metricEvent = {event: event, params: params};
