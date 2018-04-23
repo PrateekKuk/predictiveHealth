@@ -1,4 +1,4 @@
-//this is where all the scraping and calculation of side-effect likelihood happens
+//this is where all the scraping and data file creation happens
 var fetch = require('node-fetch');
 var cheerio = require('cheerio');
 var request = require('request');
@@ -7,21 +7,21 @@ var minify = require('html-minifier').minify;
 var request_sync = require('sync-request');
 var fs = require('fs');
 
-var app = {};
+var dataCollection = {};
 var scrapedData = [];
-app.urls = [];
-app.urls.push({name:"Metformin",url:'https://www.patientslikeme.com/treatments/show/221'}); 
-app.urls.push({name:"Insulin Glargine", url: "https://www.patientslikeme.com/treatments/show/8306"});
+dataCollection.urls = [];
+dataCollection.urls.push({name:"Metformin",url:'https://www.patientslikeme.com/treatments/show/221'}); 
+dataCollection.urls.push({name:"Insulin Glargine", url: "https://www.patientslikeme.com/treatments/show/8306"});
 
 
-app.parsingUrls = function(){
+dataCollection.parsingUrls = function(){
     //create html page for each url
     app.urls.forEach((urlInfo, index, urls)=> {
         var eachPageRequest = request(urlInfo.url).pipe(fs.createWriteStream('drugs/'+ urlInfo.name + ".html"));
     });
 };
 
-app.processDataFiles = function(){
+dataCollection.processDataFiles = function(){
     //parse each html page for the necessary data and add to data array
     fs.readdirSync('drugs').forEach((file) => {
         if(file[file.length-1] == 'l'){//only get files that end in html
@@ -83,4 +83,4 @@ var writeDataToFile = function(){
 var showData = function(scrapedDataJSON){
     console.log(scrapedDataJSON);
 }
-module.exports = app;
+module.exports = dataCollection;

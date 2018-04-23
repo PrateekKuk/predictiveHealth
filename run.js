@@ -1,7 +1,7 @@
-var app = require('./app.js');
+var dataCollection = require('./dataCollection.js');
 
 //app.parsingUrls();
-app.processDataFiles();
+dataCollection.processDataFiles();
 
 
 
