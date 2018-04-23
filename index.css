@@ -11,12 +11,9 @@
 	--color-white:white;
 	--color-black:black;
 	--color-dark-gray: #787878;
-	--color-theme-blue:#4257b2;
-	--color-theme-light-blue:rgba(66,87,178,0.5);
-	--color-theme-blue-hover:#c9ceeb;
-	--color-card-details: rgba(0,0,0,.03);
-	--fade-duration: 0.5s;
-
+	--color-bright-blue:#4257b2;
+	--color-light-blue:rgba(66,87,178,0.5);
+	--color-blue-hover:#c9ceeb;
 }
 
 @media (max-width:450px){
@@ -59,6 +56,6 @@
     width: 18rem;
 }
 .ui-menu-item-wrapper:hover{
-    background: var(--color-theme-blue)!important;
+    background: var(--color-bright-blue)!important;
     color:var(--color-white)!important;
 }

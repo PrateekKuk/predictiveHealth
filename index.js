@@ -2,6 +2,8 @@
 
 //datasource for the autocomplete
 var availableTags = [];
+var sideEffects = [];
+var sideEffectCount = {};
 
 var dataPrep = function(){
     console.log(data);
@@ -18,6 +20,7 @@ var addButtonClicked = function(){
     makeDrugCard(drug);
     var drugDiv = document.getElementById("drugs-container");
     drugDiv.classList.remove("hide");
+    getAllSideEffects(drug);
 }
 var getDrug = function(drugName){
     var drugNameClean = drugName.toLowerCase().replace(" ","");
@@ -50,8 +53,9 @@ var makeDrugCard = function(drug){
 
     var cardInfo = document.createElement("p");
     cardInfo.classList.add("card-text");
-    var sideEffectsObj = drug[drugNameWithSpace];
-    var sideEffectsList = Object.keys(sideEffectsObj).toString();
+    // var sideEffectsObj = drug[drugNameWithSpace];
+    // var sideEffectsList = Object.keys(sideEffectsObj).toString();
+    var sideEffectsList = getSideEffectsForDrug(drug);
     console.log(sideEffectsList);
     cardInfo.innerHTML = "Side Effects:" + "</br>" + sideEffectsList;
     cardBody.appendChild(cardInfo);
@@ -64,21 +68,61 @@ var makeDrugCard = function(drug){
     removeButton.innerHTML = "Remove";
     cardBody.appendChild(removeButton);
     removeButton.onclick = function() {
-        removeDrug(drugNameNoSpace);
-      };
+        removeDrug(drug,drugNameNoSpace);
+    };
 }
 
 $("#search").autocomplete({
     source: availableTags
 });
 
-var removeDrug = function(drugName) {
+var removeDrug = function(drug,drugName) {
     $("#"+drugName).remove();
     var drugDiv = document.getElementById("drugs-body");
     if(drugDiv.childElementCount == 0){
         var drugDiv = document.getElementById("drugs-container");
         drugDiv.classList.add("hide");
     }
+    removeSideEffectsFromCount(drug);
+}
+var getSideEffectsForDrug = function(drug){
+    var drugNameWithSpace = Object.keys(drug).toString();
+    var drugSideEffects = Object.keys(drug[drugNameWithSpace]);
+    var returnEffects = [];
+    for(var j = 0; j<drugSideEffects.length; j++){
+        if(!sideEffects[drugSideEffects[j]]){
+            returnEffects.push(drugSideEffects[j]);
+        }
+    }
+    return returnEffects;
+}
+var getAllSideEffects = function(drug){
+    
+    var drugNameWithSpace = Object.keys(drug).toString();
+    var drugSideEffects = Object.keys(drug[drugNameWithSpace]);
+    for(var j = 0; j<drugSideEffects.length; j++){
+        if(!sideEffects[drugSideEffects[j]]){
+            if(drugSideEffects[j] in sideEffectCount){
+                sideEffectCount[drugSideEffects[j]] += 1;
+
+            }else{
+                sideEffectCount[drugSideEffects[j]] = 1;
+
+            }
+        }
+    }
+    console.log(sideEffectCount);
+}
+
+var removeSideEffectsFromCount = function(drug){
+    var drugSideEffects = getSideEffectsForDrug(drug);
+    for(var j = 0; j<drugSideEffects.length; j++){
+        if(drugSideEffects[j] in sideEffectCount){
+            sideEffectCount[drugSideEffects[j]] -= 1;
+
+        }
+    }
+    console.log(sideEffectCount);
 }
 
 
