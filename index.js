@@ -15,6 +15,7 @@ var makeDrugCard = function(){
     for(var i = 0; i < data.length;i++){
         var drugCard = document.createElement("div");
         drugCard.setAttribute("id", Object.keys(data[i]).toString().replace(" ",""));
+        availableTags.push(Object.keys(data[i]).toString());
         drugCard.classList.add("card");
         drugCard.classList.add("custom-card");      
         drugDiv.appendChild(drugCard);
@@ -43,3 +44,6 @@ var makeDrugCard = function(){
 
 }
 
+$("#search").autocomplete({
+    source: availableTags
+});
