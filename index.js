@@ -1,4 +1,4 @@
-//this file is programmatically adding elements to index.html page
+//this file is where all the data science logic happens
 
 //datasource for the autocomplete
 var availableTags = [];
@@ -183,7 +183,7 @@ var updateSideEffectsDiv = function(drug, drugName){
             var effectDivbody = document.createElement("div");
             effectDivbody.classList.add("card-body");
             effectDivbody.innerHTML = "";
-            effectDivbody.innerHTML = allSideEffects[i];
+            effectDivbody.innerHTML = (i+1)+"."+ "</br>" + allSideEffects[i];
             effectDiv.appendChild(effectDivbody);
             //sideEffectListDiv.innerHTML += allSideEffects[i];
             
