@@ -100,6 +100,7 @@ var getSideEffectsForDrug = function(drug){
     }
     return returnEffects;
 }
+//function that updates the global side effects count
 var getAllSideEffects = function(drug){
     
     var drugNameWithSpace = Object.keys(drug).toString();
@@ -139,10 +140,25 @@ var updateSideEffectsDiv = function(){
     var resultsDiv = document.getElementById("results-container");
     resultsDiv.classList.remove("hide");
 
+    var rowSpace = document.createElement("div");
+    rowSpace.classList.add("row");
+    sideEffectListDiv.appendChild(rowSpace);
+
     var allSideEffects = Object.keys(sideEffectCount);
     for(var i=0;i<allSideEffects.length;i++){
         if(sideEffectCount[allSideEffects[i]] != 0){
-            sideEffectListDiv.innerHTML += allSideEffects[i];
+
+            var effectDiv = document.createElement("div");
+            effectDiv.classList.add("card");
+            effectDiv.classList.add("col-md-2");
+            rowSpace.appendChild(effectDiv);
+
+            var effectDivbody = document.createElement("div");
+            effectDivbody.classList.add("card-body");
+            effectDivbody.innerHTML = "";
+            effectDivbody.innerHTML = allSideEffects[i];
+            effectDiv.appendChild(effectDivbody);
+            //sideEffectListDiv.innerHTML += allSideEffects[i];
         }
     }
 }
