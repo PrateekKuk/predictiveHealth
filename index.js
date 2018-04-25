@@ -94,7 +94,8 @@ var removeDrug = function(drug,drugName) {
             regimenDrugs.splice(i,1);
         }
     }
-    removeSideEffectsFromCount(drug);
+    removeSideEffectsFromCount(drug, drugName);
+    updateSideEffectsDiv(drug,drugName);
     
 }
 //use this to get the side-effects for a drug
@@ -137,7 +138,7 @@ var getAllSideEffects = function(drug, drugName){
     console.log(sideEffectCount);
 }
 
-var removeSideEffectsFromCount = function(drug){
+var removeSideEffectsFromCount = function(drug,drugName){
     var drugSideEffects = getSideEffectsForDrug(drug);
     for(var j = 0; j<drugSideEffects.length; j++){
         if(drugSideEffects[j] in sideEffectCount){
@@ -156,7 +157,7 @@ var removeSideEffectsFromCount = function(drug){
         }   
     }
     console.log(sideEffectCount);
-    updateSideEffectsDiv();
+    updateSideEffectsDiv(drug,drugName);
 }
 
 
