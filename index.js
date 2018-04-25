@@ -13,17 +13,26 @@ var dataPrep = function(){
         availableTags.push(Object.keys(data[i]).toString());
     }
 }
+//TODO: Prevent from adding the same drug
 var addButtonClicked = function(){
     var searchBox = document.getElementById("search");
     var drugName = searchBox.value;
-    var drug = getDrug(drugName);
-    console.log(drug);
-    makeDrugCard(drug);
-    var drugDiv = document.getElementById("drugs-container");
-    drugDiv.classList.remove("hide");
-    getAllSideEffects(drug,drugName);
-    updateSideEffectsDiv(drug, drugName);
-    regimenDrugs.push(drug);
+    if(drugName != ""){
+        var drug = getDrug(drugName);
+        console.log(drug);
+        for(var i = 0; i < regimenDrugs.length; i++){
+            if(Object.keys(regimenDrugs[i]).toString() == drugName){
+                return;
+            }
+        }
+        makeDrugCard(drug);
+        var drugDiv = document.getElementById("drugs-container");
+        drugDiv.classList.remove("hide");
+        getAllSideEffects(drug,drugName);
+        updateSideEffectsDiv(drug, drugName);
+        regimenDrugs.push(drug);
+    }
+
 }
 var getDrug = function(drugName){
     var drugNameClean = drugName.toLowerCase().replace(" ","");
