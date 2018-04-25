@@ -37,7 +37,7 @@
 }
 
 .search-box-container{
-	margin-bottom:10px;
+    margin-bottom:10px;
 }
 
 .hide{
@@ -49,9 +49,6 @@
       margin-bottom: 10px;
   }
   
-.drugs-body{
-    margin-left:20px;
-}
 .custom-card{
     width: 18rem;
 }
@@ -60,5 +57,13 @@
     color:var(--color-white)!important;
 }
 #results-container{
+    margin-top:10px;
+    margin-left:20px;
+    margin-right:20px;
+    margin-bottom:20px;
+}
+#drugs-container{
+    margin-left:20px;
+    margin-right:20px;
     margin-top:10px;
 }

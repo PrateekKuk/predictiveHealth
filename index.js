@@ -4,6 +4,8 @@
 var availableTags = [];
 var sideEffects = [];
 var sideEffectCount = {};
+var regimenDrugs = [];
+var sideEffectPercents = {};
 
 var dataPrep = function(){
     console.log(data);
@@ -14,14 +16,14 @@ var dataPrep = function(){
 var addButtonClicked = function(){
     var searchBox = document.getElementById("search");
     var drugName = searchBox.value;
-    console.log(drugName);
     var drug = getDrug(drugName);
     console.log(drug);
     makeDrugCard(drug);
     var drugDiv = document.getElementById("drugs-container");
     drugDiv.classList.remove("hide");
-    getAllSideEffects(drug);
-    updateSideEffectsDiv();
+    getAllSideEffects(drug,drugName);
+    updateSideEffectsDiv(drug, drugName);
+    regimenDrugs.push(drug);
 }
 var getDrug = function(drugName){
     var drugNameClean = drugName.toLowerCase().replace(" ","");
@@ -39,7 +41,7 @@ var makeDrugCard = function(drug){
     var drugCard = document.createElement("div");
     drugCard.setAttribute("id", drugNameNoSpace);
     drugCard.classList.add("card");
-    drugCard.classList.add("col-md-4");
+    drugCard.classList.add("col-sm-4");
     drugCard.classList.add("custom-card");      
     drugDiv.appendChild(drugCard);
 
@@ -87,8 +89,15 @@ var removeDrug = function(drug,drugName) {
         var resultsDiv = document.getElementById("results-container");
         resultsDiv.classList.add("hide");
     }
+    for(var i = 0; i< regimenDrugs.length; i++){
+        if(Object.keys(regimenDrugs[i]).toString() == Object.keys(drug).toString() ){
+            regimenDrugs.splice(i,1);
+        }
+    }
     removeSideEffectsFromCount(drug);
+    
 }
+//use this to get the side-effects for a drug
 var getSideEffectsForDrug = function(drug){
     var drugNameWithSpace = Object.keys(drug).toString();
     var drugSideEffects = Object.keys(drug[drugNameWithSpace]);
@@ -100,19 +109,28 @@ var getSideEffectsForDrug = function(drug){
     }
     return returnEffects;
 }
+
 //function that updates the global side effects count
-var getAllSideEffects = function(drug){
+var getAllSideEffects = function(drug, drugName){
     
     var drugNameWithSpace = Object.keys(drug).toString();
     var drugSideEffects = Object.keys(drug[drugNameWithSpace]);
     for(var j = 0; j<drugSideEffects.length; j++){
         if(!sideEffects[drugSideEffects[j]]){
+            var holderArray = [];
             if(drugSideEffects[j] in sideEffectCount){
                 sideEffectCount[drugSideEffects[j]] += 1;
 
+                var tmpObjPercent = {};
+                tmpObjPercent[drugName] = drug[drugName][drugSideEffects[j]];
+                sideEffectPercents[drugSideEffects[j]].push(tmpObjPercent);
             }else{
                 sideEffectCount[drugSideEffects[j]] = 1;
 
+                var tmpObjPercent = {};
+                tmpObjPercent[drugName] = drug[drugName][drugSideEffects[j]];
+                holderArray.push(tmpObjPercent);
+                sideEffectPercents[drugSideEffects[j]] = holderArray;
             }
         }
     }
@@ -124,16 +142,26 @@ var removeSideEffectsFromCount = function(drug){
     for(var j = 0; j<drugSideEffects.length; j++){
         if(drugSideEffects[j] in sideEffectCount){
             sideEffectCount[drugSideEffects[j]] -= 1;
-
-        }
+            
+            
+            var drugArray = sideEffectPercents[drugSideEffects[j]];
+            for(var k = 0; k < drugArray.length; k++){
+                if(Object.keys(drugArray[k]).toString() == Object.keys(drug).toString()){
+                    drugArray.splice(k,1);
+                }
+            }
+            if(drugArray.length == 0){
+                delete sideEffectPercents[drugSideEffects[j]];
+            }
+        }   
     }
     console.log(sideEffectCount);
     updateSideEffectsDiv();
 }
 
 
-var updateSideEffectsDiv = function(){
-    
+var updateSideEffectsDiv = function(drug, drugName){
+    console.log("inside update side effects div");
     var sideEffectListDiv = document.getElementById("regimen-side-effects");
     sideEffectListDiv.innerHTML = "";
 
@@ -143,14 +171,13 @@ var updateSideEffectsDiv = function(){
     var rowSpace = document.createElement("div");
     rowSpace.classList.add("row");
     sideEffectListDiv.appendChild(rowSpace);
-
     var allSideEffects = Object.keys(sideEffectCount);
+
     for(var i=0;i<allSideEffects.length;i++){
         if(sideEffectCount[allSideEffects[i]] != 0){
-
             var effectDiv = document.createElement("div");
             effectDiv.classList.add("card");
-            effectDiv.classList.add("col-md-2");
+            effectDiv.classList.add("col-lg-2");
             rowSpace.appendChild(effectDiv);
 
             var effectDivbody = document.createElement("div");
@@ -159,6 +186,9 @@ var updateSideEffectsDiv = function(){
             effectDivbody.innerHTML = allSideEffects[i];
             effectDiv.appendChild(effectDivbody);
             //sideEffectListDiv.innerHTML += allSideEffects[i];
+            
+        }else{
+            delete sideEffectCount[allSideEffects[i]];
         }
     }
 }
