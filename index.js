@@ -70,7 +70,7 @@ var makeDrugCard = function(drug){
     var sideEffectsList = getSideEffectsForDrug(drug);
     console.log(sideEffectsList);
     cardInfo.innerHTML = "Side Effects:" + "</br>" + sideEffectsList;
-    cardBody.appendChild(cardInfo);
+    //cardBody.appendChild(cardInfo);
 
     var removeButton = document.createElement("button");
     removeButton.classList.add("btn");
