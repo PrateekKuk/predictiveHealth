@@ -50,7 +50,7 @@ var makeDrugCard = function(drug){
     var drugCard = document.createElement("div");
     drugCard.setAttribute("id", drugNameNoSpace);
     drugCard.classList.add("card");
-    drugCard.classList.add("col-sm-4");
+    drugCard.classList.add("col-sm-2");
     drugCard.classList.add("custom-card");      
     drugDiv.appendChild(drugCard);
 
@@ -77,7 +77,7 @@ var makeDrugCard = function(drug){
     removeButton.classList.add("btn-danger");
     removeButton.classList.add("custom-button-prop");
     removeButton.classList.add("float-right");
-    removeButton.innerHTML = "Remove";
+    removeButton.innerHTML = '<i class="fas fa-trash-alt"></i>';
     cardBody.appendChild(removeButton);
     removeButton.onclick = function() {
         removeDrug(drug,drugNameNoSpace);
