@@ -2,17 +2,17 @@
 <html lang="en" class=" no-js">
 <head>
 
-<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"3ee98a9739","applicationID":"58764","transactionName":"cglXQEANXllVExdAE1QHTVlXDEZGHxJQWxY=","queueTime":0,"applicationTime":71,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"3ee98a9739","applicationID":"58764","transactionName":"cglXQEANXllVExdAE1QHTVlXDEZGHxJQWxY=","queueTime":0,"applicationTime":70,"agent":""}</script>
 <script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"Vg4GV0VWAAQGUA=="};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(18)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(18)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(18)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(18)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(x?x.then(a):w?w(a):(E=-E,O.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(18)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var b=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,b),b.prototype=p.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var x=m&&m.resolve();if(!w&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],16:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],17:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],18:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=h(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([g,e,r,a]),a}}function p(t,n){v[t]=h(t).concat(n)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var v={},y={},g={on:p,emit:e,get:m,listeners:h,context:n,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(15),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!x++){var t=b.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=l.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(15),u=t("ee"),d=window,l=d.document,p="addEventListener",h="attachEvent",m=d.XMLHttpRequest,w=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},g=m&&w&&w[p]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:v,features:{},xhrWrappable:g};t(12),l[p]?(l[p]("DOMContentLoaded",i,!1),d[p]("load",r,!1)):(l[h]("onreadystatechange",o),d[h]("onload",r)),c("mark",["firstbyte",s],null,"api");var x=0,E=t(17)},{}]},{},["loader",2,10,4,3]);</script>
-<title>PatientsLikeMe | Glipizide report for  patients like you</title>
+<title>PatientsLikeMe | Vitamin B12 Injection report for  patients like you</title>
 <meta charset="UTF-8">
 <meta content="8scufJGxU9JCHew1yOlfXYXtd73pybYP2xyel8v3GjQ" name="google-site-verification">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta content="PatientsLikeMe" name="application-name">
 <meta content="PatientsLikeMe | Treatments" property="og:title">
 <meta content="https://dy82vckl8b34w.cloudfront.net/assets/open_graph/treatments-d1efa6a6ae8fcf07f3b802aa8c172740f214dfb5ea77367ba0225a3a63fa2006.png" property="og:image">
-<meta content="Glipizide: Find the most comprehensive real-world treatment information on Glipizide at PatientsLikeMe. 187 patients with fibromyalgia, multiple sclerosis, major depressive disorder, generalized anxiety disorder, diabetes type 2, systemic lupus erythematosus, post-traumatic stress disorder, bipolar disorder, Parkinson's disease, panic disorder, rheumatoid arthritis, high blood pressure (hypertension), myalgic encephalomyelitis/chronic fatigue syndrome, persistent depressive disorder (dysthymia), amyotrophic lateral sclerosis, epilepsy, migraine, hypothyroidism, osteoarthritis, traumatic brain injury, attention deficit/hyperactivity disorder, bipolar II disorder, asthma, social anxiety disorder, high cholesterol (hypercholesterolemia), irritable bowel syndrome, idiopathic pulmonary fibrosis, gastroesophageal reflux disease, bipolar I disorder or psoriasis currently take Glipizide." property="og:description">
-<meta content="Glipizide: Find the most comprehensive real-world treatment information on Glipizide at PatientsLikeMe. 187 patients with fibromyalgia, multiple sclerosis, major depressive disorder, generalized anxiety disorder, diabetes type 2, systemic lupus erythematosus, post-traumatic stress disorder, bipolar disorder, Parkinson's disease, panic disorder, rheumatoid arthritis, high blood pressure (hypertension), myalgic encephalomyelitis/chronic fatigue syndrome, persistent depressive disorder (dysthymia), amyotrophic lateral sclerosis, epilepsy, migraine, hypothyroidism, osteoarthritis, traumatic brain injury, attention deficit/hyperactivity disorder, bipolar II disorder, asthma, social anxiety disorder, high cholesterol (hypercholesterolemia), irritable bowel syndrome, idiopathic pulmonary fibrosis, gastroesophageal reflux disease, bipolar I disorder or psoriasis currently take Glipizide." name="description">
+<meta content="Vitamin B12 Injection: Find the most comprehensive real-world treatment information on Vitamin B12 Injection at PatientsLikeMe. 458 patients with fibromyalgia, multiple sclerosis, major depressive disorder, generalized anxiety disorder, diabetes type 2, systemic lupus erythematosus, post-traumatic stress disorder, bipolar disorder, Parkinson's disease, panic disorder, rheumatoid arthritis, high blood pressure (hypertension), myalgic encephalomyelitis/chronic fatigue syndrome, persistent depressive disorder (dysthymia), amyotrophic lateral sclerosis, epilepsy, migraine, hypothyroidism, osteoarthritis, traumatic brain injury, attention deficit/hyperactivity disorder, bipolar II disorder, asthma, social anxiety disorder, high cholesterol (hypercholesterolemia), irritable bowel syndrome, idiopathic pulmonary fibrosis, gastroesophageal reflux disease, bipolar I disorder or psoriasis currently take Vitamin B12 Injection." property="og:description">
+<meta content="Vitamin B12 Injection: Find the most comprehensive real-world treatment information on Vitamin B12 Injection at PatientsLikeMe. 458 patients with fibromyalgia, multiple sclerosis, major depressive disorder, generalized anxiety disorder, diabetes type 2, systemic lupus erythematosus, post-traumatic stress disorder, bipolar disorder, Parkinson's disease, panic disorder, rheumatoid arthritis, high blood pressure (hypertension), myalgic encephalomyelitis/chronic fatigue syndrome, persistent depressive disorder (dysthymia), amyotrophic lateral sclerosis, epilepsy, migraine, hypothyroidism, osteoarthritis, traumatic brain injury, attention deficit/hyperactivity disorder, bipolar II disorder, asthma, social anxiety disorder, high cholesterol (hypercholesterolemia), irritable bowel syndrome, idiopathic pulmonary fibrosis, gastroesophageal reflux disease, bipolar I disorder or psoriasis currently take Vitamin B12 Injection." name="description">
 <link href="/apple-touch-icon.png?v=1023171" rel="apple-touch-icon-precomposed">
 <link href="/apple-touch-icon.png?v=1023171" rel="apple-touch-icon" sizes="180x180">
 <link href="/favicon-32x32.png?v=1023171" rel="icon" sizes="32x32" type="image/png">
@@ -23,7 +23,7 @@
 <meta content="#ffffff" name="theme-color">
 <link href="/android-chrome-512x512.png?v=1023171" rel="image_src" type="image/png">
 
-<link href="https://www.patientslikeme.com/treatments/show/1456-glipizide-side-effects-and-efficacy" rel="canonical">
+<link href="https://www.patientslikeme.com/treatments/show/303-vitamin-b12-injection-side-effects-and-efficacy" rel="canonical">
 <script>
   window.queued_functions = [];
   window.$ = function(f) {
@@ -48,7 +48,7 @@
   var MTIProjectId='19cc9a7d-3df0-4312-b847-b9c6508a6bce';
 </script>
 <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="b/YIJxo0xDNdVf7KlmWYciomrX/ZnrerbbR3CYgTqC88MmJgXKCGw1EmKq8moY7ofaKJaDe8wuxQK3BN4/Pkrw==" />
+<meta name="csrf-token" content="r7J5UbB7JIxI03u+LAc3TXuRUtYw9/zvBdgnZtNF+y43KwROCh/x6vMeBtoNc/keHUjeC/x6EQxR2dayH51m6w==" />
 <script>
   window.PLM = window.PLM || {};
   window.PLM['RAILS_CONTROLLER'] = "treatments";
@@ -93,7 +93,7 @@
     ga('set', 'dimension3', '-1');
   
     // metric_guid. Scope: user
-    ga('set', 'dimension4', 'a2f0cf9b-0598-45bf-964a-aa91ce063e07');
+    ga('set', 'dimension4', 'f31f83e5-5ab5-4522-a195-3e70a30b6ae0');
   
     // Before adding new custom page variables, you'll need to set them up in the
     // Google Analytics UI to get an assigned index to use in this code.
@@ -256,7 +256,7 @@ PatientsLikeMe ®
 <ul>
 <li class="toolbar-title">
 <h1>
-<span itemprop="name">Glipizide</span> treatment report
+<span itemprop="name">Vitamin B12 Injection</span> treatment report
 </h1>
 </li>
 </ul>
@@ -271,10 +271,10 @@ PatientsLikeMe ®
 <nav class="columns medium-24" id="treatment-report-tabs">
 <ul class="margin-top-none tabs" role="tablist">
 <li class="overview">
-<a aria-controls="overview" class="yah" href="/treatments/show/1456-glipizide-side-effects-and-efficacy?brand=f">Overview</a>
+<a aria-controls="overview" class="yah" href="/treatments/show/303-vitamin-b12-injection-side-effects-and-efficacy?brand=f">Overview</a>
 </li>
 <li class="evaluations">
-<a aria-controls="evaluations" href="/treatment_evaluations/browse?brand=f&amp;id=1456-glipizide-side-effects-and-efficacy">Individual patient evaluations</a>
+<a aria-controls="evaluations" href="/treatment_evaluations/browse?brand=f&amp;id=303-vitamin-b12-injection-side-effects-and-efficacy">Individual patient evaluations</a>
 </li>
 
 </ul>
@@ -288,10 +288,10 @@ PatientsLikeMe ®
 <nav data-popup-type="menu" id="treatment-report-dropdown" style="display:none">
 <ul class="toc-menu">
 <li class="overview">
-<a aria-controls="overview" class="yah" href="/treatments/show/1456-glipizide-side-effects-and-efficacy?brand=f">Overview</a>
+<a aria-controls="overview" class="yah" href="/treatments/show/303-vitamin-b12-injection-side-effects-and-efficacy?brand=f">Overview</a>
 </li>
 <li class="evaluations">
-<a aria-controls="evaluations" href="/treatment_evaluations/browse?brand=f&amp;id=1456-glipizide-side-effects-and-efficacy">Individual patient evaluations</a>
+<a aria-controls="evaluations" href="/treatment_evaluations/browse?brand=f&amp;id=303-vitamin-b12-injection-side-effects-and-efficacy">Individual patient evaluations</a>
 </li>
 
 </ul>
@@ -304,7 +304,7 @@ PatientsLikeMe ®
 <div class="row">
 <div class="columns large-15 medium-15">
 <header id="summary">
-<h2>What is Glipizide?</h2>
+<h2>What is Vitamin B12 Injection?</h2>
 </header>
 <p class="margin-vertical-none">
 <strong>Category:</strong>
@@ -313,16 +313,12 @@ PatientsLikeMe ®
 <p class="show toggle">
 <strong>Most popular types:</strong>
 <span class="comma-separated">
-<a href="/treatments/show/13433-glipizide-er-side-effects-and-efficacy?brand=t">Glipizide ER</a>
-<a href="/treatments/show/9065-glipizide-xl-side-effects-and-efficacy?brand=t">Glipizide XL</a>
-<a href="/treatments/show/14847-glucotrol-side-effects-and-efficacy?brand=t">Glucotrol</a>
-<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/22524-glucotrol-xl-side-effects-and-efficacy?brand=t">Glucotrol XL</a>
+<a href="/treatments/show/20913-medivitan-side-effects-and-efficacy?brand=t">Medivitan</a>
 </span>
-<a class="content-toggle" data-toggle-content-selector=".treatment-report-other-brand" data-toggled-text="Show top 3" data-fn-click="toggle_content" href="#">Show all</a>
 </p>
 <span itemprop="isProprietary" style="display:none">false</span>
 <p itemprop="description">
-Glipizide is an anti-diabetic medicine (sulfonylurea-type) used along with a proper diet and exercise program to control high blood sugar. It is used in patients with type 2 diabetes (non-insulin-dependent diabetes). It works by stimulating the release of the body&#39;s natural insulin.
+Vitamin B-12 via intramuscular or deep subcutaneous injection is used to treat pernicious anemia; dietary deficiencies due to malabsorption diseases, inadequate secretion of intrinsic factor, and inadequate utilization; for increased requirements due to pregnancy. 
 </p>
 </div>
 <div class="columns large-9 medium-9">
@@ -331,7 +327,7 @@ Glipizide is an anti-diabetic medicine (sulfonylurea-type) used along with a pro
 </span>
 <span class="flag-content">
 <p>
-<a href="/patients?s%5Bexclude_deceased%5D=true&amp;s%5Bt%5D=1456">See patients taking Glipizide</a>
+<a href="/patients?s%5Bexclude_deceased%5D=true&amp;s%5Bt%5D=303">See patients taking Vitamin B12 Injection</a>
 </p>
 </span>
 </div>
@@ -356,105 +352,105 @@ Glipizide is an anti-diabetic medicine (sulfonylurea-type) used along with a pro
 <th>Perceived Effectiveness</th>
 </tr>
 </thead>
-<tbody class="ajax-target compacted" data-url="/treatments/1456/additional_purpose_rows">
-<tr class="top-n yah-receiver" data-yah-key="purpose" data-yah-value="conditions-50" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
+<tbody class="ajax-target compacted" data-url="/treatments/303/additional_purpose_rows">
+<tr class="top-n yah-receiver" data-yah-key="purpose" data-yah-value="conditions-413" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-<a href="/conditions/50"><span itemprop="name">Diabetes type 2</span>
+<a href="/conditions/413"><span itemprop="name">Vitamin B12 deficiency</span>
 </a></th>
 <td class="numeric">
-<a title="See patients who are taking or have taken Glipizide for this purpose" href="/patients/treatment/14847?treatment_purpose_condition=50">235</a>
+<a title="See patients who are taking or have taken Vitamin B12 Injection for this purpose" href="/patients/treatment/303-vitamin-b12-injection-side-effects-and-efficacy?treatment_purpose_condition=413">152</a>
 </td>
 <td class="numeric">
-<a title="See all evaluations with this purpose" href="/treatment_evaluations/browse?brand=false&amp;condition_id=50&amp;id=1456">125</a>
+<a title="See all evaluations with this purpose" href="/treatment_evaluations/browse?brand=false&amp;condition_id=413&amp;id=303">73</a>
 </td>
 <td class="efficacy">
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item bg-efficacy-major" style="width: 33.6%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=50&amp;id=1456&amp;value=4"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 42 evaluations from 29 patients with major perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-moderate" style="width: 32.8%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=50&amp;id=1456&amp;value=3"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 41 evaluations from 31 patients with moderate perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-slight" style="width: 12.0%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=50&amp;id=1456&amp;value=2"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 15 evaluations from 15 patients with slight perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-none" style="width: 2.4%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=50&amp;id=1456&amp;value=1"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 3 evaluations from 3 patients with none perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-cant_tell" style="width: 19.2%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=50&amp;id=1456&amp;value=0"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 24 evaluations from 21 patients with unknown perceived effectiveness</small></a></li></ul>
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item bg-efficacy-major" style="width: 40.0%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=413&amp;id=303&amp;value=4"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 26 evaluations from 19 patients with major perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-moderate" style="width: 26.153846153846153%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=413&amp;id=303&amp;value=3"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 17 evaluations from 11 patients with moderate perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-slight" style="width: 15.384615384615385%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=413&amp;id=303&amp;value=2"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 10 evaluations from 10 patients with slight perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-none" style="width: 6.153846153846154%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=413&amp;id=303&amp;value=1"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 4 evaluations from 3 patients with none perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-cant_tell" style="width: 12.307692307692308%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=413&amp;id=303&amp;value=0"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 8 evaluations from 8 patients with unknown perceived effectiveness</small></a></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-yah-key="purpose" data-yah-value="symptoms-2065" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
+<tr class="top-n yah-receiver" data-yah-key="purpose" data-yah-value="symptoms-7" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-<a href="/symptoms/show/2065"><span itemprop="name">Elevated blood sugar (hyperglycemia)</span>
+<a href="/symptoms/show/7"><span itemprop="name">Fatigue</span>
 </a></th>
 <td class="numeric">
-<a title="See patients who are taking or have taken Glipizide for this purpose" href="/patients/treatment/14847?treatment_purpose_symptom=2065">8</a>
+<a title="See patients who are taking or have taken Vitamin B12 Injection for this purpose" href="/patients/treatment/303-vitamin-b12-injection-side-effects-and-efficacy?treatment_purpose_symptom=7">148</a>
 </td>
 <td class="numeric">
-<a title="See all evaluations with this purpose" href="/treatment_evaluations/browse?brand=false&amp;id=1456&amp;symptom_id=2065">3</a>
+<a title="See all evaluations with this purpose" href="/treatment_evaluations/browse?brand=false&amp;id=303&amp;symptom_id=7">68</a>
 </td>
 <td class="efficacy">
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item bg-efficacy-major" style="width: 33.333333333333336%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=1456&amp;symptom_id=2065&amp;value=4"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 1 evaluation from 1 patient with major perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-moderate" style="width: 0.0%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=1456&amp;symptom_id=2065&amp;value=3"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 0 evaluations from 0 patients with moderate perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-slight" style="width: 33.333333333333336%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=1456&amp;symptom_id=2065&amp;value=2"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 1 evaluation from 1 patient with slight perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-none" style="width: 0.0%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=1456&amp;symptom_id=2065&amp;value=1"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 0 evaluations from 0 patients with none perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-cant_tell" style="width: 33.333333333333336%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=1456&amp;symptom_id=2065&amp;value=0"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item bg-efficacy-major" style="width: 26.153846153846153%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=303&amp;symptom_id=7&amp;value=4"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 17 evaluations from 11 patients with major perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-moderate" style="width: 26.153846153846153%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=303&amp;symptom_id=7&amp;value=3"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 17 evaluations from 14 patients with moderate perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-slight" style="width: 23.076923076923077%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=303&amp;symptom_id=7&amp;value=2"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 15 evaluations from 15 patients with slight perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-none" style="width: 10.76923076923077%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=303&amp;symptom_id=7&amp;value=1"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 7 evaluations from 5 patients with none perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-cant_tell" style="width: 13.846153846153847%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=303&amp;symptom_id=7&amp;value=0"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 9 evaluations from 9 patients with unknown perceived effectiveness</small></a></li></ul>
+</td>
+</tr>
+<tr class="top-n yah-receiver" data-yah-key="purpose" data-yah-value="conditions-292" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
+<th scope="row">
+<span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
+<a href="/conditions/292"><span itemprop="name">Pernicious anemia</span>
+</a></th>
+<td class="numeric">
+<a title="See patients who are taking or have taken Vitamin B12 Injection for this purpose" href="/patients/treatment/303-vitamin-b12-injection-side-effects-and-efficacy?treatment_purpose_condition=292">38</a>
+</td>
+<td class="numeric">
+<a title="See all evaluations with this purpose" href="/treatment_evaluations/browse?brand=false&amp;condition_id=292&amp;id=303">11</a>
+</td>
+<td class="efficacy">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item bg-efficacy-major" style="width: 88.88888888888889%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=292&amp;id=303&amp;value=4"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 8 evaluations from 7 patients with major perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-moderate" style="width: 0.0%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=292&amp;id=303&amp;value=3"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 0 evaluations from 0 patients with moderate perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-slight" style="width: 0.0%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=292&amp;id=303&amp;value=2"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 0 evaluations from 0 patients with slight perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-none" style="width: 0.0%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=292&amp;id=303&amp;value=1"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 0 evaluations from 0 patients with none perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-cant_tell" style="width: 11.11111111111111%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=292&amp;id=303&amp;value=0"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
 See 1 evaluation from 1 patient with unknown perceived effectiveness</small></a></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-yah-key="purpose" data-yah-value="conditions-51" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
+<tr class="top-n yah-receiver" data-yah-key="purpose" data-yah-value="treatment_purposes-2" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-<a href="/conditions/51"><span itemprop="name">Diabetes type 1</span>
+<a href="/treatment_purposes/2"><span itemprop="name">General health</span>
 </a></th>
 <td class="numeric">
-<a title="See patients who are taking or have taken Glipizide for this purpose" href="/patients/treatment/14847?treatment_purpose_condition=51">2</a>
+<a title="See patients who are taking or have taken Vitamin B12 Injection for this purpose" href="/patients/treatment/303-vitamin-b12-injection-side-effects-and-efficacy?treatment_purpose=2">35</a>
 </td>
 <td class="numeric">
-<a title="See all evaluations with this purpose" href="/treatment_evaluations/browse?brand=false&amp;condition_id=51&amp;id=1456">1</a>
+<a title="See all evaluations with this purpose" href="/treatment_evaluations/browse?brand=false&amp;id=303&amp;treatment_purpose_id=2">14</a>
 </td>
 <td class="efficacy">
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item bg-efficacy-major" style="width: 0.0%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=51&amp;id=1456&amp;value=4"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 0 evaluations from 0 patients with major perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-moderate" style="width: 0.0%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=51&amp;id=1456&amp;value=3"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 0 evaluations from 0 patients with moderate perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-slight" style="width: 0.0%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=51&amp;id=1456&amp;value=2"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 0 evaluations from 0 patients with slight perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-none" style="width: 100.0%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=51&amp;id=1456&amp;value=1"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 1 evaluation from 1 patient with none perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-cant_tell" style="width: 0.0%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=51&amp;id=1456&amp;value=0"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 0 evaluations from 0 patients with unknown perceived effectiveness</small></a></li></ul>
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item bg-efficacy-major" style="width: 16.666666666666668%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=303&amp;treatment_purpose_id=2&amp;value=4"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 2 evaluations from 2 patients with major perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-moderate" style="width: 25.0%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=303&amp;treatment_purpose_id=2&amp;value=3"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 3 evaluations from 3 patients with moderate perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-slight" style="width: 41.666666666666664%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=303&amp;treatment_purpose_id=2&amp;value=2"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 5 evaluations from 5 patients with slight perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-none" style="width: 0.0%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=303&amp;treatment_purpose_id=2&amp;value=1"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 0 evaluations from 0 patients with none perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-cant_tell" style="width: 16.666666666666668%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=303&amp;treatment_purpose_id=2&amp;value=0"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 2 evaluations from 2 patients with unknown perceived effectiveness</small></a></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-yah-key="purpose" data-yah-value="symptoms-236" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
+<tr class="top-n yah-receiver" data-yah-key="purpose" data-yah-value="conditions-27" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-<a href="/symptoms/show/236"><span itemprop="name">Blurry vision</span>
+<a href="/conditions/27"><span itemprop="name">Myalgic encephalomyelitis/chronic fatigue syndrome</span>
 </a></th>
 <td class="numeric">
-<a title="See patients who are taking or have taken Glipizide for this purpose" href="/patients/treatment/14847?treatment_purpose_symptom=236">1</a>
+<a title="See patients who are taking or have taken Vitamin B12 Injection for this purpose" href="/patients/treatment/303-vitamin-b12-injection-side-effects-and-efficacy?treatment_purpose_condition=27">24</a>
 </td>
 <td class="numeric">
-<a title="See all evaluations with this purpose" href="/treatment_evaluations/browse?brand=false&amp;id=1456&amp;symptom_id=236">15</a>
+<a title="See all evaluations with this purpose" href="/treatment_evaluations/browse?brand=false&amp;condition_id=27&amp;id=303">13</a>
 </td>
 <td class="efficacy">
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item bg-efficacy-major" style="width: 0.0%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=1456&amp;symptom_id=236&amp;value=4"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 0 evaluations from 0 patients with major perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-moderate" style="width: 20.0%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=1456&amp;symptom_id=236&amp;value=3"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 1 evaluation from 1 patient with moderate perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-slight" style="width: 0.0%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=1456&amp;symptom_id=236&amp;value=2"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 0 evaluations from 0 patients with slight perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-none" style="width: 80.0%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=1456&amp;symptom_id=236&amp;value=1"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 4 evaluations from 1 patient with none perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-cant_tell" style="width: 0.0%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=1456&amp;symptom_id=236&amp;value=0"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 0 evaluations from 0 patients with unknown perceived effectiveness</small></a></li></ul>
-</td>
-</tr>
-<tr class="top-n yah-receiver" data-yah-key="purpose" data-yah-value="treatment_purposes-478" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
-<th scope="row">
-<span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-<a href="/treatment_purposes/478"><span itemprop="name">Doctor recommendation</span>
-</a></th>
-<td class="numeric">
-<a title="See patients who are taking or have taken Glipizide for this purpose" href="/patients/treatment/14847?treatment_purpose=478">1</a>
-</td>
-<td class="numeric">
-<a title="See all evaluations with this purpose" href="/treatment_evaluations/browse?brand=false&amp;id=1456&amp;treatment_purpose_id=478">1</a>
-</td>
-<td class="efficacy">
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item bg-efficacy-major" style="width: 100.0%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=1456&amp;treatment_purpose_id=478&amp;value=4"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 1 evaluation from 1 patient with major perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-moderate" style="width: 0.0%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=1456&amp;treatment_purpose_id=478&amp;value=3"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 0 evaluations from 0 patients with moderate perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-slight" style="width: 0.0%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=1456&amp;treatment_purpose_id=478&amp;value=2"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 0 evaluations from 0 patients with slight perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-none" style="width: 0.0%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=1456&amp;treatment_purpose_id=478&amp;value=1"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 0 evaluations from 0 patients with none perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-cant_tell" style="width: 0.0%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=1456&amp;treatment_purpose_id=478&amp;value=0"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 0 evaluations from 0 patients with unknown perceived effectiveness</small></a></li></ul>
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item bg-efficacy-major" style="width: 16.666666666666668%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=27&amp;id=303&amp;value=4"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 2 evaluations from 2 patients with major perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-moderate" style="width: 33.333333333333336%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=27&amp;id=303&amp;value=3"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 4 evaluations from 4 patients with moderate perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-slight" style="width: 16.666666666666668%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=27&amp;id=303&amp;value=2"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 2 evaluations from 2 patients with slight perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-none" style="width: 25.0%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=27&amp;id=303&amp;value=1"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 3 evaluations from 3 patients with none perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-cant_tell" style="width: 8.333333333333334%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=27&amp;id=303&amp;value=0"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 1 evaluation from 1 patient with unknown perceived effectiveness</small></a></li></ul>
 </td>
 </tr>
 
@@ -462,7 +458,7 @@ See 0 evaluations from 0 patients with unknown perceived effectiveness</small></
 </table>
 <p class="show toggle">
 <a class="content-toggle" data-fn-click="treatment_report_section.toggle_compacted" href="#">Show all
-<strong>11 reasons taken</strong>
+<strong>48 reasons taken</strong>
 <span class="loading" style="display: none;"></span>
 </a></p>
 <p class="hide toggle" style="display: none;">
@@ -496,13 +492,13 @@ Can&#39;t tell
 </div>
 
 <div class="glass-panel">
-<a href="/patients/treatment/1456-glipizide-side-effects-and-efficacy">See
+<a href="/patients/treatment/303-vitamin-b12-injection-side-effects-and-efficacy">See
 all
 <strong>
-301 patients
+601 patients
 
 </strong>
-<span>that have taken Glipizide</span>
+<span>that have taken Vitamin B12 Injection</span>
 </a></div>
 <div class="content-section section-panel">
 <h2>Side effects</h2>
@@ -532,11 +528,11 @@ Side effects as an overall problem
 Severe
 </td>
 <td class="numeric">
-<a href="/treatment_evaluations/browse?attribute=side_effects&amp;brand=false&amp;id=1456&amp;value=4">7</a>
+<a href="/treatment_evaluations/browse?attribute=side_effects&amp;brand=false&amp;id=303&amp;value=4">0</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item scale-color-severe" style="width: 5.426356589147287%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=side_effects&amp;brand=false&amp;id=1456&amp;value=4"><small class="is-tooltip" role="tooltip">
-7</small></a></li></ul>
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item scale-color-severe" style="width: 0.0%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=side_effects&amp;brand=false&amp;id=303&amp;value=4"><small class="is-tooltip" role="tooltip">
+0</small></a></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="overall_side_effects" data-yah-value="3">
@@ -545,11 +541,11 @@ Severe
 Moderate
 </td>
 <td class="numeric">
-<a href="/treatment_evaluations/browse?attribute=side_effects&amp;brand=false&amp;id=1456&amp;value=3">2</a>
+<a href="/treatment_evaluations/browse?attribute=side_effects&amp;brand=false&amp;id=303&amp;value=3">6</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item scale-color-severe" style="width: 1.550387596899225%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=side_effects&amp;brand=false&amp;id=1456&amp;value=3"><small class="is-tooltip" role="tooltip">
-2</small></a></li></ul>
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item scale-color-severe" style="width: 3.125%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=side_effects&amp;brand=false&amp;id=303&amp;value=3"><small class="is-tooltip" role="tooltip">
+6</small></a></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="overall_side_effects" data-yah-value="2">
@@ -558,11 +554,11 @@ Moderate
 Mild
 </td>
 <td class="numeric">
-<a href="/treatment_evaluations/browse?attribute=side_effects&amp;brand=false&amp;id=1456&amp;value=2">16</a>
+<a href="/treatment_evaluations/browse?attribute=side_effects&amp;brand=false&amp;id=303&amp;value=2">25</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item scale-color-severe" style="width: 12.4031007751938%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=side_effects&amp;brand=false&amp;id=1456&amp;value=2"><small class="is-tooltip" role="tooltip">
-16</small></a></li></ul>
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item scale-color-severe" style="width: 13.020833333333334%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=side_effects&amp;brand=false&amp;id=303&amp;value=2"><small class="is-tooltip" role="tooltip">
+25</small></a></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="overall_side_effects" data-yah-value="1">
@@ -571,11 +567,11 @@ Mild
 None
 </td>
 <td class="numeric">
-<a href="/treatment_evaluations/browse?attribute=side_effects&amp;brand=false&amp;id=1456&amp;value=1">104</a>
+<a href="/treatment_evaluations/browse?attribute=side_effects&amp;brand=false&amp;id=303&amp;value=1">161</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item scale-color-severe" style="width: 80.62015503875969%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=side_effects&amp;brand=false&amp;id=1456&amp;value=1"><small class="is-tooltip" role="tooltip">
-104</small></a></li></ul>
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item scale-color-severe" style="width: 83.85416666666667%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=side_effects&amp;brand=false&amp;id=303&amp;value=1"><small class="is-tooltip" role="tooltip">
+161</small></a></li></ul>
 </td>
 </tr>
 </tbody>
@@ -583,9 +579,9 @@ None
 </div>
 <div class="columns medium-12" data-widget="treatment_report_section">
 <h3 class="tertiary-title">
-Commonly reported side effects and conditions associated with Glipizide
+Commonly reported side effects and conditions associated with Vitamin B12 Injection
 </h3>
-<table class="tbl-default-layout tbl-divided" summary="Side effects of Glipizide">
+<table class="tbl-default-layout tbl-divided" summary="Side effects of Vitamin B12 Injection">
 <col class="small-10">
 <col class="small-4">
 <col class="small-10">
@@ -596,19 +592,75 @@ Commonly reported side effects and conditions associated with Glipizide
 <th></th>
 </tr>
 </thead>
-<tbody class="ajax-target compacted" data-url="/treatments/1456/additional_side_effect_rows">
-<tr class="top-n yah-receiver" data-yah-key="side_effect" data-yah-value="symptoms-1829" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
+<tbody class="ajax-target compacted" data-url="/treatments/303/additional_side_effect_rows">
+<tr class="top-n yah-receiver" data-yah-key="side_effect" data-yah-value="symptoms-5265" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-<a href="/symptoms/show/1829"><span itemprop="name">Low blood sugar (hypoglycemia)</span>
+<a href="/symptoms/show/5265"><span itemprop="name">Injection site bruising</span>
 </a></th>
 <td class="numeric">
-7
+6
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 24.137931034482758%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 26.08695652173913%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-7</small></span></li></ul>
+6</small></span></li></ul>
+</td>
+</tr>
+<tr class="top-n yah-receiver" data-yah-key="side_effect" data-yah-value="symptoms-2298" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
+<th scope="row">
+<span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
+<a href="/symptoms/show/2298"><span itemprop="name">Injection site pain</span>
+</a></th>
+<td class="numeric">
+4
+</td>
+<td>
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 17.391304347826086%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<small class="is-tooltip" role="tooltip">
+4</small></span></li></ul>
+</td>
+</tr>
+<tr class="top-n yah-receiver" data-yah-key="side_effect" data-yah-value="symptoms-181" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
+<th scope="row">
+<span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
+<a href="/symptoms/show/181"><span itemprop="name">Bruising</span>
+</a></th>
+<td class="numeric">
+2
+</td>
+<td>
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 8.695652173913043%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<small class="is-tooltip" role="tooltip">
+2</small></span></li></ul>
+</td>
+</tr>
+<tr class="top-n yah-receiver" data-yah-key="side_effect" data-yah-value="symptoms-2101" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
+<th scope="row">
+<span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
+<a href="/symptoms/show/2101"><span itemprop="name">Jittery feeling</span>
+</a></th>
+<td class="numeric">
+2
+</td>
+<td>
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 8.695652173913043%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<small class="is-tooltip" role="tooltip">
+2</small></span></li></ul>
+</td>
+</tr>
+<tr class="top-n yah-receiver" data-yah-key="side_effect" data-yah-value="symptoms-11590" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
+<th scope="row">
+<span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
+<a href="/symptoms/show/11590"><span itemprop="name">Burning pain at injection site</span>
+</a></th>
+<td class="numeric">
+1
+</td>
+<td>
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 4.3478260869565215%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<small class="is-tooltip" role="tooltip">
+1</small></span></li></ul>
 </td>
 </tr>
 <tr class="top-n yah-receiver" data-yah-key="side_effect" data-yah-value="symptoms-263" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
@@ -617,66 +669,10 @@ Commonly reported side effects and conditions associated with Glipizide
 <a href="/symptoms/show/263"><span itemprop="name">Diarrhea</span>
 </a></th>
 <td class="numeric">
-2
-</td>
-<td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 6.896551724137931%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
-<small class="is-tooltip" role="tooltip">
-2</small></span></li></ul>
-</td>
-</tr>
-<tr class="top-n yah-receiver" data-yah-key="side_effect" data-yah-value="symptoms-1486" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
-<th scope="row">
-<span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-<a href="/symptoms/show/1486"><span itemprop="name">Tiredness</span>
-</a></th>
-<td class="numeric">
-2
-</td>
-<td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 6.896551724137931%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
-<small class="is-tooltip" role="tooltip">
-2</small></span></li></ul>
-</td>
-</tr>
-<tr class="top-n yah-receiver" data-yah-key="side_effect" data-yah-value="symptoms-224" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
-<th scope="row">
-<span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-<a href="/symptoms/show/224"><span itemprop="name">Weight gain</span>
-</a></th>
-<td class="numeric">
-2
-</td>
-<td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 6.896551724137931%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
-<small class="is-tooltip" role="tooltip">
-2</small></span></li></ul>
-</td>
-</tr>
-<tr class="top-n yah-receiver" data-yah-key="side_effect" data-yah-value="symptoms-11288" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
-<th scope="row">
-<span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-<a href="/symptoms/show/11288"><span itemprop="name">Constant tiredness</span>
-</a></th>
-<td class="numeric">
 1
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 3.4482758620689653%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
-<small class="is-tooltip" role="tooltip">
-1</small></span></li></ul>
-</td>
-</tr>
-<tr class="top-n yah-receiver" data-yah-key="side_effect" data-yah-value="symptoms-2" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
-<th scope="row">
-<span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-<a href="/symptoms/show/2"><span itemprop="name">Constipation</span>
-</a></th>
-<td class="numeric">
-1
-</td>
-<td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 3.4482758620689653%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 4.3478260869565215%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
 1</small></span></li></ul>
 </td>
@@ -686,7 +682,7 @@ Commonly reported side effects and conditions associated with Glipizide
 </table>
 <p class="show toggle">
 <a class="content-toggle" data-fn-click="treatment_report_section.toggle_compacted" href="#">Show all
-<strong>23 reported side effects</strong>
+<strong>20 reported side effects</strong>
 <span class="loading" style="display: none;"></span>
 </a></p>
 <p class="hide toggle" style="display: none;">
@@ -702,7 +698,7 @@ Commonly reported side effects and conditions associated with Glipizide
 <div class="columns medium-12">
 <div data-widget="treatment_report_section">
 <h2>Dosages</h2>
-<p class="helptext">Based on patients currently taking Glipizide</p>
+<p class="helptext">Based on patients currently taking Vitamin B12 Injection</p>
 <table class="tbl-default-layout tbl-divided">
 <colgroup>
 <col class="medium-10">
@@ -716,143 +712,143 @@ Commonly reported side effects and conditions associated with Glipizide
 <th></th>
 </tr>
 </thead>
-<tbody class="ajax-target compacted" data-url="/treatments/1456/additional_dosage_rows">
-<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="5 mg daily">
+<tbody class="ajax-target compacted" data-url="/treatments/303/additional_dosage_rows">
+<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="1 mg monthly">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-5 mg daily
+1 mg monthly
 </th>
 <td class="numeric">
-<a title="See patients who are currently taking Glipizide at this dosage" href="/patients/treatment/14847?dosage_string=5+mg+daily&amp;stopped=false">14</a>
+<a title="See patients who are currently taking Vitamin B12 Injection at this dosage" href="/patients/treatment/303-vitamin-b12-injection-side-effects-and-efficacy?dosage_string=1+mg+monthly&amp;stopped=false">27</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 27.45098039215686%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 40.90909090909091%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-14</small></span></li></ul>
+27</small></span></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="10 mg daily">
+<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="1 mg every other week">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-10 mg daily
+1 mg every other week
 </th>
 <td class="numeric">
-<a title="See patients who are currently taking Glipizide at this dosage" href="/patients/treatment/14847?dosage_string=10+mg+daily&amp;stopped=false">10</a>
+<a title="See patients who are currently taking Vitamin B12 Injection at this dosage" href="/patients/treatment/303-vitamin-b12-injection-side-effects-and-efficacy?dosage_string=1+mg+every+other+week&amp;stopped=false">7</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 19.607843137254903%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
-<small class="is-tooltip" role="tooltip">
-10</small></span></li></ul>
-</td>
-</tr>
-<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="2.5 mg daily">
-<th scope="row">
-<span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-2.5 mg daily
-</th>
-<td class="numeric">
-<a title="See patients who are currently taking Glipizide at this dosage" href="/patients/treatment/14847?dosage_string=2.5+mg+daily&amp;stopped=false">7</a>
-</td>
-<td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 13.72549019607843%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 10.606060606060606%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
 7</small></span></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="10 mg twice daily">
+<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="1 mg weekly">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-10 mg twice daily
+1 mg weekly
 </th>
 <td class="numeric">
-<a title="See patients who are currently taking Glipizide at this dosage" href="/patients/treatment/14847?dosage_string=10+mg+twice+daily&amp;stopped=false">6</a>
+<a title="See patients who are currently taking Vitamin B12 Injection at this dosage" href="/patients/treatment/303-vitamin-b12-injection-side-effects-and-efficacy?dosage_string=1+mg+weekly&amp;stopped=false">7</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 11.764705882352942%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 10.606060606060606%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-6</small></span></li></ul>
+7</small></span></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="5 mg twice daily">
+<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="1 mg every 3 months">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-5 mg twice daily
+1 mg every 3 months
 </th>
 <td class="numeric">
-<a title="See patients who are currently taking Glipizide at this dosage" href="/patients/treatment/14847?dosage_string=5+mg+twice+daily&amp;stopped=false">5</a>
+<a title="See patients who are currently taking Vitamin B12 Injection at this dosage" href="/patients/treatment/303-vitamin-b12-injection-side-effects-and-efficacy?dosage_string=1+mg+every+3+months&amp;stopped=false">2</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 9.803921568627452%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 3.0303030303030303%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-5</small></span></li></ul>
+2</small></span></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="20 mg daily">
+<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="1 mg every 12 weeks">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-20 mg daily
+1 mg every 12 weeks
 </th>
 <td class="numeric">
-<a title="See patients who are currently taking Glipizide at this dosage" href="/patients/treatment/14847?dosage_string=20+mg+daily&amp;stopped=false">5</a>
+<a title="See patients who are currently taking Vitamin B12 Injection at this dosage" href="/patients/treatment/303-vitamin-b12-injection-side-effects-and-efficacy?dosage_string=1+mg+every+12+weeks&amp;stopped=false">2</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 9.803921568627452%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 3.0303030303030303%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-5</small></span></li></ul>
+2</small></span></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="2.5 mg twice daily">
+<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="1 other monthly">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-2.5 mg twice daily
+1 other monthly
 </th>
 <td class="numeric">
-<a title="See patients who are currently taking Glipizide at this dosage" href="/patients/treatment/14847?dosage_string=2.5+mg+twice+daily&amp;stopped=false">1</a>
+<a title="See patients who are currently taking Vitamin B12 Injection at this dosage" href="/patients/treatment/303-vitamin-b12-injection-side-effects-and-efficacy?dosage_string=1+other+monthly&amp;stopped=false">2</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 1.9607843137254901%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 3.0303030303030303%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<small class="is-tooltip" role="tooltip">
+2</small></span></li></ul>
+</td>
+</tr>
+<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="1 mg m,w,f">
+<th scope="row">
+<span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
+1 mg m,w,f
+</th>
+<td class="numeric">
+<a title="See patients who are currently taking Vitamin B12 Injection at this dosage" href="/patients/treatment/303-vitamin-b12-injection-side-effects-and-efficacy?dosage_string=1+mg+m%2Cw%2Cf&amp;stopped=false">2</a>
+</td>
+<td>
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 3.0303030303030303%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<small class="is-tooltip" role="tooltip">
+2</small></span></li></ul>
+</td>
+</tr>
+<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="1 mL every 3 months">
+<th scope="row">
+<span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
+1 mL every 3 months
+</th>
+<td class="numeric">
+<a title="See patients who are currently taking Vitamin B12 Injection at this dosage" href="/patients/treatment/303-vitamin-b12-injection-side-effects-and-efficacy?dosage_string=1+mL+every+3+months&amp;stopped=false">1</a>
+</td>
+<td>
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 1.5151515151515151%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
 1</small></span></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="10 mg three times daily">
+<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="1 mg every 8 weeks">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-10 mg three times daily
+1 mg every 8 weeks
 </th>
 <td class="numeric">
-<a title="See patients who are currently taking Glipizide at this dosage" href="/patients/treatment/14847?dosage_string=10+mg+three+times+daily&amp;stopped=false">1</a>
+<a title="See patients who are currently taking Vitamin B12 Injection at this dosage" href="/patients/treatment/303-vitamin-b12-injection-side-effects-and-efficacy?dosage_string=1+mg+every+8+weeks&amp;stopped=false">1</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 1.9607843137254901%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 1.5151515151515151%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
 1</small></span></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="40 mg daily">
+<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="1 mg every 6 weeks">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-40 mg daily
+1 mg every 6 weeks
 </th>
 <td class="numeric">
-<a title="See patients who are currently taking Glipizide at this dosage" href="/patients/treatment/14847?dosage_string=40+mg+daily&amp;stopped=false">1</a>
+<a title="See patients who are currently taking Vitamin B12 Injection at this dosage" href="/patients/treatment/303-vitamin-b12-injection-side-effects-and-efficacy?dosage_string=1+mg+every+6+weeks&amp;stopped=false">1</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 1.9607843137254901%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
-<small class="is-tooltip" role="tooltip">
-1</small></span></li></ul>
-</td>
-</tr>
-<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="100 mg twice daily">
-<th scope="row">
-<span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-100 mg twice daily
-</th>
-<td class="numeric">
-<a title="See patients who are currently taking Glipizide at this dosage" href="/patients/treatment/14847?dosage_string=100+mg+twice+daily&amp;stopped=false">1</a>
-</td>
-<td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 1.9607843137254901%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 1.5151515151515151%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
 1</small></span></li></ul>
 </td>
@@ -860,11 +856,20 @@ Commonly reported side effects and conditions associated with Glipizide
 
 </tbody>
 </table>
+<p class="show toggle">
+<a class="content-toggle" data-fn-click="treatment_report_section.toggle_compacted" href="#">See all
+<strong>24 dosages</strong>
+<span class="loading" style="display: none;"></span>
+</a></p>
+<p class="hide toggle" style="display: none;">
+<a class="content-toggle is-open" data-fn-click="treatment_report_section.toggle_compacted" href="#">See top
+<strong>10 dosages</strong>
+</a></p>
 </div>
 
 </div>
 <div class="columns medium-12">
-<h2>Why patients stopped taking Glipizide</h2>
+<h2>Why patients stopped taking Vitamin B12 Injection</h2>
 <p class="helptext">Multiple reasons could be selected</p>
 <table class="tbl-default-layout tbl-divided">
 <colgroup>
@@ -878,46 +883,18 @@ Commonly reported side effects and conditions associated with Glipizide
 <th></th>
 </thead>
 <tbody>
-<tr class="yah-receiver" data-yah-key="stop_reason" data-yah-value="4">
+<tr class="yah-receiver" data-yah-key="stop_reason" data-yah-value="7">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-Doctor&#39;s advice
+Course of treatment ended
 </th>
 <td class="numeric">
-<a title="See patients who stopped taking Glipizide for this reason" href="/patients/treatment/14847?stop_reason=4">32</a>
+<a title="See patients who stopped taking Vitamin B12 Injection for this reason" href="/patients/treatment/303-vitamin-b12-injection-side-effects-and-efficacy?stop_reason=7">43</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 57.142857142857146%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 33.333333333333336%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-32</small></span></li></ul>
-</td>
-</tr>
-<tr class="yah-receiver" data-yah-key="stop_reason" data-yah-value="1">
-<th scope="row">
-<span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-Did not seem to work
-</th>
-<td class="numeric">
-<a title="See patients who stopped taking Glipizide for this reason" href="/patients/treatment/14847?stop_reason=1">20</a>
-</td>
-<td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 35.714285714285715%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
-<small class="is-tooltip" role="tooltip">
-20</small></span></li></ul>
-</td>
-</tr>
-<tr class="yah-receiver" data-yah-key="stop_reason" data-yah-value="5">
-<th scope="row">
-<span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-Side effects too severe
-</th>
-<td class="numeric">
-<a title="See patients who stopped taking Glipizide for this reason" href="/patients/treatment/14847?stop_reason=5">13</a>
-</td>
-<td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 23.214285714285715%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
-<small class="is-tooltip" role="tooltip">
-13</small></span></li></ul>
+43</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="stop_reason" data-yah-value="6">
@@ -926,40 +903,40 @@ Side effects too severe
 Other
 </th>
 <td class="numeric">
-<a title="See patients who stopped taking Glipizide for this reason" href="/patients/treatment/14847?stop_reason=6">7</a>
+<a title="See patients who stopped taking Vitamin B12 Injection for this reason" href="/patients/treatment/303-vitamin-b12-injection-side-effects-and-efficacy?stop_reason=6">38</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 12.5%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 29.45736434108527%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-7</small></span></li></ul>
+38</small></span></li></ul>
 </td>
 </tr>
-<tr class="yah-receiver" data-yah-key="stop_reason" data-yah-value="7">
+<tr class="yah-receiver" data-yah-key="stop_reason" data-yah-value="1">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-Course of treatment ended
+Did not seem to work
 </th>
 <td class="numeric">
-<a title="See patients who stopped taking Glipizide for this reason" href="/patients/treatment/14847?stop_reason=7">5</a>
+<a title="See patients who stopped taking Vitamin B12 Injection for this reason" href="/patients/treatment/303-vitamin-b12-injection-side-effects-and-efficacy?stop_reason=1">25</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 8.928571428571429%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 19.37984496124031%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-5</small></span></li></ul>
+25</small></span></li></ul>
 </td>
 </tr>
-<tr class="yah-receiver" data-yah-key="stop_reason" data-yah-value="8">
+<tr class="yah-receiver" data-yah-key="stop_reason" data-yah-value="4">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-Change in health plan coverage
+Doctor&#39;s advice
 </th>
 <td class="numeric">
-<a title="See patients who stopped taking Glipizide for this reason" href="/patients/treatment/14847?stop_reason=8">2</a>
+<a title="See patients who stopped taking Vitamin B12 Injection for this reason" href="/patients/treatment/303-vitamin-b12-injection-side-effects-and-efficacy?stop_reason=4">20</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 3.5714285714285716%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 15.503875968992247%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-2</small></span></li></ul>
+20</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="stop_reason" data-yah-value="2">
@@ -968,10 +945,38 @@ Change in health plan coverage
 Expense
 </th>
 <td class="numeric">
-<a title="See patients who stopped taking Glipizide for this reason" href="/patients/treatment/14847?stop_reason=2">1</a>
+<a title="See patients who stopped taking Vitamin B12 Injection for this reason" href="/patients/treatment/303-vitamin-b12-injection-side-effects-and-efficacy?stop_reason=2">13</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 1.7857142857142858%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 10.077519379844961%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<small class="is-tooltip" role="tooltip">
+13</small></span></li></ul>
+</td>
+</tr>
+<tr class="yah-receiver" data-yah-key="stop_reason" data-yah-value="8">
+<th scope="row">
+<span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
+Change in health plan coverage
+</th>
+<td class="numeric">
+<a title="See patients who stopped taking Vitamin B12 Injection for this reason" href="/patients/treatment/303-vitamin-b12-injection-side-effects-and-efficacy?stop_reason=8">2</a>
+</td>
+<td>
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 1.550387596899225%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<small class="is-tooltip" role="tooltip">
+2</small></span></li></ul>
+</td>
+</tr>
+<tr class="yah-receiver" data-yah-key="stop_reason" data-yah-value="3">
+<th scope="row">
+<span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
+Personal research
+</th>
+<td class="numeric">
+<a title="See patients who stopped taking Vitamin B12 Injection for this reason" href="/patients/treatment/303-vitamin-b12-injection-side-effects-and-efficacy?stop_reason=3">1</a>
+</td>
+<td>
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 0.7751937984496124%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
 1</small></span></li></ul>
 </td>
@@ -979,12 +984,12 @@ Expense
 </tbody>
 </table>
 
-<a href="/patients/treatment/1456-glipizide-side-effects-and-efficacy?stopped=true">See
+<a href="/patients/treatment/303-vitamin-b12-injection-side-effects-and-efficacy?stopped=true">See
 all
-<strong>56 patients</strong>
+<strong>129 patients</strong>
 
 who&#39;ve
-stopped taking Glipizide
+stopped taking Vitamin B12 Injection
 </a></div>
 </div>
 </div>
@@ -993,7 +998,7 @@ stopped taking Glipizide
 <div class="row">
 <div class="columns medium-12">
 <h3 class="tertiary-title">
-Currently taking Glipizide
+Currently taking Vitamin B12 Injection
 </h3>
 <table class="tbl-default-layout tbl-divided">
 <colgroup>
@@ -1007,18 +1012,32 @@ Currently taking Glipizide
 <th></th>
 </thead>
 <tbody>
+<tr class="yah-receiver" data-yah-key="duration_current" data-yah-value="0">
+<th scope="row">
+<span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
+Less than 1 month
+</th>
+<td class="numeric">
+<a title="See patients who have been taking Vitamin B12 Injection for this long" href="/patients/treatment/303-vitamin-b12-injection-side-effects-and-efficacy?max_duration=2629746&amp;min_duration=0">1</a>
+</td>
+<td>
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 1.4705882352941178%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<small class="is-tooltip" role="tooltip">
+1</small></span></li></ul>
+</td>
+</tr>
 <tr class="yah-receiver" data-yah-key="duration_current" data-yah-value="2629746">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
 1 - 6 months
 </th>
 <td class="numeric">
-<a title="See patients who have been taking Glipizide for this long" href="/patients/treatment/14847?max_duration=15778476&amp;min_duration=2629746">1</a>
+<a title="See patients who have been taking Vitamin B12 Injection for this long" href="/patients/treatment/303-vitamin-b12-injection-side-effects-and-efficacy?max_duration=15778476&amp;min_duration=2629746">2</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 1.8867924528301887%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 2.9411764705882355%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-1</small></span></li></ul>
+2</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="duration_current" data-yah-value="15778476">
@@ -1027,12 +1046,12 @@ Currently taking Glipizide
 6 months - 1 year
 </th>
 <td class="numeric">
-<a title="See patients who have been taking Glipizide for this long" href="/patients/treatment/14847?max_duration=31556952&amp;min_duration=15778476">6</a>
+<a title="See patients who have been taking Vitamin B12 Injection for this long" href="/patients/treatment/303-vitamin-b12-injection-side-effects-and-efficacy?max_duration=31556952&amp;min_duration=15778476">4</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 11.320754716981131%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 5.882352941176471%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-6</small></span></li></ul>
+4</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="duration_current" data-yah-value="31556952">
@@ -1041,12 +1060,12 @@ Currently taking Glipizide
 1 - 2 years
 </th>
 <td class="numeric">
-<a title="See patients who have been taking Glipizide for this long" href="/patients/treatment/14847?max_duration=63113904&amp;min_duration=31556952">11</a>
+<a title="See patients who have been taking Vitamin B12 Injection for this long" href="/patients/treatment/303-vitamin-b12-injection-side-effects-and-efficacy?max_duration=63113904&amp;min_duration=31556952">9</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 20.754716981132077%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 13.235294117647058%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-11</small></span></li></ul>
+9</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="duration_current" data-yah-value="63113904">
@@ -1055,12 +1074,12 @@ Currently taking Glipizide
 2 - 5 years
 </th>
 <td class="numeric">
-<a title="See patients who have been taking Glipizide for this long" href="/patients/treatment/14847?max_duration=157784760&amp;min_duration=63113904">22</a>
+<a title="See patients who have been taking Vitamin B12 Injection for this long" href="/patients/treatment/303-vitamin-b12-injection-side-effects-and-efficacy?max_duration=157784760&amp;min_duration=63113904">21</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 41.509433962264154%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 30.88235294117647%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-22</small></span></li></ul>
+21</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="duration_current" data-yah-value="157784760">
@@ -1069,12 +1088,12 @@ Currently taking Glipizide
 5 - 10 years
 </th>
 <td class="numeric">
-<a title="See patients who have been taking Glipizide for this long" href="/patients/treatment/14847?max_duration=315569520&amp;min_duration=157784760">7</a>
+<a title="See patients who have been taking Vitamin B12 Injection for this long" href="/patients/treatment/303-vitamin-b12-injection-side-effects-and-efficacy?max_duration=315569520&amp;min_duration=157784760">23</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 13.20754716981132%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 33.8235294117647%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-7</small></span></li></ul>
+23</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="duration_current" data-yah-value="315569520">
@@ -1083,12 +1102,12 @@ Currently taking Glipizide
 10 years or more
 </th>
 <td class="numeric">
-<a title="See patients who have been taking Glipizide for this long" href="/patients/treatment/14847?min_duration=315569520">6</a>
+<a title="See patients who have been taking Vitamin B12 Injection for this long" href="/patients/treatment/303-vitamin-b12-injection-side-effects-and-efficacy?min_duration=315569520">8</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 11.320754716981131%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 11.764705882352942%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-6</small></span></li></ul>
+8</small></span></li></ul>
 </td>
 </tr>
 </tbody>
@@ -1097,7 +1116,7 @@ Currently taking Glipizide
 </div>
 <div class="columns medium-12">
 <h3 class="tertiary-title">
-Stopped taking Glipizide
+Stopped taking Vitamin B12 Injection
 </h3>
 <table class="tbl-default-layout tbl-divided">
 <colgroup>
@@ -1117,12 +1136,12 @@ Stopped taking Glipizide
 Less than 1 month
 </th>
 <td class="numeric">
-<a title="See patients who took Glipizide for this long" href="/patients/treatment/14847?max_duration=2629746&amp;min_duration=0&amp;stopped=true">14</a>
+<a title="See patients who took Vitamin B12 Injection for this long" href="/patients/treatment/303-vitamin-b12-injection-side-effects-and-efficacy?max_duration=2629746&amp;min_duration=0&amp;stopped=true">23</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 25.0%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 17.829457364341085%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-14</small></span></li></ul>
+23</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="duration_stopped" data-yah-value="2629746">
@@ -1131,12 +1150,12 @@ Less than 1 month
 1 - 6 months
 </th>
 <td class="numeric">
-<a title="See patients who took Glipizide for this long" href="/patients/treatment/14847?max_duration=15778476&amp;min_duration=2629746&amp;stopped=true">5</a>
+<a title="See patients who took Vitamin B12 Injection for this long" href="/patients/treatment/303-vitamin-b12-injection-side-effects-and-efficacy?max_duration=15778476&amp;min_duration=2629746&amp;stopped=true">31</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 8.928571428571429%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 24.031007751937985%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-5</small></span></li></ul>
+31</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="duration_stopped" data-yah-value="15778476">
@@ -1145,12 +1164,12 @@ Less than 1 month
 6 months - 1 year
 </th>
 <td class="numeric">
-<a title="See patients who took Glipizide for this long" href="/patients/treatment/14847?max_duration=31556952&amp;min_duration=15778476&amp;stopped=true">6</a>
+<a title="See patients who took Vitamin B12 Injection for this long" href="/patients/treatment/303-vitamin-b12-injection-side-effects-and-efficacy?max_duration=31556952&amp;min_duration=15778476&amp;stopped=true">22</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 10.714285714285714%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 17.05426356589147%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-6</small></span></li></ul>
+22</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="duration_stopped" data-yah-value="31556952">
@@ -1159,12 +1178,12 @@ Less than 1 month
 1 - 2 years
 </th>
 <td class="numeric">
-<a title="See patients who took Glipizide for this long" href="/patients/treatment/14847?max_duration=63113904&amp;min_duration=31556952&amp;stopped=true">4</a>
+<a title="See patients who took Vitamin B12 Injection for this long" href="/patients/treatment/303-vitamin-b12-injection-side-effects-and-efficacy?max_duration=63113904&amp;min_duration=31556952&amp;stopped=true">21</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 7.142857142857143%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 16.27906976744186%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-4</small></span></li></ul>
+21</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="duration_stopped" data-yah-value="63113904">
@@ -1173,12 +1192,12 @@ Less than 1 month
 2 - 5 years
 </th>
 <td class="numeric">
-<a title="See patients who took Glipizide for this long" href="/patients/treatment/14847?max_duration=157784760&amp;min_duration=63113904&amp;stopped=true">10</a>
+<a title="See patients who took Vitamin B12 Injection for this long" href="/patients/treatment/303-vitamin-b12-injection-side-effects-and-efficacy?max_duration=157784760&amp;min_duration=63113904&amp;stopped=true">23</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 17.857142857142858%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 17.829457364341085%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-10</small></span></li></ul>
+23</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="duration_stopped" data-yah-value="157784760">
@@ -1187,12 +1206,12 @@ Less than 1 month
 5 - 10 years
 </th>
 <td class="numeric">
-<a title="See patients who took Glipizide for this long" href="/patients/treatment/14847?max_duration=315569520&amp;min_duration=157784760&amp;stopped=true">14</a>
+<a title="See patients who took Vitamin B12 Injection for this long" href="/patients/treatment/303-vitamin-b12-injection-side-effects-and-efficacy?max_duration=315569520&amp;min_duration=157784760&amp;stopped=true">5</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 25.0%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 3.875968992248062%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-14</small></span></li></ul>
+5</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="duration_stopped" data-yah-value="315569520">
@@ -1201,10 +1220,10 @@ Less than 1 month
 10 years or more
 </th>
 <td class="numeric">
-<a title="See patients who took Glipizide for this long" href="/patients/treatment/14847?min_duration=315569520&amp;stopped=true">4</a>
+<a title="See patients who took Vitamin B12 Injection for this long" href="/patients/treatment/303-vitamin-b12-injection-side-effects-and-efficacy?min_duration=315569520&amp;stopped=true">4</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 7.142857142857143%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 3.10077519379845%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
 4</small></span></li></ul>
 </td>
@@ -1240,12 +1259,12 @@ Always
 
 </th>
 <td class="numeric">
-<a href="/treatment_evaluations/browse?attribute=adherence&amp;brand=false&amp;id=1456&amp;value=3">105</a>
+<a href="/treatment_evaluations/browse?attribute=adherence&amp;brand=false&amp;id=303&amp;value=3">146</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 81.3953488372093%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 76.04166666666667%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-105 evaluations from 79 patients</small></span></li></ul>
+146 evaluations from 108 patients</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="adherence" data-yah-value="2">
@@ -1256,12 +1275,12 @@ Usually
 
 </th>
 <td class="numeric">
-<a href="/treatment_evaluations/browse?attribute=adherence&amp;brand=false&amp;id=1456&amp;value=2">12</a>
+<a href="/treatment_evaluations/browse?attribute=adherence&amp;brand=false&amp;id=303&amp;value=2">31</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 9.30232558139535%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 16.145833333333332%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-12 evaluations from 9 patients</small></span></li></ul>
+31 evaluations from 28 patients</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="adherence" data-yah-value="1">
@@ -1272,12 +1291,12 @@ Sometimes
 
 </th>
 <td class="numeric">
-<a href="/treatment_evaluations/browse?attribute=adherence&amp;brand=false&amp;id=1456&amp;value=1">2</a>
+<a href="/treatment_evaluations/browse?attribute=adherence&amp;brand=false&amp;id=303&amp;value=1">10</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 1.550387596899225%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 5.208333333333333%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-2 evaluations from 2 patients</small></span></li></ul>
+10 evaluations from 10 patients</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="adherence" data-yah-value="0">
@@ -1288,12 +1307,12 @@ Never
 taken as prescribed
 </th>
 <td class="numeric">
-<a href="/treatment_evaluations/browse?attribute=adherence&amp;brand=false&amp;id=1456&amp;value=0">10</a>
+<a href="/treatment_evaluations/browse?attribute=adherence&amp;brand=false&amp;id=303&amp;value=0">5</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 7.751937984496124%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 2.6041666666666665%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-10 evaluations from 9 patients</small></span></li></ul>
+5 evaluations from 4 patients</small></span></li></ul>
 </td>
 </tr>
 </tbody>
@@ -1322,12 +1341,12 @@ hard to take
 
 </th>
 <td class="numeric">
-0
+<a href="/treatment_evaluations/browse?attribute=burden&amp;brand=false&amp;id=303&amp;value=3">7</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 0.0%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 3.6458333333333335%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-0 evaluations from 0 patients</small></span></li></ul>
+7 evaluations from 7 patients</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="burden" data-yah-value="2">
@@ -1338,12 +1357,12 @@ hard to take
 
 </th>
 <td class="numeric">
-<a href="/treatment_evaluations/browse?attribute=burden&amp;brand=false&amp;id=1456&amp;value=2">9</a>
+<a href="/treatment_evaluations/browse?attribute=burden&amp;brand=false&amp;id=303&amp;value=2">47</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 6.976744186046512%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 24.479166666666668%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-9 evaluations from 8 patients</small></span></li></ul>
+47 evaluations from 37 patients</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="burden" data-yah-value="1">
@@ -1354,12 +1373,12 @@ hard to take
 
 </th>
 <td class="numeric">
-<a href="/treatment_evaluations/browse?attribute=burden&amp;brand=false&amp;id=1456&amp;value=1">9</a>
+<a href="/treatment_evaluations/browse?attribute=burden&amp;brand=false&amp;id=303&amp;value=1">69</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 6.976744186046512%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 35.9375%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-9 evaluations from 8 patients</small></span></li></ul>
+69 evaluations from 56 patients</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="burden" data-yah-value="0">
@@ -1370,12 +1389,12 @@ hard to take
 
 </th>
 <td class="numeric">
-<a href="/treatment_evaluations/browse?attribute=burden&amp;brand=false&amp;id=1456&amp;value=0">111</a>
+<a href="/treatment_evaluations/browse?attribute=burden&amp;brand=false&amp;id=303&amp;value=0">69</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 86.04651162790698%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 35.9375%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-111 evaluations from 81 patients</small></span></li></ul>
+69 evaluations from 58 patients</small></span></li></ul>
 </td>
 </tr>
 </tbody>
@@ -1408,12 +1427,12 @@ $200+
 
 </th>
 <td class="numeric">
-<a href="/treatment_evaluations/browse?attribute=cost&amp;brand=false&amp;id=1456&amp;value=5">1</a>
+<a href="/treatment_evaluations/browse?attribute=cost&amp;brand=false&amp;id=303&amp;value=5">5</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 0.7751937984496124%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 2.6041666666666665%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-1 evaluation from 1 patient</small></span></li></ul>
+5 evaluations from 5 patients</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="cost" data-yah-value="4">
@@ -1424,12 +1443,12 @@ $100-199
 
 </th>
 <td class="numeric">
-0
+<a href="/treatment_evaluations/browse?attribute=cost&amp;brand=false&amp;id=303&amp;value=4">4</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 0.0%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 2.0833333333333335%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-0 evaluations from 0 patients</small></span></li></ul>
+4 evaluations from 3 patients</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="cost" data-yah-value="3">
@@ -1440,12 +1459,12 @@ $50-99
 
 </th>
 <td class="numeric">
-0
+<a href="/treatment_evaluations/browse?attribute=cost&amp;brand=false&amp;id=303&amp;value=3">8</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 0.0%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 4.166666666666667%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-0 evaluations from 0 patients</small></span></li></ul>
+8 evaluations from 8 patients</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="cost" data-yah-value="2">
@@ -1456,12 +1475,12 @@ $25-49
 
 </th>
 <td class="numeric">
-<a href="/treatment_evaluations/browse?attribute=cost&amp;brand=false&amp;id=1456&amp;value=2">3</a>
+<a href="/treatment_evaluations/browse?attribute=cost&amp;brand=false&amp;id=303&amp;value=2">15</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 2.3255813953488373%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 7.8125%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-3 evaluations from 3 patients</small></span></li></ul>
+15 evaluations from 10 patients</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="cost" data-yah-value="1">
@@ -1472,12 +1491,12 @@ $25-49
 
 </th>
 <td class="numeric">
-<a href="/treatment_evaluations/browse?attribute=cost&amp;brand=false&amp;id=1456&amp;value=1">58</a>
+<a href="/treatment_evaluations/browse?attribute=cost&amp;brand=false&amp;id=303&amp;value=1">83</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 44.96124031007752%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 43.229166666666664%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-58 evaluations from 46 patients</small></span></li></ul>
+83 evaluations from 59 patients</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="cost" data-yah-value="0">
@@ -1488,12 +1507,12 @@ Not specified
 
 </th>
 <td class="numeric">
-<a href="/treatment_evaluations/browse?attribute=cost&amp;brand=false&amp;id=1456&amp;value=0">67</a>
+<a href="/treatment_evaluations/browse?attribute=cost&amp;brand=false&amp;id=303&amp;value=0">77</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 51.93798449612403%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 40.104166666666664%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-67 evaluations from 45 patients</small></span></li></ul>
+77 evaluations from 66 patients</small></span></li></ul>
 </td>
 </tr>
 </tbody>
@@ -1512,7 +1531,7 @@ Not specified
 Patients
 <strong>started</strong>
 taking
-Glipizide
+Vitamin B12 Injection
 <strong>after stopping:</strong>
 </p>
 <table class="tbl-default-layout tbl-divided">
@@ -1528,88 +1547,68 @@ Glipizide
 <th></th>
 </tr>
 </thead>
-<tbody class="ajax-target compacted" data-url="/treatments/1456/additional_treatment_switch_rows?direction=switched_from">
-<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_from_treatment" data-yah-value="221" foo="bar">
+<tbody class="ajax-target compacted" data-url="/treatments/303/additional_treatment_switch_rows?direction=switched_from">
+<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_from_treatment" data-yah-value="8488" foo="bar">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-Metformin
-<small class="comma-delimited">
-(<span>Glucophage</span>)
-</small>
+Vitamin B12 Prescription (cyanocobalamin)
 </th>
 <td class="numeric">
-23
+4
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 65.71428571428571%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 57.142857142857146%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-23</small></span></li></ul>
+4</small></span></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_from_treatment" data-yah-value="386" foo="bar">
+<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_from_treatment" data-yah-value="26756" foo="bar">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-Glyburide
+Lunasin
 <small class="comma-delimited">
-(<span>Glynase PresTab</span>)
-</small>
-</th>
-<td class="numeric">
-5
-</td>
-<td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 14.285714285714286%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
-<small class="is-tooltip" role="tooltip">
-5</small></span></li></ul>
-</td>
-</tr>
-<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_from_treatment" data-yah-value="1420" foo="bar">
-<th scope="row">
-<span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-Glimepiride
-<small class="comma-delimited">
-(<span>Amaryl</span>)
-</small>
-</th>
-<td class="numeric">
-2
-</td>
-<td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 5.714285714285714%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
-<small class="is-tooltip" role="tooltip">
-2</small></span></li></ul>
-</td>
-</tr>
-<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_from_treatment" data-yah-value="8306" foo="bar">
-<th scope="row">
-<span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-Insulin Glargine
-<small class="comma-delimited">
-(<span>Lantus</span>)
-</small>
-</th>
-<td class="numeric">
-2
-</td>
-<td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 5.714285714285714%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
-<small class="is-tooltip" role="tooltip">
-2</small></span></li></ul>
-</td>
-</tr>
-<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_from_treatment" data-yah-value="23458" foo="bar">
-<th scope="row">
-<span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-Exenatide
-<small class="comma-delimited">
-(<span>Byetta</span>)
+(<span>Lunasin Duke Virtual Trial</span>)
 </small>
 </th>
 <td class="numeric">
 1
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 2.857142857142857%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 14.285714285714286%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<small class="is-tooltip" role="tooltip">
+1</small></span></li></ul>
+</td>
+</tr>
+<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_from_treatment" data-yah-value="28587" foo="bar">
+<th scope="row">
+<span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
+Methotrexate injections
+<small class="comma-delimited">
+(<span>Metoject</span>)
+</small>
+</th>
+<td class="numeric">
+1
+</td>
+<td>
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 14.285714285714286%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<small class="is-tooltip" role="tooltip">
+1</small></span></li></ul>
+</td>
+</tr>
+<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_from_treatment" data-yah-value="139" foo="bar">
+<th scope="row">
+<span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
+Prednisone
+<small class="comma-delimited">
+(<span>Deltasone</span>)
+</small>
+</th>
+<td class="numeric">
+1
+</td>
+<td>
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 14.285714285714286%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
 1</small></span></li></ul>
 </td>
@@ -1617,17 +1616,6 @@ Exenatide
 
 </tbody>
 </table>
-<p class="show toggle">
-<a class="content-toggle" data-fn-click="treatment_report_section.toggle_compacted" href="#">Show all
-<strong>7 treatments</strong>
-patients report switching from
-<span class="loading" style="display: none;"></span>
-</a></p>
-<p class="hide toggle" style="display: none;">
-<a class="content-toggle is-open" data-fn-click="treatment_report_section.toggle_compacted" href="#">Show top
-<strong>5 treatments</strong>
-patients report switching from
-</a></p>
 </div>
 
 </div>
@@ -1637,7 +1625,7 @@ patients report switching from
 Patients
 <strong>stopped</strong>
 taking
-Glipizide
+Vitamin B12 Injection
 and
 <strong>switched to:</strong>
 </p>
@@ -1654,106 +1642,75 @@ and
 <th></th>
 </tr>
 </thead>
-<tbody class="ajax-target compacted" data-url="/treatments/1456/additional_treatment_switch_rows?direction=switched_to">
-<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_to_treatment" data-yah-value="221" foo="bar">
+<tbody class="ajax-target compacted" data-url="/treatments/303/additional_treatment_switch_rows?direction=switched_to">
+<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_to_treatment" data-yah-value="8488" foo="bar">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-Metformin
-<small class="comma-delimited">
-(<span>Glucophage</span>)
-</small>
-</th>
-<td class="numeric">
-6
-</td>
-<td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 26.08695652173913%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
-<small class="is-tooltip" role="tooltip">
-6</small></span></li></ul>
-</td>
-</tr>
-<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_to_treatment" data-yah-value="8306" foo="bar">
-<th scope="row">
-<span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-Insulin Glargine
-<small class="comma-delimited">
-(<span>Lantus</span>)
-</small>
-</th>
-<td class="numeric">
-4
-</td>
-<td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 17.391304347826086%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
-<small class="is-tooltip" role="tooltip">
-4</small></span></li></ul>
-</td>
-</tr>
-<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_to_treatment" data-yah-value="23962" foo="bar">
-<th scope="row">
-<span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-Insulin NPH-insulin regular
-<small class="comma-delimited">
-(<span>Humulin Mix 70/30</span>)
-</small>
-</th>
-<td class="numeric">
-3
-</td>
-<td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 13.043478260869565%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
-<small class="is-tooltip" role="tooltip">
-3</small></span></li></ul>
-</td>
-</tr>
-<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_to_treatment" data-yah-value="5457" foo="bar">
-<th scope="row">
-<span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-Sitagliptin
-<small class="comma-delimited">
-(<span>Januvia</span>)
-</small>
-</th>
-<td class="numeric">
-3
-</td>
-<td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 13.043478260869565%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
-<small class="is-tooltip" role="tooltip">
-3</small></span></li></ul>
-</td>
-</tr>
-<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_to_treatment" data-yah-value="8400" foo="bar">
-<th scope="row">
-<span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-Insulin Aspart
-<small class="comma-delimited">
-(<span>Novolog</span>)
-</small>
+Vitamin B12 Prescription (cyanocobalamin)
 </th>
 <td class="numeric">
 2
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 8.695652173913043%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 40.0%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
 2</small></span></li></ul>
+</td>
+</tr>
+<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_to_treatment" data-yah-value="13831" foo="bar">
+<th scope="row">
+<span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
+Buprenorphine patch
+<small class="comma-delimited">
+(<span>BuTrans patch</span>)
+</small>
+</th>
+<td class="numeric">
+1
+</td>
+<td>
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 20.0%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<small class="is-tooltip" role="tooltip">
+1</small></span></li></ul>
+</td>
+</tr>
+<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_to_treatment" data-yah-value="28587" foo="bar">
+<th scope="row">
+<span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
+Methotrexate injections
+<small class="comma-delimited">
+(<span>Metoject</span>)
+</small>
+</th>
+<td class="numeric">
+1
+</td>
+<td>
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 20.0%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<small class="is-tooltip" role="tooltip">
+1</small></span></li></ul>
+</td>
+</tr>
+<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_to_treatment" data-yah-value="2603" foo="bar">
+<th scope="row">
+<span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
+Vitamin B12 Sublingual (cyanocobalamin)
+<small class="comma-delimited">
+(<span>Nature&#39;s Bounty Vitamin B-12 Sublingual</span>)
+</small>
+</th>
+<td class="numeric">
+1
+</td>
+<td>
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 20.0%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<small class="is-tooltip" role="tooltip">
+1</small></span></li></ul>
 </td>
 </tr>
 
 </tbody>
 </table>
-<p class="show toggle">
-<a class="content-toggle" data-fn-click="treatment_report_section.toggle_compacted" href="#">Show all
-<strong>13 treatments</strong>
-patients report switching to
-<span class="loading" style="display: none;"></span>
-</a></p>
-<p class="hide toggle" style="display: none;">
-<a class="content-toggle is-open" data-fn-click="treatment_report_section.toggle_compacted" href="#">Show top
-<strong>5 treatments</strong>
-patients report switching to
-</a></p>
 </div>
 
 </div>
@@ -1762,7 +1719,7 @@ patients report switching to
 <div class="content-panel">
 <small class="helptext">
 Last updated:
-<time datetime="2018-05-02T05:09:15+00:00">May  2, 2018</time>
+<time datetime="2018-05-02T01:45:08+00:00">May  2, 2018</time>
 </small>
 
 </div>
@@ -1773,22 +1730,22 @@ Last updated:
 Patient Evaluations
 </h2>
 <p>
-<a href="/treatment_evaluations/browse?brand=f&amp;id=1456-glipizide-side-effects-and-efficacy">See all
+<a href="/treatment_evaluations/browse?brand=f&amp;id=303-vitamin-b12-injection-side-effects-and-efficacy">See all
 <strong>
-94
+144
 patient
 evaluations
 </strong>
 </a></p>
 <hr>
 <div class="media-object margin-bottom">
-<div class="media-item"><a class="avatar-link" id="avatar-milkway" href="https://dy82vckl8b34w.cloudfront.net/assets/portrait_default-440d4e5a55a40a72b4933e658e9f46a6aef54c4723af934ad5db47043d6212bb.svg"><img title="milkway" src="https://dy82vckl8b34w.cloudfront.net/assets/portrait_default_thumb-440d4e5a55a40a72b4933e658e9f46a6aef54c4723af934ad5db47043d6212bb.svg" alt="Portrait default thumb" /></a></div>
+<div class="media-item"><a class="avatar-link" id="avatar-margie99" href="//s3.amazonaws.com/uploads.patientslikeme.com/avatars/70573-original.JPG?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180502%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20180502T050218Z&amp;X-Amz-Expires=604800&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=692185b71391561defc6e440eeaca521f5beaf362414138272f46bcc9c119318"><img title="margie99" src="//s3.amazonaws.com/uploads.patientslikeme.com/avatars/70573-thumb.JPG?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180502%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20180502T050218Z&amp;X-Amz-Expires=604800&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=92525f4e48e4851c46a7a52e1239153235b9e910cd6023dc789e73681cbbf79b" alt="70573 thumb" /></a></div>
 <div class="media-content">
-<h2><a href="/members/448472">milkway</a></h2>
+<h2><a href="/members/23215">margie99</a></h2>
 <p>
-10 mg twice daily
+1 mg monthly
 <br>
-since Aug 23, 2015
+since Apr 11, 2018
 </p>
 </div>
 </div>
@@ -1796,7 +1753,7 @@ since Aug 23, 2015
 <li class="efficacy margin-bottom-quarter">
 <span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-off"></span>
 Perceived effectiveness
-<span class="purpose">for diabetes type 2:</span>
+<span class="purpose">for fatigue:</span>
 <strong>Moderate</strong>
 </li>
 <li class="side-effects margin-bottom">
@@ -1805,53 +1762,27 @@ Side effects:
 <strong>Mild</strong>
 </li>
 <li class="advice">
-<a href="/treatment_evaluations/149800">See full evaluation</a>
+<a href="/treatment_evaluations/226518">See full evaluation</a>
 </li>
 </ul>
 <hr>
 <div class="media-object margin-bottom">
-<div class="media-item"><a class="avatar-link" id="avatar-new_me" href="//s3.amazonaws.com/uploads.patientslikeme.com/avatars/43614-original.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180502%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20180502T050916Z&amp;X-Amz-Expires=604800&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=6dacb09fcdf1bf368ed14bcc93a4745b23580b7530c02b08140554a99d4ecb86"><img title="new_me" src="//s3.amazonaws.com/uploads.patientslikeme.com/avatars/43614-thumb.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180502%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20180502T050916Z&amp;X-Amz-Expires=604800&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=00f17c8563e480dc9f144590dd13975d09e31bfa1a7b6cc9d6d56e345c751076" alt="43614 thumb" /></a></div>
+<div class="media-item"><a class="avatar-link" id="avatar-suzzie" href="//s3.amazonaws.com/uploads.patientslikeme.com/avatars/18770-original.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180502%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20180502T050218Z&amp;X-Amz-Expires=604800&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=d869de0442f465584ea8d08e474994d8683c73fee3680cf59a5745de6a963c00"><img title="suzzie" src="//s3.amazonaws.com/uploads.patientslikeme.com/avatars/18770-thumb.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180502%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20180502T050218Z&amp;X-Amz-Expires=604800&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=ca5fc393b548f84a3cf35709f97048faf85ab561c38343b8349e82e11dfaffd3" alt="18770 thumb" /></a></div>
 <div class="media-content">
-<h2><a href="/members/16850">new_me</a></h2>
+<h2><a href="/members/81676">suzzie</a></h2>
 <p>
-since Jul 08, 2015
-</p>
-</div>
-</div>
-<ul class="user-eval-summary">
-<li class="efficacy margin-bottom-quarter">
-<span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span>
-Perceived effectiveness
-<span class="purpose">for diabetes type 2:</span>
-<strong>Major</strong>
-</li>
-<li class="side-effects margin-bottom">
-<span class="led-light led-light-side-effects"></span><span class="led-light led-light-side-effects"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
-Side effects:
-<strong>Mild</strong>
-</li>
-<li class="advice">
-<a href="/treatment_evaluations/146516">See full evaluation</a>
-</li>
-</ul>
-<hr>
-<div class="media-object margin-bottom">
-<div class="media-item"><a class="avatar-link" id="avatar-Santa 1" href="//s3.amazonaws.com/uploads.patientslikeme.com/avatars/23573-original.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180502%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20180502T050916Z&amp;X-Amz-Expires=604800&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=772ccd7e936a43f4e41e5b4cc2ef4c0fddd76fbfaacaf7dfb174040ef6f56faf"><img title="Santa 1" src="//s3.amazonaws.com/uploads.patientslikeme.com/avatars/23573-thumb.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180502%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20180502T050916Z&amp;X-Amz-Expires=604800&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=c5e23805eb3cf28a9e2f73f69e238a08296619397391587b0749ff0c9b25e5e8" alt="23573 thumb" /></a></div>
-<div class="media-content">
-<h2><a href="/members/100744">Santa 1</a></h2>
-<p>
-10 mg daily
+1 mg monthly
 <br>
-since Jun 10, 2014
+since Sep 26, 2016
 </p>
 </div>
 </div>
 <ul class="user-eval-summary">
 <li class="efficacy margin-bottom-quarter">
-<span class="led-light led-light-off"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
+<span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
 Perceived effectiveness
-<span class="purpose">for diabetes type 2:</span>
-<strong>Can&#39;t tell</strong>
+<span class="purpose">for fatigue:</span>
+<strong>Slight</strong>
 </li>
 <li class="side-effects margin-bottom">
 <span class="led-light led-light-side-effects"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
@@ -1859,7 +1790,35 @@ Side effects:
 <strong>None</strong>
 </li>
 <li class="advice">
-<a href="/treatment_evaluations/126957">See full evaluation</a>
+<a href="/treatment_evaluations/180567">See full evaluation</a>
+</li>
+</ul>
+<hr>
+<div class="media-object margin-bottom">
+<div class="media-item"><a class="avatar-link" id="avatar-lazaras" href="//s3.amazonaws.com/uploads.patientslikeme.com/avatars/12975-original.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180502%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20180502T050218Z&amp;X-Amz-Expires=604800&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=6dd225694d135ba0bc61d3ce3c2e0457a778ea41dcd15195b8baf11470b2fca9"><img title="lazaras" src="//s3.amazonaws.com/uploads.patientslikeme.com/avatars/12975-thumb.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180502%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20180502T050218Z&amp;X-Amz-Expires=604800&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=09b4e728c10ce00e4315a0529b2be3e055c306231087efbce94e124b1b60d73d" alt="12975 thumb" /></a></div>
+<div class="media-content">
+<h2><a href="/members/54378">lazaras</a></h2>
+<p>
+1 mg daily
+<br>
+since Oct 09, 2015
+</p>
+</div>
+</div>
+<ul class="user-eval-summary">
+<li class="efficacy margin-bottom-quarter">
+<span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
+Perceived effectiveness
+<span class="purpose">for fatigue:</span>
+<strong>Slight</strong>
+</li>
+<li class="side-effects margin-bottom">
+<span class="led-light led-light-side-effects"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
+Side effects:
+<strong>None</strong>
+</li>
+<li class="advice">
+<a href="/treatment_evaluations/152756">See full evaluation</a>
 </li>
 </ul>
 
@@ -1876,33 +1835,33 @@ Side effects:
 <div class="row" id="filters-wrapper">
 <div class="filters_results columns large-16 medium-16">
 <h2>
-6 patient evaluations
+28 patient evaluations
 for
-Glipizide
+Vitamin B12 Injection
 </h2>
 </div>
 <div class="filters_sort_by columns large-8 medium-8 align-right">
 Sort by:
 <a data-popup-id="evaluations-sort-by" class="button menu-opener" data-fn-click="open_popup" href="#">Most recent</a>
 <ul data-popup-type="menu" data-popup-width="150" id="evaluations-sort-by" style="display: none">
-<li><a href="/treatments/show/1456-glipizide-side-effects-and-efficacy?sort=helpfulness#evaluations">Helpfulness</a></li>
-<li><a href="/treatments/show/1456-glipizide-side-effects-and-efficacy?sort=most-recent#evaluations">Most Recent</a></li>
+<li><a href="/treatments/show/303-vitamin-b12-injection-side-effects-and-efficacy?sort=helpfulness#evaluations">Helpfulness</a></li>
+<li><a href="/treatments/show/303-vitamin-b12-injection-side-effects-and-efficacy?sort=most-recent#evaluations">Most Recent</a></li>
 </ul>
 </div>
 </div>
 </div>
-<div data-treatment-id="1456" id="evaluations-list">
+<div data-treatment-id="303" id="evaluations-list">
 <div class="content-panel">
 <div class="evaluation-group is-divided">
 <div class="row padding-vertical margin-top">
 <div class="columns medium-5">
-<div data-react-class="ProfileSummaryPropsContainer" data-react-props="{&quot;profileUrl&quot;:&quot;/members/448472&quot;,&quot;showUsername&quot;:true,&quot;avatarUrl&quot;:&quot;https://dy82vckl8b34w.cloudfront.net/assets/portrait_default_thumb-440d4e5a55a40a72b4933e658e9f46a6aef54c4723af934ad5db47043d6212bb.svg&quot;,&quot;briefBio&quot;:null,&quot;country&quot;:&quot;China&quot;,&quot;currentUserId&quot;:null,&quot;deceased&quot;:false,&quot;deleted&quot;:false,&quot;firstDiagnosisDate&quot;:2012,&quot;fullAvatarUrl&quot;:&quot;https://dy82vckl8b34w.cloudfront.net/assets/portrait_default-440d4e5a55a40a72b4933e658e9f46a6aef54c4723af934ad5db47043d6212bb.svg&quot;,&quot;genders&quot;:[],&quot;isAdmin&quot;:false,&quot;isSignedIn&quot;:false,&quot;lastActivityTime&quot;:&quot;about 2 years ago&quot;,&quot;preferredPronouns&quot;:null,&quot;primaryConditionName&quot;:&quot;diabetes type 2&quot;,&quot;secondaryConditionNames&quot;:[&quot;non-alcoholic fatty liver disease&quot;,&quot;strep throat&quot;,&quot;systemic lupus erythematosus&quot;,&quot;lung cancer&quot;],&quot;sex&quot;:&quot;M&quot;,&quot;state&quot;:&quot;&quot;,&quot;title&quot;:null,&quot;userAge&quot;:49,&quot;userId&quot;:448472,&quot;userIsFollowing&quot;:false,&quot;userName&quot;:&quot;milkway&quot;}"></div>
+<div data-react-class="ProfileSummaryPropsContainer" data-react-props="{&quot;profileUrl&quot;:&quot;/members/23215&quot;,&quot;showUsername&quot;:true,&quot;avatarUrl&quot;:&quot;//s3.amazonaws.com/uploads.patientslikeme.com/avatars/70573-thumb.JPG?X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180502%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20180502T050219Z\u0026X-Amz-Expires=604800\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=5d19ad0a0fd93b16f7e322cc3e174ce81435497fde063a0c3f2e45c9e74cd956&quot;,&quot;briefBio&quot;:&quot;I was diagnosed correctly in 2004 with Parkinson&#39;s disease with dystonia .\nSymptoms began in 1987.Mother, wife and grandmother. Exercise is important to me.&quot;,&quot;country&quot;:&quot;United States&quot;,&quot;currentUserId&quot;:null,&quot;deceased&quot;:false,&quot;deleted&quot;:false,&quot;firstDiagnosisDate&quot;:2004,&quot;fullAvatarUrl&quot;:&quot;//s3.amazonaws.com/uploads.patientslikeme.com/avatars/70573-full.JPG?X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180502%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20180502T050219Z\u0026X-Amz-Expires=604800\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=4bd2066877b56459f2d067aff1215c466d8a33a2c4f49574071fe364dac25fb6&quot;,&quot;genders&quot;:[],&quot;isAdmin&quot;:false,&quot;isSignedIn&quot;:false,&quot;lastActivityTime&quot;:&quot;about 5 hours ago&quot;,&quot;preferredPronouns&quot;:null,&quot;primaryConditionName&quot;:&quot;Parkinson&#39;s disease&quot;,&quot;secondaryConditionNames&quot;:[&quot;bile acid malabsorption syndrome&quot;,&quot;dystonia&quot;,&quot;cataracts&quot;,&quot;atherosclerosis&quot;,&quot;brain aneurysm&quot;,&quot;vitamin B12 deficiency&quot;],&quot;sex&quot;:&quot;F&quot;,&quot;state&quot;:&quot;FL&quot;,&quot;title&quot;:&quot;&quot;,&quot;userAge&quot;:68,&quot;userId&quot;:23215,&quot;userIsFollowing&quot;:false,&quot;userName&quot;:&quot;margie99&quot;}"></div>
 
 </div>
 <div class="eval-details columns medium-19">
 <h3 class="tertiary-title">
-Aug 23, 2015
-<span class="helptext">(Started Mar 15, 2013)</span>
+Apr 11, 2018
+<span class="helptext">(Started Jul 30, 2012)</span>
 </h3>
 <div class="margin-bottom-quarter"><ul class="okgo">
 <li>
@@ -1913,7 +1872,19 @@ Aug 23, 2015
 <div class="columns small-16 medium-18 large-20">
 <span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-off"></span>
 Moderate
-<span class="helptext">(for diabetes type 2)</span>
+<span class="helptext">(for vitamin B12 deficiency)</span>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="columns small-8 medium-6 large-4">
+<span>Effectiveness</span>
+</div>
+<div class="columns small-16 medium-18 large-20">
+<span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-off"></span>
+Moderate
+<span class="helptext">(for fatigue)</span>
 </div>
 </div>
 </li>
@@ -1925,7 +1896,7 @@ Moderate
 <div class="columns small-16 medium-18 large-20">
 <span class="led-light led-light-side-effects"></span><span class="led-light led-light-side-effects"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
 Mild
-<span class="helptext">(pain in knees)</span>
+<span class="helptext">(soreness)</span>
 </div>
 </div>
 </li>
@@ -1935,8 +1906,83 @@ Mild
 <span>Adherence</span>
 </div>
 <div class="columns small-16 medium-18 large-20">
-<span class="led-light led-light-adherence"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
-Never taken as prescribed
+<span class="led-light led-light-adherence"></span><span class="led-light led-light-adherence"></span><span class="led-light led-light-adherence"></span><span class="led-light led-light-adherence"></span>
+Always
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="columns small-8 medium-6 large-4">
+<span>Burden</span>
+</div>
+<div class="columns small-16 medium-18 large-20">
+<span class="led-light led-light-burden"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
+Not at all hard to take
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="margin-bottom-quarter">
+<strong>Dosage:</strong>
+1 mg
+Monthly
+</div>
+<div class="margin-bottom-quarter">
+<strong>Cost:</strong>
+&lt; $25 monthly
+</div>
+<hr>
+<h3 class="tertiary-title">
+Nov  4, 2017
+<span class="helptext">(Started Jul 30, 2012)</span>
+</h3>
+<div class="margin-bottom-quarter"><ul class="okgo">
+<li>
+<div class="row">
+<div class="columns small-8 medium-6 large-4">
+<span>Effectiveness</span>
+</div>
+<div class="columns small-16 medium-18 large-20">
+<span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-off"></span>
+Moderate
+<span class="helptext">(for vitamin B12 deficiency)</span>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="columns small-8 medium-6 large-4">
+<span>Effectiveness</span>
+</div>
+<div class="columns small-16 medium-18 large-20">
+<span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-off"></span>
+Moderate
+<span class="helptext">(for fatigue)</span>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="columns small-8 medium-6 large-4">
+<span>Side effects</span>
+</div>
+<div class="columns small-16 medium-18 large-20">
+<span class="led-light led-light-side-effects"></span><span class="led-light led-light-side-effects"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
+Mild
+<span class="helptext">(soreness)</span>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="columns small-8 medium-6 large-4">
+<span>Adherence</span>
+</div>
+<div class="columns small-16 medium-18 large-20">
+<span class="led-light led-light-adherence"></span><span class="led-light led-light-adherence"></span><span class="led-light led-light-adherence"></span><span class="led-light led-light-adherence"></span>
+Always
 </div>
 </div>
 </li>
@@ -1955,33 +2001,17 @@ A little hard to take
 </div>
 <div class="margin-bottom-quarter">
 <strong>Dosage:</strong>
-10 mg
-Twice daily
+1 mg
+Monthly
+</div>
+<div class="margin-bottom-quarter">
+<strong>Cost:</strong>
+&lt; $25 monthly
 </div>
 <hr>
-<ul class="list-inline" data-widget="helpful_marks">
-<li>
-<span class="icon-thumb icon-spacer align-text-bottom icon"></span>
-<span class="text-smallest">0</span>
-<span class="is-hidden-visually">helpful marks</span>
-</li>
-<li>
-</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="evaluation-group is-divided">
-<div class="row padding-vertical margin-top">
-<div class="columns medium-5">
-<div data-react-class="ProfileSummaryPropsContainer" data-react-props="{&quot;profileUrl&quot;:&quot;/members/16850&quot;,&quot;showUsername&quot;:true,&quot;avatarUrl&quot;:&quot;//s3.amazonaws.com/uploads.patientslikeme.com/avatars/43614-thumb.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180502%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20180502T050916Z\u0026X-Amz-Expires=604800\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=00f17c8563e480dc9f144590dd13975d09e31bfa1a7b6cc9d6d56e345c751076&quot;,&quot;briefBio&quot;:null,&quot;country&quot;:&quot;United States&quot;,&quot;currentUserId&quot;:null,&quot;deceased&quot;:false,&quot;deleted&quot;:false,&quot;firstDiagnosisDate&quot;:2004,&quot;fullAvatarUrl&quot;:&quot;//s3.amazonaws.com/uploads.patientslikeme.com/avatars/43614-full.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180502%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20180502T050916Z\u0026X-Amz-Expires=604800\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=ae712ac4a1ef97d5de00c817226c1669df31d0235360da157a2e4b97a3aaa1d2&quot;,&quot;genders&quot;:[],&quot;isAdmin&quot;:false,&quot;isSignedIn&quot;:false,&quot;lastActivityTime&quot;:&quot;about 2 months ago&quot;,&quot;preferredPronouns&quot;:null,&quot;primaryConditionName&quot;:&quot;bipolar disorder&quot;,&quot;secondaryConditionNames&quot;:[&quot;binge eating disorder&quot;,&quot;high blood pressure (hypertension)&quot;,&quot;asthma&quot;,&quot;high cholesterol (hypercholesterolemia)&quot;,&quot;perennial allergy&quot;,&quot;diabetes type 2&quot;,&quot;bipolar II disorder&quot;],&quot;sex&quot;:&quot;F&quot;,&quot;state&quot;:&quot;TX&quot;,&quot;title&quot;:&quot;&quot;,&quot;userAge&quot;:52,&quot;userId&quot;:16850,&quot;userIsFollowing&quot;:false,&quot;userName&quot;:&quot;new_me&quot;}"></div>
-
-</div>
-<div class="eval-details columns medium-19">
 <h3 class="tertiary-title">
-Jul  8, 2015
-<span class="helptext">(Started May 15, 2013)</span>
+Aug 10, 2017
+<span class="helptext">(Started Jul 30, 2012)</span>
 </h3>
 <div class="margin-bottom-quarter"><ul class="okgo">
 <li>
@@ -1992,7 +2022,19 @@ Jul  8, 2015
 <div class="columns small-16 medium-18 large-20">
 <span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span>
 Major
-<span class="helptext">(for diabetes type 2)</span>
+<span class="helptext">(for vitamin B12 deficiency)</span>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="columns small-8 medium-6 large-4">
+<span>Effectiveness</span>
+</div>
+<div class="columns small-16 medium-18 large-20">
+<span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span>
+Major
+<span class="helptext">(for fatigue)</span>
 </div>
 </div>
 </li>
@@ -2004,7 +2046,7 @@ Major
 <div class="columns small-16 medium-18 large-20">
 <span class="led-light led-light-side-effects"></span><span class="led-light led-light-side-effects"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
 Mild
-<span class="helptext">(low blood sugar (hypoglycemia))</span>
+<span class="helptext">(soreness)</span>
 </div>
 </div>
 </li>
@@ -2033,13 +2075,18 @@ Not at all hard to take
 </ul>
 </div>
 <div class="margin-bottom-quarter">
+<strong>Dosage:</strong>
+1 mg
+Monthly
+</div>
+<div class="margin-bottom-quarter">
 <strong>Cost:</strong>
 &lt; $25 monthly
 </div>
 <hr>
 <h3 class="tertiary-title">
-Apr 15, 2014
-<span class="helptext">(Started May 15, 2013)</span>
+May 25, 2017
+<span class="helptext">(Started Jul 30, 2012)</span>
 </h3>
 <div class="margin-bottom-quarter"><ul class="okgo">
 <li>
@@ -2048,9 +2095,100 @@ Apr 15, 2014
 <span>Effectiveness</span>
 </div>
 <div class="columns small-16 medium-18 large-20">
-<span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
-Slight
-<span class="helptext">(for diabetes type 2)</span>
+<span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span>
+Major
+<span class="helptext">(for vitamin B12 deficiency)</span>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="columns small-8 medium-6 large-4">
+<span>Effectiveness</span>
+</div>
+<div class="columns small-16 medium-18 large-20">
+<span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span>
+Major
+<span class="helptext">(for fatigue)</span>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="columns small-8 medium-6 large-4">
+<span>Side effects</span>
+</div>
+<div class="columns small-16 medium-18 large-20">
+<span class="led-light led-light-side-effects"></span><span class="led-light led-light-side-effects"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
+Mild
+<span class="helptext">(soreness)</span>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="columns small-8 medium-6 large-4">
+<span>Adherence</span>
+</div>
+<div class="columns small-16 medium-18 large-20">
+<span class="led-light led-light-adherence"></span><span class="led-light led-light-adherence"></span><span class="led-light led-light-adherence"></span><span class="led-light led-light-adherence"></span>
+Always
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="columns small-8 medium-6 large-4">
+<span>Burden</span>
+</div>
+<div class="columns small-16 medium-18 large-20">
+<span class="led-light led-light-burden"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
+Not at all hard to take
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="margin-bottom-quarter">
+<strong>Dosage:</strong>
+1 mg
+Monthly
+</div>
+<div class="margin-bottom-quarter">
+<strong>Advice & Tips:</strong>
+Relax area where injection is placed, so it doesn&#39;t make the area sore.
+</div>
+<div class="margin-bottom-quarter">
+<strong>Cost:</strong>
+&lt; $25 monthly
+</div>
+<hr>
+<h3 class="tertiary-title">
+Jan 17, 2017
+<span class="helptext">(Started Jul 30, 2012)</span>
+</h3>
+<div class="margin-bottom-quarter"><ul class="okgo">
+<li>
+<div class="row">
+<div class="columns small-8 medium-6 large-4">
+<span>Effectiveness</span>
+</div>
+<div class="columns small-16 medium-18 large-20">
+<span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-off"></span>
+Moderate
+<span class="helptext">(for vitamin B12 deficiency)</span>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="columns small-8 medium-6 large-4">
+<span>Effectiveness</span>
+</div>
+<div class="columns small-16 medium-18 large-20">
+<span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-off"></span>
+Moderate
+<span class="helptext">(for fatigue)</span>
 </div>
 </div>
 </li>
@@ -2071,8 +2209,590 @@ None
 <span>Adherence</span>
 </div>
 <div class="columns small-16 medium-18 large-20">
-<span class="led-light led-light-adherence"></span><span class="led-light led-light-adherence"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
-Sometimes
+<span class="led-light led-light-adherence"></span><span class="led-light led-light-adherence"></span><span class="led-light led-light-adherence"></span><span class="led-light led-light-adherence"></span>
+Always
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="columns small-8 medium-6 large-4">
+<span>Burden</span>
+</div>
+<div class="columns small-16 medium-18 large-20">
+<span class="led-light led-light-burden"></span><span class="led-light led-light-burden"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
+A little hard to take
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="margin-bottom-quarter">
+<strong>Dosage:</strong>
+1 mg
+Monthly
+</div>
+<div class="margin-bottom-quarter">
+<strong>Advice & Tips:</strong>
+Relax area where injection is placed, so it doesn&#39;t make the area sore.
+</div>
+<div class="margin-bottom-quarter">
+<strong>Cost:</strong>
+&lt; $25 monthly
+</div>
+<hr>
+<h3 class="tertiary-title">
+Oct 10, 2016
+<span class="helptext">(Started Jul 30, 2012)</span>
+</h3>
+<div class="margin-bottom-quarter"><ul class="okgo">
+<li>
+<div class="row">
+<div class="columns small-8 medium-6 large-4">
+<span>Effectiveness</span>
+</div>
+<div class="columns small-16 medium-18 large-20">
+<span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span>
+Major
+<span class="helptext">(for vitamin B12 deficiency)</span>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="columns small-8 medium-6 large-4">
+<span>Effectiveness</span>
+</div>
+<div class="columns small-16 medium-18 large-20">
+<span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span>
+Major
+<span class="helptext">(for fatigue)</span>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="columns small-8 medium-6 large-4">
+<span>Side effects</span>
+</div>
+<div class="columns small-16 medium-18 large-20">
+<span class="led-light led-light-side-effects"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
+None
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="columns small-8 medium-6 large-4">
+<span>Adherence</span>
+</div>
+<div class="columns small-16 medium-18 large-20">
+<span class="led-light led-light-adherence"></span><span class="led-light led-light-adherence"></span><span class="led-light led-light-adherence"></span><span class="led-light led-light-adherence"></span>
+Always
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="columns small-8 medium-6 large-4">
+<span>Burden</span>
+</div>
+<div class="columns small-16 medium-18 large-20">
+<span class="led-light led-light-burden"></span><span class="led-light led-light-burden"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
+A little hard to take
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="margin-bottom-quarter">
+<strong>Dosage:</strong>
+1 mg
+Monthly
+</div>
+<div class="margin-bottom-quarter">
+<strong>Cost:</strong>
+&lt; $25 monthly
+</div>
+<hr>
+<h3 class="tertiary-title">
+Sep 14, 2016
+<span class="helptext">(Started Jul 30, 2012)</span>
+</h3>
+<div class="margin-bottom-quarter"><ul class="okgo">
+<li>
+<div class="row">
+<div class="columns small-8 medium-6 large-4">
+<span>Effectiveness</span>
+</div>
+<div class="columns small-16 medium-18 large-20">
+<span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-off"></span>
+Moderate
+<span class="helptext">(for vitamin B12 deficiency)</span>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="columns small-8 medium-6 large-4">
+<span>Effectiveness</span>
+</div>
+<div class="columns small-16 medium-18 large-20">
+<span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-off"></span>
+Moderate
+<span class="helptext">(for fatigue)</span>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="columns small-8 medium-6 large-4">
+<span>Side effects</span>
+</div>
+<div class="columns small-16 medium-18 large-20">
+<span class="led-light led-light-side-effects"></span><span class="led-light led-light-side-effects"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
+Mild
+<span class="helptext">(soreness)</span>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="columns small-8 medium-6 large-4">
+<span>Adherence</span>
+</div>
+<div class="columns small-16 medium-18 large-20">
+<span class="led-light led-light-adherence"></span><span class="led-light led-light-adherence"></span><span class="led-light led-light-adherence"></span><span class="led-light led-light-adherence"></span>
+Always
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="columns small-8 medium-6 large-4">
+<span>Burden</span>
+</div>
+<div class="columns small-16 medium-18 large-20">
+<span class="led-light led-light-burden"></span><span class="led-light led-light-burden"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
+A little hard to take
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="margin-bottom-quarter">
+<strong>Dosage:</strong>
+1 mg
+Monthly
+</div>
+<div class="margin-bottom-quarter">
+<strong>Advice & Tips:</strong>
+No change
+</div>
+<div class="margin-bottom-quarter">
+<strong>Cost:</strong>
+&lt; $25 monthly
+</div>
+<hr>
+<h3 class="tertiary-title">
+Jul 13, 2016
+<span class="helptext">(Started Jul 30, 2012)</span>
+</h3>
+<div class="margin-bottom-quarter"><ul class="okgo">
+<li>
+<div class="row">
+<div class="columns small-8 medium-6 large-4">
+<span>Effectiveness</span>
+</div>
+<div class="columns small-16 medium-18 large-20">
+<span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-off"></span>
+Moderate
+<span class="helptext">(for vitamin B12 deficiency)</span>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="columns small-8 medium-6 large-4">
+<span>Effectiveness</span>
+</div>
+<div class="columns small-16 medium-18 large-20">
+<span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span>
+Major
+<span class="helptext">(for fatigue)</span>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="columns small-8 medium-6 large-4">
+<span>Side effects</span>
+</div>
+<div class="columns small-16 medium-18 large-20">
+<span class="led-light led-light-side-effects"></span><span class="led-light led-light-side-effects"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
+Mild
+<span class="helptext">(soreness)</span>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="columns small-8 medium-6 large-4">
+<span>Adherence</span>
+</div>
+<div class="columns small-16 medium-18 large-20">
+<span class="led-light led-light-adherence"></span><span class="led-light led-light-adherence"></span><span class="led-light led-light-adherence"></span><span class="led-light led-light-adherence"></span>
+Always
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="columns small-8 medium-6 large-4">
+<span>Burden</span>
+</div>
+<div class="columns small-16 medium-18 large-20">
+<span class="led-light led-light-burden"></span><span class="led-light led-light-burden"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
+A little hard to take
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="margin-bottom-quarter">
+<strong>Dosage:</strong>
+1 mg
+Monthly
+</div>
+<div class="margin-bottom-quarter">
+<strong>Advice & Tips:</strong>
+Helps with fatigue. Soreness, but relaxing the arm really helps.
+</div>
+<div class="margin-bottom-quarter">
+<strong>Cost:</strong>
+&lt; $25 monthly
+</div>
+<hr>
+<h3 class="tertiary-title">
+Sep 16, 2015
+<span class="helptext">(Started Jul 30, 2012)</span>
+</h3>
+<div class="margin-bottom-quarter"><ul class="okgo">
+<li>
+<div class="row">
+<div class="columns small-8 medium-6 large-4">
+<span>Effectiveness</span>
+</div>
+<div class="columns small-16 medium-18 large-20">
+<span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-off"></span>
+Moderate
+<span class="helptext">(for vitamin B12 deficiency)</span>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="columns small-8 medium-6 large-4">
+<span>Effectiveness</span>
+</div>
+<div class="columns small-16 medium-18 large-20">
+<span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span>
+Major
+<span class="helptext">(for fatigue)</span>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="columns small-8 medium-6 large-4">
+<span>Side effects</span>
+</div>
+<div class="columns small-16 medium-18 large-20">
+<span class="led-light led-light-side-effects"></span><span class="led-light led-light-side-effects"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
+Mild
+<span class="helptext">(soreness)</span>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="columns small-8 medium-6 large-4">
+<span>Adherence</span>
+</div>
+<div class="columns small-16 medium-18 large-20">
+<span class="led-light led-light-adherence"></span><span class="led-light led-light-adherence"></span><span class="led-light led-light-adherence"></span><span class="led-light led-light-adherence"></span>
+Always
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="columns small-8 medium-6 large-4">
+<span>Burden</span>
+</div>
+<div class="columns small-16 medium-18 large-20">
+<span class="led-light led-light-burden"></span><span class="led-light led-light-burden"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
+A little hard to take
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="margin-bottom-quarter">
+<strong>Dosage:</strong>
+1 mg
+Monthly
+</div>
+<div class="margin-bottom-quarter">
+<strong>Advice & Tips:</strong>
+Sometimes it gets sore even when relaxed
+</div>
+<div class="margin-bottom-quarter">
+<strong>Cost:</strong>
+&lt; $25 monthly
+</div>
+<hr>
+<h3 class="tertiary-title">
+Jul 15, 2015
+<span class="helptext">(Started Jul 30, 2012)</span>
+</h3>
+<div class="margin-bottom-quarter"><ul class="okgo">
+<li>
+<div class="row">
+<div class="columns small-8 medium-6 large-4">
+<span>Effectiveness</span>
+</div>
+<div class="columns small-16 medium-18 large-20">
+<span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span>
+Major
+<span class="helptext">(for vitamin B12 deficiency)</span>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="columns small-8 medium-6 large-4">
+<span>Effectiveness</span>
+</div>
+<div class="columns small-16 medium-18 large-20">
+<span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span>
+Major
+<span class="helptext">(for fatigue)</span>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="columns small-8 medium-6 large-4">
+<span>Side effects</span>
+</div>
+<div class="columns small-16 medium-18 large-20">
+<span class="led-light led-light-side-effects"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
+None
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="columns small-8 medium-6 large-4">
+<span>Adherence</span>
+</div>
+<div class="columns small-16 medium-18 large-20">
+<span class="led-light led-light-adherence"></span><span class="led-light led-light-adherence"></span><span class="led-light led-light-adherence"></span><span class="led-light led-light-adherence"></span>
+Always
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="columns small-8 medium-6 large-4">
+<span>Burden</span>
+</div>
+<div class="columns small-16 medium-18 large-20">
+<span class="led-light led-light-burden"></span><span class="led-light led-light-burden"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
+A little hard to take
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="margin-bottom-quarter">
+<strong>Dosage:</strong>
+1 mg
+Monthly
+</div>
+<div class="margin-bottom-quarter">
+<strong>Advice & Tips:</strong>
+Relax area where injection is placed, so it doesn&#39;t make the area sore.
+
+
+
+
+
+</div>
+<div class="margin-bottom-quarter">
+<strong>Cost:</strong>
+&lt; $25 monthly
+</div>
+<hr>
+<ul class="list-inline" data-widget="helpful_marks">
+<li>
+<span class="icon-thumb icon-spacer align-text-bottom icon"></span>
+<span class="text-smallest">0</span>
+<span class="is-hidden-visually">helpful marks</span>
+</li>
+<li>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="evaluation-group is-divided">
+<div class="row padding-vertical margin-top">
+<div class="columns medium-5">
+<div data-react-class="ProfileSummaryPropsContainer" data-react-props="{&quot;profileUrl&quot;:&quot;/members/81676&quot;,&quot;showUsername&quot;:true,&quot;avatarUrl&quot;:&quot;//s3.amazonaws.com/uploads.patientslikeme.com/avatars/18770-thumb.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180502%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20180502T050219Z\u0026X-Amz-Expires=604800\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=65b9ea168aabfabff373f103d231196dfd022da8587ff0b5ee5de7f3fd6514b5&quot;,&quot;briefBio&quot;:null,&quot;country&quot;:&quot;United States&quot;,&quot;currentUserId&quot;:null,&quot;deceased&quot;:false,&quot;deleted&quot;:false,&quot;firstDiagnosisDate&quot;:2010,&quot;fullAvatarUrl&quot;:&quot;//s3.amazonaws.com/uploads.patientslikeme.com/avatars/18770-full.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180502%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20180502T050219Z\u0026X-Amz-Expires=604800\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=3129463be336280f2d57a2b1b87dd38ac9942550b923002b23a81d3e9dbb3121&quot;,&quot;genders&quot;:[],&quot;isAdmin&quot;:false,&quot;isSignedIn&quot;:false,&quot;lastActivityTime&quot;:&quot;about 1 year ago&quot;,&quot;preferredPronouns&quot;:null,&quot;primaryConditionName&quot;:&quot;multiple sclerosis&quot;,&quot;secondaryConditionNames&quot;:[&quot;vitamin B12 deficiency&quot;,&quot;peripheral neuropathy&quot;],&quot;sex&quot;:&quot;F&quot;,&quot;state&quot;:&quot;MI&quot;,&quot;title&quot;:&quot;&quot;,&quot;userAge&quot;:49,&quot;userId&quot;:81676,&quot;userIsFollowing&quot;:false,&quot;userName&quot;:&quot;suzzie&quot;}"></div>
+
+</div>
+<div class="eval-details columns medium-19">
+<h3 class="tertiary-title">
+Sep 26, 2016
+<span class="helptext">(Started Oct 05, 2011)</span>
+</h3>
+<div class="margin-bottom-quarter"><ul class="okgo">
+<li>
+<div class="row">
+<div class="columns small-8 medium-6 large-4">
+<span>Effectiveness</span>
+</div>
+<div class="columns small-16 medium-18 large-20">
+<span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
+Slight
+<span class="helptext">(for vitamin B12 deficiency)</span>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="columns small-8 medium-6 large-4">
+<span>Effectiveness</span>
+</div>
+<div class="columns small-16 medium-18 large-20">
+<span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
+Slight
+<span class="helptext">(for fatigue)</span>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="columns small-8 medium-6 large-4">
+<span>Side effects</span>
+</div>
+<div class="columns small-16 medium-18 large-20">
+<span class="led-light led-light-side-effects"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
+None
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="columns small-8 medium-6 large-4">
+<span>Adherence</span>
+</div>
+<div class="columns small-16 medium-18 large-20">
+<span class="led-light led-light-adherence"></span><span class="led-light led-light-adherence"></span><span class="led-light led-light-adherence"></span><span class="led-light led-light-adherence"></span>
+Always
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="columns small-8 medium-6 large-4">
+<span>Burden</span>
+</div>
+<div class="columns small-16 medium-18 large-20">
+<span class="led-light led-light-burden"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
+Not at all hard to take
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="margin-bottom-quarter">
+<strong>Dosage:</strong>
+1 mg
+Monthly
+</div>
+<hr>
+<ul class="list-inline" data-widget="helpful_marks">
+<li>
+<span class="icon-thumb icon-spacer align-text-bottom icon"></span>
+<span class="text-smallest">0</span>
+<span class="is-hidden-visually">helpful marks</span>
+</li>
+<li>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="evaluation-group is-divided">
+<div class="row padding-vertical margin-top">
+<div class="columns medium-5">
+<div data-react-class="ProfileSummaryPropsContainer" data-react-props="{&quot;profileUrl&quot;:&quot;/members/54378&quot;,&quot;showUsername&quot;:true,&quot;avatarUrl&quot;:&quot;//s3.amazonaws.com/uploads.patientslikeme.com/avatars/12975-thumb.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180502%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20180502T050219Z\u0026X-Amz-Expires=604800\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=57c72839ec733a701625af4ea9cd33cf8df5196bd1344bd7bf62bed5ea741b2d&quot;,&quot;briefBio&quot;:null,&quot;country&quot;:&quot;United States&quot;,&quot;currentUserId&quot;:null,&quot;deceased&quot;:false,&quot;deleted&quot;:false,&quot;firstDiagnosisDate&quot;:2007,&quot;fullAvatarUrl&quot;:&quot;//s3.amazonaws.com/uploads.patientslikeme.com/avatars/12975-full.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180502%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20180502T050219Z\u0026X-Amz-Expires=604800\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=69d62e8920c27de22fb315b7123372814566af29ffb707a4ac18efcca19bd919&quot;,&quot;genders&quot;:[],&quot;isAdmin&quot;:false,&quot;isSignedIn&quot;:false,&quot;lastActivityTime&quot;:&quot;about 3 weeks ago&quot;,&quot;preferredPronouns&quot;:null,&quot;primaryConditionName&quot;:&quot;fibromyalgia&quot;,&quot;secondaryConditionNames&quot;:[&quot;myalgic encephalomyelitis/chronic fatigue syndrome&quot;,&quot;migraine&quot;,&quot;hearing loss&quot;,&quot;bipolar disorder&quot;,&quot;sleep apnea disorder&quot;,&quot;narcolepsy&quot;,&quot;degenerative disc disease&quot;,&quot;undifferentiated inflammatory arthritis&quot;,&quot;gout&quot;,&quot;tinnitus&quot;,&quot;Meniere&#39;s disease&quot;,&quot;periodic limb movement disorder&quot;,&quot;carpal tunnel syndrome&quot;,&quot;diabetes type 2&quot;,&quot;vitamin B12 deficiency&quot;,&quot;attention deficit/hyperactivity disorder&quot;,&quot;generalized anxiety disorder&quot;],&quot;sex&quot;:&quot;M&quot;,&quot;state&quot;:&quot;AL&quot;,&quot;title&quot;:&quot;&quot;,&quot;userAge&quot;:54,&quot;userId&quot;:54378,&quot;userIsFollowing&quot;:false,&quot;userName&quot;:&quot;lazaras&quot;}"></div>
+
+</div>
+<div class="eval-details columns medium-19">
+<h3 class="tertiary-title">
+Oct  9, 2015
+<span class="helptext">(Started Aug 01, 2015)</span>
+</h3>
+<div class="margin-bottom-quarter"><ul class="okgo">
+<li>
+<div class="row">
+<div class="columns small-8 medium-6 large-4">
+<span>Effectiveness</span>
+</div>
+<div class="columns small-16 medium-18 large-20">
+<span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
+Slight
+<span class="helptext">(for vitamin B12 deficiency)</span>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="columns small-8 medium-6 large-4">
+<span>Effectiveness</span>
+</div>
+<div class="columns small-16 medium-18 large-20">
+<span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
+Slight
+<span class="helptext">(for fatigue)</span>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="columns small-8 medium-6 large-4">
+<span>Side effects</span>
+</div>
+<div class="columns small-16 medium-18 large-20">
+<span class="led-light led-light-side-effects"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
+None
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="columns small-8 medium-6 large-4">
+<span>Adherence</span>
+</div>
+<div class="columns small-16 medium-18 large-20">
+<span class="led-light led-light-adherence"></span><span class="led-light led-light-adherence"></span><span class="led-light led-light-adherence"></span><span class="led-light led-light-off"></span>
+Usually
 </div>
 </div>
 </li>
@@ -2091,85 +2811,7 @@ Somewhat hard to take
 </div>
 <div class="margin-bottom-quarter">
 <strong>Dosage:</strong>
-10 mg
-Daily
-</div>
-<hr>
-<ul class="list-inline" data-widget="helpful_marks">
-<li>
-<span class="icon-thumb icon-spacer align-text-bottom icon"></span>
-<span class="text-smallest">0</span>
-<span class="is-hidden-visually">helpful marks</span>
-</li>
-<li>
-</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="evaluation-group is-divided">
-<div class="row padding-vertical margin-top">
-<div class="columns medium-5">
-<div data-react-class="ProfileSummaryPropsContainer" data-react-props="{&quot;profileUrl&quot;:&quot;/members/100744&quot;,&quot;showUsername&quot;:true,&quot;avatarUrl&quot;:&quot;//s3.amazonaws.com/uploads.patientslikeme.com/avatars/23573-thumb.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180502%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20180502T050916Z\u0026X-Amz-Expires=604800\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=c5e23805eb3cf28a9e2f73f69e238a08296619397391587b0749ff0c9b25e5e8&quot;,&quot;briefBio&quot;:null,&quot;country&quot;:&quot;United States&quot;,&quot;currentUserId&quot;:null,&quot;deceased&quot;:false,&quot;deleted&quot;:false,&quot;firstDiagnosisDate&quot;:null,&quot;fullAvatarUrl&quot;:&quot;//s3.amazonaws.com/uploads.patientslikeme.com/avatars/23573-full.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180502%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20180502T050916Z\u0026X-Amz-Expires=604800\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=7b3cdacadb52616ff8fa7a1d29d352c6d24f9bd6cb8630af87c42d9d7ee4f98a&quot;,&quot;genders&quot;:[],&quot;isAdmin&quot;:false,&quot;isSignedIn&quot;:false,&quot;lastActivityTime&quot;:&quot;about 5 weeks ago&quot;,&quot;preferredPronouns&quot;:null,&quot;primaryConditionName&quot;:&quot;kidney transplant&quot;,&quot;secondaryConditionNames&quot;:[&quot;high blood pressure (hypertension)&quot;,&quot;polycystic kidney disease&quot;,&quot;cardiomyopathy&quot;,&quot;sleep apnea disorder&quot;,&quot;atrial fibrillation&quot;,&quot;chronic hyperglycemia&quot;,&quot;congestive heart failure&quot;,&quot;diabetes type 2&quot;,&quot;gout&quot;,&quot;carpal tunnel syndrome&quot;,&quot;ulnar tunnel syndrome&quot;,&quot;retina detachment&quot;,&quot;vitamin C deficiency anemia&quot;,&quot;vitamin D deficiency&quot;],&quot;sex&quot;:&quot;M&quot;,&quot;state&quot;:&quot;IL&quot;,&quot;title&quot;:&quot;&quot;,&quot;userAge&quot;:63,&quot;userId&quot;:100744,&quot;userIsFollowing&quot;:false,&quot;userName&quot;:&quot;Santa 1&quot;}"></div>
-
-</div>
-<div class="eval-details columns medium-19">
-<h3 class="tertiary-title">
-Jun 10, 2014
-<span class="helptext">(Started Feb 10, 2012)</span>
-</h3>
-<div class="margin-bottom-quarter"><ul class="okgo">
-<li>
-<div class="row">
-<div class="columns small-8 medium-6 large-4">
-<span>Effectiveness</span>
-</div>
-<div class="columns small-16 medium-18 large-20">
-<span class="led-light led-light-off"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
-Can&#39;t tell
-<span class="helptext">(for diabetes type 2)</span>
-</div>
-</div>
-</li>
-<li>
-<div class="row">
-<div class="columns small-8 medium-6 large-4">
-<span>Side effects</span>
-</div>
-<div class="columns small-16 medium-18 large-20">
-<span class="led-light led-light-side-effects"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
-None
-</div>
-</div>
-</li>
-<li>
-<div class="row">
-<div class="columns small-8 medium-6 large-4">
-<span>Adherence</span>
-</div>
-<div class="columns small-16 medium-18 large-20">
-<span class="led-light led-light-adherence"></span><span class="led-light led-light-adherence"></span><span class="led-light led-light-adherence"></span><span class="led-light led-light-adherence"></span>
-Always
-</div>
-</div>
-</li>
-<li>
-<div class="row">
-<div class="columns small-8 medium-6 large-4">
-<span>Burden</span>
-</div>
-<div class="columns small-16 medium-18 large-20">
-<span class="led-light led-light-burden"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
-Not at all hard to take
-</div>
-</div>
-</li>
-</ul>
-</div>
-<div class="margin-bottom-quarter">
-<strong>Dosage:</strong>
-10 mg
+1 mg
 Daily
 </div>
 <hr>
@@ -2193,15 +2835,15 @@ Daily
 <div class="columns large-8 medium-8 align-left">
 <small class="helptext">
 Last updated:
-<time datetime="2018-05-02T05:09:16+00:00">May  2, 2018</time>
+<time datetime="2018-05-02T05:02:19+00:00">May  2, 2018</time>
 </small>
 
 </div>
 <div class="columns large-16 medium-16">
 <span class="padding-horizontal">
-Showing 3 of 6 patient evaluations for Glipizide
+Showing 3 of 28 patient evaluations for Vitamin B12 Injection
 </span>
-<div class="pagination inline-block"><a class="icon-only is-not-rwd previous_page" disabled="true"><span class="icon icon-director-left">Previous page</span></a> <em class="current">1</em> <a rel="next" href="/treatments/show/14847?page=2&amp;size=3&amp;stop_reason=5#evaluations">2</a> <a class="icon-only is-not-rwd next_page" rel="next" href="/treatments/show/14847?page=2&amp;size=3&amp;stop_reason=5#evaluations"><span class="icon icon-director-right">Next page</span></a></div>
+<div class="pagination inline-block"><a class="icon-only is-not-rwd previous_page" disabled="true"><span class="icon icon-director-left">Previous page</span></a> <em class="current">1</em> <a rel="next" href="/treatments/show/303-vitamin-b12-injection-side-effects-and-efficacy?page=2&amp;size=3&amp;treatment_purpose_symptom=9#evaluations">2</a> <a href="/treatments/show/303-vitamin-b12-injection-side-effects-and-efficacy?page=3&amp;size=3&amp;treatment_purpose_symptom=9#evaluations">3</a> <span class="gap">&hellip;</span> <a href="/treatments/show/303-vitamin-b12-injection-side-effects-and-efficacy?page=10&amp;size=3&amp;treatment_purpose_symptom=9#evaluations">10</a> <a class="icon-only is-not-rwd next_page" rel="next" href="/treatments/show/303-vitamin-b12-injection-side-effects-and-efficacy?page=2&amp;size=3&amp;treatment_purpose_symptom=9#evaluations"><span class="icon icon-director-right">Next page</span></a></div>
 </div>
 </div>
 </div>
@@ -2341,7 +2983,7 @@ PatientsLikeMe ®
   [].forEach(function(metric, index) {
     var event = metric[0];
     var params = metric[1];
-    var uniqid = "4bc6a6b0-cbfe-4c63-9468-c93e4a5eb888-" + index;
+    var uniqid = "8195f4fc-6d53-4ee0-8941-5c5a55b96f57-" + index;
     if (window.sessionStorage['metric_event-' + uniqid] === undefined) {
       window.sessionStorage['metric_event-' + uniqid] = true;
       var metricEvent = {event: event, params: params};

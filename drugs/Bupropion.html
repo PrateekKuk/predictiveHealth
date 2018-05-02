@@ -2,17 +2,17 @@
 <html lang="en" class=" no-js">
 <head>
 
-<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"3ee98a9739","applicationID":"58764","transactionName":"cglXQEANXllVExdAE1QHTVlXDEZGHxJQWxY=","queueTime":0,"applicationTime":91,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"3ee98a9739","applicationID":"58764","transactionName":"cglXQEANXllVExdAE1QHTVlXDEZGHxJQWxY=","queueTime":0,"applicationTime":73,"agent":""}</script>
 <script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"Vg4GV0VWAAQGUA=="};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(18)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(18)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(18)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(18)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(x?x.then(a):w?w(a):(E=-E,O.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(18)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var b=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,b),b.prototype=p.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var x=m&&m.resolve();if(!w&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],16:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],17:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],18:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=h(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([g,e,r,a]),a}}function p(t,n){v[t]=h(t).concat(n)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var v={},y={},g={on:p,emit:e,get:m,listeners:h,context:n,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(15),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!x++){var t=b.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=l.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(15),u=t("ee"),d=window,l=d.document,p="addEventListener",h="attachEvent",m=d.XMLHttpRequest,w=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},g=m&&w&&w[p]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:v,features:{},xhrWrappable:g};t(12),l[p]?(l[p]("DOMContentLoaded",i,!1),d[p]("load",r,!1)):(l[h]("onreadystatechange",o),d[h]("onload",r)),c("mark",["firstbyte",s],null,"api");var x=0,E=t(17)},{}]},{},["loader",2,10,4,3]);</script>
-<title>PatientsLikeMe | Glimepiride report for  patients like you</title>
+<title>PatientsLikeMe | Bupropion report for  patients like you</title>
 <meta charset="UTF-8">
 <meta content="8scufJGxU9JCHew1yOlfXYXtd73pybYP2xyel8v3GjQ" name="google-site-verification">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta content="PatientsLikeMe" name="application-name">
 <meta content="PatientsLikeMe | Treatments" property="og:title">
 <meta content="https://dy82vckl8b34w.cloudfront.net/assets/open_graph/treatments-d1efa6a6ae8fcf07f3b802aa8c172740f214dfb5ea77367ba0225a3a63fa2006.png" property="og:image">
-<meta content="Glimepiride: Find the most comprehensive real-world treatment information on Glimepiride at PatientsLikeMe. 176 patients with fibromyalgia, multiple sclerosis, major depressive disorder, generalized anxiety disorder, diabetes type 2, systemic lupus erythematosus, post-traumatic stress disorder, bipolar disorder, Parkinson's disease, panic disorder, rheumatoid arthritis, high blood pressure (hypertension), myalgic encephalomyelitis/chronic fatigue syndrome, persistent depressive disorder (dysthymia), amyotrophic lateral sclerosis, epilepsy, migraine, hypothyroidism, osteoarthritis, traumatic brain injury, attention deficit/hyperactivity disorder, bipolar II disorder, asthma, social anxiety disorder, high cholesterol (hypercholesterolemia), irritable bowel syndrome, idiopathic pulmonary fibrosis, gastroesophageal reflux disease, bipolar I disorder or psoriasis currently take Glimepiride." property="og:description">
-<meta content="Glimepiride: Find the most comprehensive real-world treatment information on Glimepiride at PatientsLikeMe. 176 patients with fibromyalgia, multiple sclerosis, major depressive disorder, generalized anxiety disorder, diabetes type 2, systemic lupus erythematosus, post-traumatic stress disorder, bipolar disorder, Parkinson's disease, panic disorder, rheumatoid arthritis, high blood pressure (hypertension), myalgic encephalomyelitis/chronic fatigue syndrome, persistent depressive disorder (dysthymia), amyotrophic lateral sclerosis, epilepsy, migraine, hypothyroidism, osteoarthritis, traumatic brain injury, attention deficit/hyperactivity disorder, bipolar II disorder, asthma, social anxiety disorder, high cholesterol (hypercholesterolemia), irritable bowel syndrome, idiopathic pulmonary fibrosis, gastroesophageal reflux disease, bipolar I disorder or psoriasis currently take Glimepiride." name="description">
+<meta content="Bupropion: Find the most comprehensive real-world treatment information on Bupropion at PatientsLikeMe. 1393 patients with fibromyalgia, multiple sclerosis, major depressive disorder, generalized anxiety disorder, diabetes type 2, systemic lupus erythematosus, post-traumatic stress disorder, bipolar disorder, Parkinson's disease, panic disorder, rheumatoid arthritis, high blood pressure (hypertension), myalgic encephalomyelitis/chronic fatigue syndrome, persistent depressive disorder (dysthymia), amyotrophic lateral sclerosis, epilepsy, migraine, hypothyroidism, osteoarthritis, traumatic brain injury, attention deficit/hyperactivity disorder, bipolar II disorder, asthma, social anxiety disorder, high cholesterol (hypercholesterolemia), irritable bowel syndrome, idiopathic pulmonary fibrosis, gastroesophageal reflux disease, bipolar I disorder or psoriasis currently take Bupropion." property="og:description">
+<meta content="Bupropion: Find the most comprehensive real-world treatment information on Bupropion at PatientsLikeMe. 1393 patients with fibromyalgia, multiple sclerosis, major depressive disorder, generalized anxiety disorder, diabetes type 2, systemic lupus erythematosus, post-traumatic stress disorder, bipolar disorder, Parkinson's disease, panic disorder, rheumatoid arthritis, high blood pressure (hypertension), myalgic encephalomyelitis/chronic fatigue syndrome, persistent depressive disorder (dysthymia), amyotrophic lateral sclerosis, epilepsy, migraine, hypothyroidism, osteoarthritis, traumatic brain injury, attention deficit/hyperactivity disorder, bipolar II disorder, asthma, social anxiety disorder, high cholesterol (hypercholesterolemia), irritable bowel syndrome, idiopathic pulmonary fibrosis, gastroesophageal reflux disease, bipolar I disorder or psoriasis currently take Bupropion." name="description">
 <link href="/apple-touch-icon.png?v=1023171" rel="apple-touch-icon-precomposed">
 <link href="/apple-touch-icon.png?v=1023171" rel="apple-touch-icon" sizes="180x180">
 <link href="/favicon-32x32.png?v=1023171" rel="icon" sizes="32x32" type="image/png">
@@ -23,7 +23,7 @@
 <meta content="#ffffff" name="theme-color">
 <link href="/android-chrome-512x512.png?v=1023171" rel="image_src" type="image/png">
 
-<link href="https://www.patientslikeme.com/treatments/show/1420-glimepiride-side-effects-and-efficacy" rel="canonical">
+<link href="https://www.patientslikeme.com/treatments/show/1089-bupropion-side-effects-and-efficacy" rel="canonical">
 <script>
   window.queued_functions = [];
   window.$ = function(f) {
@@ -48,7 +48,7 @@
   var MTIProjectId='19cc9a7d-3df0-4312-b847-b9c6508a6bce';
 </script>
 <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="e159BNJXEfkRk3soiHa90BEx3G0+YUMyPIqKxhtkv6iaNcasTTj8W13UkZNLGFisK30ZmT/YGte9DadbBNA8wQ==" />
+<meta name="csrf-token" content="IEcY1W2YFs7Vo1yx50dMTqMHTlI5I2qy4n6TnkHUfmqd//GRXwyGabA24Bw9hZ3O9F28TUQ0rlYXeGdD2RJD3A==" />
 <script>
   window.PLM = window.PLM || {};
   window.PLM['RAILS_CONTROLLER'] = "treatments";
@@ -93,7 +93,7 @@
     ga('set', 'dimension3', '-1');
   
     // metric_guid. Scope: user
-    ga('set', 'dimension4', 'd52b78fa-fba0-4aaf-bff2-2cdfc05cf68e');
+    ga('set', 'dimension4', 'a807f81a-2fe0-4b95-abd8-900664663eda');
   
     // Before adding new custom page variables, you'll need to set them up in the
     // Google Analytics UI to get an assigned index to use in this code.
@@ -256,7 +256,7 @@ PatientsLikeMe ®
 <ul>
 <li class="toolbar-title">
 <h1>
-<span itemprop="name">Glimepiride</span> treatment report
+<span itemprop="name">Bupropion</span> treatment report
 </h1>
 </li>
 </ul>
@@ -271,10 +271,10 @@ PatientsLikeMe ®
 <nav class="columns medium-24" id="treatment-report-tabs">
 <ul class="margin-top-none tabs" role="tablist">
 <li class="overview">
-<a aria-controls="overview" class="yah" href="/treatments/show/1420-glimepiride-side-effects-and-efficacy?brand=f">Overview</a>
+<a aria-controls="overview" class="yah" href="/treatments/show/1089-bupropion-side-effects-and-efficacy?brand=f">Overview</a>
 </li>
 <li class="evaluations">
-<a aria-controls="evaluations" href="/treatment_evaluations/browse?brand=f&amp;id=1420-glimepiride-side-effects-and-efficacy">Individual patient evaluations</a>
+<a aria-controls="evaluations" href="/treatment_evaluations/browse?brand=f&amp;id=1089-bupropion-side-effects-and-efficacy">Individual patient evaluations</a>
 </li>
 
 </ul>
@@ -288,10 +288,10 @@ PatientsLikeMe ®
 <nav data-popup-type="menu" id="treatment-report-dropdown" style="display:none">
 <ul class="toc-menu">
 <li class="overview">
-<a aria-controls="overview" class="yah" href="/treatments/show/1420-glimepiride-side-effects-and-efficacy?brand=f">Overview</a>
+<a aria-controls="overview" class="yah" href="/treatments/show/1089-bupropion-side-effects-and-efficacy?brand=f">Overview</a>
 </li>
 <li class="evaluations">
-<a aria-controls="evaluations" href="/treatment_evaluations/browse?brand=f&amp;id=1420-glimepiride-side-effects-and-efficacy">Individual patient evaluations</a>
+<a aria-controls="evaluations" href="/treatment_evaluations/browse?brand=f&amp;id=1089-bupropion-side-effects-and-efficacy">Individual patient evaluations</a>
 </li>
 
 </ul>
@@ -304,7 +304,7 @@ PatientsLikeMe ®
 <div class="row">
 <div class="columns large-15 medium-15">
 <header id="summary">
-<h2>What is Glimepiride?</h2>
+<h2>What is Bupropion?</h2>
 </header>
 <p class="margin-vertical-none">
 <strong>Category:</strong>
@@ -313,18 +313,26 @@ PatientsLikeMe ®
 <p class="show toggle">
 <strong>Most popular types:</strong>
 <span class="comma-separated">
-<a href="/treatments/show/2635-amaryl-side-effects-and-efficacy?brand=t">Amaryl</a>
+<a href="/treatments/show/1131-wellbutrin-xl-side-effects-and-efficacy?brand=t">Wellbutrin XL</a>
+<a href="/treatments/show/111-wellbutrin-side-effects-and-efficacy?brand=t">Wellbutrin</a>
+<a href="/treatments/show/5395-bupropion-xl-side-effects-and-efficacy?brand=t">Bupropion XL</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/1282-wellbutrin-sr-side-effects-and-efficacy?brand=t">Wellbutrin SR</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/4427-bupropion-sr-side-effects-and-efficacy?brand=t">Bupropion SR</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/3769-budeprion-xl-side-effects-and-efficacy?brand=t">Budeprion XL</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/1646-budeprion-sr-side-effects-and-efficacy?brand=t">Budeprion SR</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/10855-aplenzin-side-effects-and-efficacy?brand=t">Aplenzin</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/4873-zyban-side-effects-and-efficacy?brand=t">Zyban</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/15068-voxra-side-effects-and-efficacy?brand=t">Voxra</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/26299-forfivo-xl-side-effects-and-efficacy?brand=t">Forfivo XL</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/7845-elontril-side-effects-and-efficacy?brand=t">Elontril</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/6872-zetron-side-effects-and-efficacy?brand=t">Zetron</a>
+<a class="treatment-report-other-brand" style="display: none" href="/treatments/show/11766-novobupropion-side-effects-and-efficacy?brand=t">Novo-Bupropion</a>
 </span>
+<a class="content-toggle" data-toggle-content-selector=".treatment-report-other-brand" data-toggled-text="Show top 3" data-fn-click="toggle_content" href="#">Show all</a>
 </p>
 <span itemprop="isProprietary" style="display:none">false</span>
-<p>
-<em>See also:</em>
-<span class="comma-separated">
-<a href="/treatments/show/25619-glimepiridepioglitazone-side-effects-and-efficacy">Glimepiride-pioglitazone</a>
-</span>
-</p>
 <p itemprop="description">
-Glimepride is a medium-to-long acting sulfonylurea anti-diabetic drug that is taken orally for Type II diabetes. It may be used in combination with metformin or insulin in patients whose hyperglycemia cannot be controlled by diet and exercise in conjunction with a single oral hypoglycemic agent.
+Bupropion, a norepinephrine and dopamine reuptake inhibitor (NDRI) antidepressant is used for the treatment of major depressive disorder, including seasonal affective disorder, and as an adjunct in smoking cessation. It may also be used for attention-deficit/hyperactivity and bipolar disorders. 
 </p>
 </div>
 <div class="columns large-9 medium-9">
@@ -333,7 +341,7 @@ Glimepride is a medium-to-long acting sulfonylurea anti-diabetic drug that is ta
 </span>
 <span class="flag-content">
 <p>
-<a href="/patients?s%5Bexclude_deceased%5D=true&amp;s%5Bt%5D=1420">See patients taking Glimepiride</a>
+<a href="/patients?s%5Bexclude_deceased%5D=true&amp;s%5Bt%5D=1089">See patients taking Bupropion</a>
 </p>
 </span>
 </div>
@@ -358,105 +366,105 @@ Glimepride is a medium-to-long acting sulfonylurea anti-diabetic drug that is ta
 <th>Perceived Effectiveness</th>
 </tr>
 </thead>
-<tbody class="ajax-target compacted" data-url="/treatments/1420/additional_purpose_rows">
-<tr class="top-n yah-receiver" data-yah-key="purpose" data-yah-value="conditions-50" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
+<tbody class="ajax-target compacted" data-url="/treatments/1089/additional_purpose_rows">
+<tr class="top-n yah-receiver" data-yah-key="purpose" data-yah-value="conditions-19" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-<a href="/conditions/50"><span itemprop="name">Diabetes type 2</span>
+<a href="/conditions/19"><span itemprop="name">Major depressive disorder</span>
 </a></th>
 <td class="numeric">
-<a title="See patients who are taking or have taken Glimepiride for this purpose" href="/patients/treatment/2635?treatment_purpose_condition=50">194</a>
+<a title="See patients who are taking or have taken Bupropion for this purpose" href="/patients/treatment/1089-bupropion-side-effects-and-efficacy?treatment_purpose_condition=19">2,297</a>
 </td>
 <td class="numeric">
-<a title="See all evaluations with this purpose" href="/treatment_evaluations/browse?brand=false&amp;condition_id=50&amp;id=1420">85</a>
+<a title="See all evaluations with this purpose" href="/treatment_evaluations/browse?brand=false&amp;condition_id=19&amp;id=1089">1,297</a>
 </td>
 <td class="efficacy">
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item bg-efficacy-major" style="width: 34.11764705882353%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=50&amp;id=1420&amp;value=4"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 29 evaluations from 20 patients with major perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-moderate" style="width: 37.64705882352941%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=50&amp;id=1420&amp;value=3"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 32 evaluations from 31 patients with moderate perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-slight" style="width: 10.588235294117647%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=50&amp;id=1420&amp;value=2"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 9 evaluations from 9 patients with slight perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-none" style="width: 4.705882352941177%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=50&amp;id=1420&amp;value=1"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 4 evaluations from 4 patients with none perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-cant_tell" style="width: 12.941176470588236%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=50&amp;id=1420&amp;value=0"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 11 evaluations from 11 patients with unknown perceived effectiveness</small></a></li></ul>
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item bg-efficacy-major" style="width: 20.84870848708487%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=19&amp;id=1089&amp;value=4"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 226 evaluations from 187 patients with major perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-moderate" style="width: 35.14760147601476%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=19&amp;id=1089&amp;value=3"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 381 evaluations from 310 patients with moderate perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-slight" style="width: 21.309963099630995%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=19&amp;id=1089&amp;value=2"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 231 evaluations from 209 patients with slight perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-none" style="width: 13.653136531365314%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=19&amp;id=1089&amp;value=1"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 148 evaluations from 138 patients with none perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-cant_tell" style="width: 9.040590405904059%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=19&amp;id=1089&amp;value=0"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 98 evaluations from 91 patients with unknown perceived effectiveness</small></a></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-yah-key="purpose" data-yah-value="treatment_purposes-6" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
+<tr class="top-n yah-receiver" data-yah-key="purpose" data-yah-value="symptoms-3" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-<a href="/treatment_purposes/6"><span itemprop="name">Increase effect of another treatment</span>
+<a href="/symptoms/show/3"><span itemprop="name">Depressed mood</span>
 </a></th>
 <td class="numeric">
-<a title="See patients who are taking or have taken Glimepiride for this purpose" href="/patients/treatment/2635?treatment_purpose=6">9</a>
+<a title="See patients who are taking or have taken Bupropion for this purpose" href="/patients/treatment/1089-bupropion-side-effects-and-efficacy?treatment_purpose_symptom=3">1,616</a>
 </td>
 <td class="numeric">
-<a title="See all evaluations with this purpose" href="/treatment_evaluations/browse?brand=false&amp;id=1420&amp;treatment_purpose_id=6">3</a>
+<a title="See all evaluations with this purpose" href="/treatment_evaluations/browse?brand=false&amp;id=1089&amp;symptom_id=3">802</a>
 </td>
 <td class="efficacy">
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item bg-efficacy-major" style="width: 0.0%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=1420&amp;treatment_purpose_id=6&amp;value=4"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 0 evaluations from 0 patients with major perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-moderate" style="width: 33.333333333333336%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=1420&amp;treatment_purpose_id=6&amp;value=3"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 1 evaluation from 1 patient with moderate perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-slight" style="width: 0.0%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=1420&amp;treatment_purpose_id=6&amp;value=2"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 0 evaluations from 0 patients with slight perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-none" style="width: 66.66666666666667%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=1420&amp;treatment_purpose_id=6&amp;value=1"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 2 evaluations from 1 patient with none perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-cant_tell" style="width: 0.0%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=1420&amp;treatment_purpose_id=6&amp;value=0"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 0 evaluations from 0 patients with unknown perceived effectiveness</small></a></li></ul>
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item bg-efficacy-major" style="width: 26.693227091633467%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=1089&amp;symptom_id=3&amp;value=4"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 201 evaluations from 131 patients with major perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-moderate" style="width: 38.114209827357236%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=1089&amp;symptom_id=3&amp;value=3"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 287 evaluations from 229 patients with moderate perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-slight" style="width: 17.662682602921645%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=1089&amp;symptom_id=3&amp;value=2"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 133 evaluations from 126 patients with slight perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-none" style="width: 7.702523240371846%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=1089&amp;symptom_id=3&amp;value=1"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 58 evaluations from 50 patients with none perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-cant_tell" style="width: 9.827357237715804%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=1089&amp;symptom_id=3&amp;value=0"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 74 evaluations from 67 patients with unknown perceived effectiveness</small></a></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-yah-key="purpose" data-yah-value="conditions-49" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
+<tr class="top-n yah-receiver" data-yah-key="purpose" data-yah-value="conditions-16" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-<a href="/conditions/49"><span itemprop="name">Diabetes insipidus</span>
+<a href="/conditions/16"><span itemprop="name">Persistent depressive disorder (dysthymia)</span>
 </a></th>
 <td class="numeric">
-<a title="See patients who are taking or have taken Glimepiride for this purpose" href="/patients/treatment/2635?treatment_purpose_condition=49">1</a>
+<a title="See patients who are taking or have taken Bupropion for this purpose" href="/patients/treatment/1089-bupropion-side-effects-and-efficacy?treatment_purpose_condition=16">402</a>
 </td>
 <td class="numeric">
-0
+<a title="See all evaluations with this purpose" href="/treatment_evaluations/browse?brand=false&amp;condition_id=16&amp;id=1089">329</a>
 </td>
 <td class="efficacy">
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item bg-efficacy-major" style="width: NaN%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=49&amp;id=1420&amp;value=4"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 0 evaluations from 0 patients with major perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-moderate" style="width: NaN%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=49&amp;id=1420&amp;value=3"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 0 evaluations from 0 patients with moderate perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-slight" style="width: NaN%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=49&amp;id=1420&amp;value=2"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 0 evaluations from 0 patients with slight perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-none" style="width: NaN%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=49&amp;id=1420&amp;value=1"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 0 evaluations from 0 patients with none perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-cant_tell" style="width: NaN%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=49&amp;id=1420&amp;value=0"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 0 evaluations from 0 patients with unknown perceived effectiveness</small></a></li></ul>
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item bg-efficacy-major" style="width: 20.0%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=16&amp;id=1089&amp;value=4"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 43 evaluations from 33 patients with major perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-moderate" style="width: 33.48837209302326%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=16&amp;id=1089&amp;value=3"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 72 evaluations from 60 patients with moderate perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-slight" style="width: 14.883720930232558%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=16&amp;id=1089&amp;value=2"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 32 evaluations from 27 patients with slight perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-none" style="width: 17.209302325581394%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=16&amp;id=1089&amp;value=1"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 37 evaluations from 33 patients with none perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-cant_tell" style="width: 14.418604651162791%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=16&amp;id=1089&amp;value=0"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 31 evaluations from 23 patients with unknown perceived effectiveness</small></a></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-yah-key="purpose" data-yah-value="conditions-51" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
+<tr class="top-n yah-receiver" data-yah-key="purpose" data-yah-value="conditions-566" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-<a href="/conditions/51"><span itemprop="name">Diabetes type 1</span>
+<a href="/conditions/566"><span itemprop="name">Mild depression</span>
 </a></th>
 <td class="numeric">
-<a title="See patients who are taking or have taken Glimepiride for this purpose" href="/patients/treatment/2635?treatment_purpose_condition=51">1</a>
+<a title="See patients who are taking or have taken Bupropion for this purpose" href="/patients/treatment/1089-bupropion-side-effects-and-efficacy?treatment_purpose_condition=566">155</a>
 </td>
 <td class="numeric">
-0
+<a title="See all evaluations with this purpose" href="/treatment_evaluations/browse?brand=false&amp;condition_id=566&amp;id=1089">68</a>
 </td>
 <td class="efficacy">
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item bg-efficacy-major" style="width: NaN%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=51&amp;id=1420&amp;value=4"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 0 evaluations from 0 patients with major perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-moderate" style="width: NaN%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=51&amp;id=1420&amp;value=3"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 0 evaluations from 0 patients with moderate perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-slight" style="width: NaN%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=51&amp;id=1420&amp;value=2"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 0 evaluations from 0 patients with slight perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-none" style="width: NaN%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=51&amp;id=1420&amp;value=1"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 0 evaluations from 0 patients with none perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-cant_tell" style="width: NaN%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=51&amp;id=1420&amp;value=0"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 0 evaluations from 0 patients with unknown perceived effectiveness</small></a></li></ul>
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item bg-efficacy-major" style="width: 14.814814814814815%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=566&amp;id=1089&amp;value=4"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 8 evaluations from 8 patients with major perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-moderate" style="width: 37.03703703703704%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=566&amp;id=1089&amp;value=3"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 20 evaluations from 18 patients with moderate perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-slight" style="width: 20.37037037037037%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=566&amp;id=1089&amp;value=2"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 11 evaluations from 10 patients with slight perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-none" style="width: 18.51851851851852%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=566&amp;id=1089&amp;value=1"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 10 evaluations from 9 patients with none perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-cant_tell" style="width: 9.25925925925926%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=566&amp;id=1089&amp;value=0"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 5 evaluations from 4 patients with unknown perceived effectiveness</small></a></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-yah-key="purpose" data-yah-value="conditions-324" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
+<tr class="top-n yah-receiver" data-yah-key="purpose" data-yah-value="symptoms-9" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-<a href="/conditions/324"><span itemprop="name">Hypertriglyceridemia</span>
+<a href="/symptoms/show/9"><span itemprop="name">Anxious mood</span>
 </a></th>
 <td class="numeric">
-<a title="See patients who are taking or have taken Glimepiride for this purpose" href="/patients/treatment/2635?treatment_purpose_condition=324">1</a>
+<a title="See patients who are taking or have taken Bupropion for this purpose" href="/patients/treatment/1089-bupropion-side-effects-and-efficacy?treatment_purpose_symptom=9">121</a>
 </td>
 <td class="numeric">
-0
+<a title="See all evaluations with this purpose" href="/treatment_evaluations/browse?brand=false&amp;id=1089&amp;symptom_id=9">67</a>
 </td>
 <td class="efficacy">
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item bg-efficacy-major" style="width: NaN%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=324&amp;id=1420&amp;value=4"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 0 evaluations from 0 patients with major perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-moderate" style="width: NaN%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=324&amp;id=1420&amp;value=3"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 0 evaluations from 0 patients with moderate perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-slight" style="width: NaN%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=324&amp;id=1420&amp;value=2"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 0 evaluations from 0 patients with slight perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-none" style="width: NaN%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=324&amp;id=1420&amp;value=1"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 0 evaluations from 0 patients with none perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-cant_tell" style="width: NaN%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;condition_id=324&amp;id=1420&amp;value=0"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
-See 0 evaluations from 0 patients with unknown perceived effectiveness</small></a></li></ul>
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item bg-efficacy-major" style="width: 9.090909090909092%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=1089&amp;symptom_id=9&amp;value=4"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 5 evaluations from 5 patients with major perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-moderate" style="width: 49.09090909090909%"><a class="block has-tooltip has-tooltip-right" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=1089&amp;symptom_id=9&amp;value=3"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 27 evaluations from 21 patients with moderate perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-slight" style="width: 16.363636363636363%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=1089&amp;symptom_id=9&amp;value=2"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 9 evaluations from 9 patients with slight perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-none" style="width: 7.2727272727272725%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=1089&amp;symptom_id=9&amp;value=1"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 4 evaluations from 4 patients with none perceived effectiveness</small></a></li><li class="bar-graph-item bg-efficacy-cant_tell" style="width: 18.181818181818183%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=efficacy&amp;brand=false&amp;id=1089&amp;symptom_id=9&amp;value=0"><small class="is-tooltip is-tooltip-multiline" role="tooltip">
+See 10 evaluations from 9 patients with unknown perceived effectiveness</small></a></li></ul>
 </td>
 </tr>
 
@@ -464,7 +472,7 @@ See 0 evaluations from 0 patients with unknown perceived effectiveness</small></
 </table>
 <p class="show toggle">
 <a class="content-toggle" data-fn-click="treatment_report_section.toggle_compacted" href="#">Show all
-<strong>7 reasons taken</strong>
+<strong>192 reasons taken</strong>
 <span class="loading" style="display: none;"></span>
 </a></p>
 <p class="hide toggle" style="display: none;">
@@ -498,13 +506,13 @@ Can&#39;t tell
 </div>
 
 <div class="glass-panel">
-<a href="/patients/treatment/1420-glimepiride-side-effects-and-efficacy">See
+<a href="/patients/treatment/1089-bupropion-side-effects-and-efficacy">See
 all
 <strong>
-256 patients
+5,653 patients
 
 </strong>
-<span>that have taken Glimepiride</span>
+<span>that have taken Bupropion</span>
 </a></div>
 <div class="content-section section-panel">
 <h2>Side effects</h2>
@@ -534,11 +542,11 @@ Side effects as an overall problem
 Severe
 </td>
 <td class="numeric">
-<a href="/treatment_evaluations/browse?attribute=side_effects&amp;brand=false&amp;id=1420&amp;value=4">6</a>
+<a href="/treatment_evaluations/browse?attribute=side_effects&amp;brand=false&amp;id=1089&amp;value=4">272</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item scale-color-severe" style="width: 6.818181818181818%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=side_effects&amp;brand=false&amp;id=1420&amp;value=4"><small class="is-tooltip" role="tooltip">
-6</small></a></li></ul>
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item scale-color-severe" style="width: 11.28630705394191%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=side_effects&amp;brand=false&amp;id=1089&amp;value=4"><small class="is-tooltip" role="tooltip">
+272</small></a></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="overall_side_effects" data-yah-value="3">
@@ -547,11 +555,11 @@ Severe
 Moderate
 </td>
 <td class="numeric">
-<a href="/treatment_evaluations/browse?attribute=side_effects&amp;brand=false&amp;id=1420&amp;value=3">3</a>
+<a href="/treatment_evaluations/browse?attribute=side_effects&amp;brand=false&amp;id=1089&amp;value=3">379</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item scale-color-severe" style="width: 3.409090909090909%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=side_effects&amp;brand=false&amp;id=1420&amp;value=3"><small class="is-tooltip" role="tooltip">
-3</small></a></li></ul>
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item scale-color-severe" style="width: 15.726141078838173%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=side_effects&amp;brand=false&amp;id=1089&amp;value=3"><small class="is-tooltip" role="tooltip">
+379</small></a></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="overall_side_effects" data-yah-value="2">
@@ -560,11 +568,11 @@ Moderate
 Mild
 </td>
 <td class="numeric">
-<a href="/treatment_evaluations/browse?attribute=side_effects&amp;brand=false&amp;id=1420&amp;value=2">12</a>
+<a href="/treatment_evaluations/browse?attribute=side_effects&amp;brand=false&amp;id=1089&amp;value=2">616</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item scale-color-severe" style="width: 13.636363636363637%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=side_effects&amp;brand=false&amp;id=1420&amp;value=2"><small class="is-tooltip" role="tooltip">
-12</small></a></li></ul>
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item scale-color-severe" style="width: 25.560165975103736%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=side_effects&amp;brand=false&amp;id=1089&amp;value=2"><small class="is-tooltip" role="tooltip">
+616</small></a></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="overall_side_effects" data-yah-value="1">
@@ -573,11 +581,11 @@ Mild
 None
 </td>
 <td class="numeric">
-<a href="/treatment_evaluations/browse?attribute=side_effects&amp;brand=false&amp;id=1420&amp;value=1">67</a>
+<a href="/treatment_evaluations/browse?attribute=side_effects&amp;brand=false&amp;id=1089&amp;value=1">1,143</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item scale-color-severe" style="width: 76.13636363636364%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=side_effects&amp;brand=false&amp;id=1420&amp;value=1"><small class="is-tooltip" role="tooltip">
-67</small></a></li></ul>
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item scale-color-severe" style="width: 47.427385892116185%"><a class="block has-tooltip" href="/treatment_evaluations/browse?attribute=side_effects&amp;brand=false&amp;id=1089&amp;value=1"><small class="is-tooltip" role="tooltip">
+1,143</small></a></li></ul>
 </td>
 </tr>
 </tbody>
@@ -585,9 +593,9 @@ None
 </div>
 <div class="columns medium-12" data-widget="treatment_report_section">
 <h3 class="tertiary-title">
-Commonly reported side effects and conditions associated with Glimepiride
+Commonly reported side effects and conditions associated with Bupropion
 </h3>
-<table class="tbl-default-layout tbl-divided" summary="Side effects of Glimepiride">
+<table class="tbl-default-layout tbl-divided" summary="Side effects of Bupropion">
 <col class="small-10">
 <col class="small-4">
 <col class="small-10">
@@ -598,89 +606,89 @@ Commonly reported side effects and conditions associated with Glimepiride
 <th></th>
 </tr>
 </thead>
-<tbody class="ajax-target compacted" data-url="/treatments/1420/additional_side_effect_rows">
-<tr class="top-n yah-receiver" data-yah-key="side_effect" data-yah-value="symptoms-1829" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
+<tbody class="ajax-target compacted" data-url="/treatments/1089/additional_side_effect_rows">
+<tr class="top-n yah-receiver" data-yah-key="side_effect" data-yah-value="symptoms-399" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-<a href="/symptoms/show/1829"><span itemprop="name">Low blood sugar (hypoglycemia)</span>
+<a href="/symptoms/show/399"><span itemprop="name">Dry mouth</span>
 </a></th>
 <td class="numeric">
-10
+107
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 45.45454545454545%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 10.7%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-10</small></span></li></ul>
+107</small></span></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-yah-key="side_effect" data-yah-value="symptoms-143" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
+<tr class="top-n yah-receiver" data-yah-key="side_effect" data-yah-value="symptoms-9" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-<a href="/symptoms/show/143"><span itemprop="name">Excessive daytime sleepiness (somnolence)</span>
+<a href="/symptoms/show/9"><span itemprop="name">Anxious mood</span>
 </a></th>
 <td class="numeric">
-2
+70
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 9.090909090909092%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 7.0%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-2</small></span></li></ul>
+70</small></span></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-yah-key="side_effect" data-yah-value="conditions-209" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
+<tr class="top-n yah-receiver" data-yah-key="side_effect" data-yah-value="symptoms-224" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-<a href="/conditions/209"><span itemprop="name">Candida (fungal) infection</span>
+<a href="/symptoms/show/224"><span itemprop="name">Weight gain</span>
 </a></th>
 <td class="numeric">
-1
+58
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 4.545454545454546%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 5.8%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-1</small></span></li></ul>
+58</small></span></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-yah-key="side_effect" data-yah-value="symptoms-915" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
+<tr class="top-n yah-receiver" data-yah-key="side_effect" data-yah-value="symptoms-1" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-<a href="/symptoms/show/915"><span itemprop="name">Chest pain</span>
+<a href="/symptoms/show/1"><span itemprop="name">Insomnia</span>
 </a></th>
 <td class="numeric">
-1
+53
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 4.545454545454546%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 5.3%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-1</small></span></li></ul>
+53</small></span></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-yah-key="side_effect" data-yah-value="symptoms-8530" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
+<tr class="top-n yah-receiver" data-yah-key="side_effect" data-yah-value="symptoms-575" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-<a href="/symptoms/show/8530"><span itemprop="name">Craving carbs</span>
+<a href="/symptoms/show/575"><span itemprop="name">Headaches</span>
 </a></th>
 <td class="numeric">
-1
+48
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 4.545454545454546%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 4.8%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-1</small></span></li></ul>
+48</small></span></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-yah-key="side_effect" data-yah-value="symptoms-527" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
+<tr class="top-n yah-receiver" data-yah-key="side_effect" data-yah-value="symptoms-2" itemprop="treats" itemscope itemtype="https://health-lifesci.schema.org/MedicalCondition">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-<a href="/symptoms/show/527"><span itemprop="name">Elevated blood pressure</span>
+<a href="/symptoms/show/2"><span itemprop="name">Constipation</span>
 </a></th>
 <td class="numeric">
-1
+43
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 4.545454545454546%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 4.3%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-1</small></span></li></ul>
+43</small></span></li></ul>
 </td>
 </tr>
 
@@ -688,7 +696,7 @@ Commonly reported side effects and conditions associated with Glimepiride
 </table>
 <p class="show toggle">
 <a class="content-toggle" data-fn-click="treatment_report_section.toggle_compacted" href="#">Show all
-<strong>15 reported side effects</strong>
+<strong>440 reported side effects</strong>
 <span class="loading" style="display: none;"></span>
 </a></p>
 <p class="hide toggle" style="display: none;">
@@ -704,7 +712,7 @@ Commonly reported side effects and conditions associated with Glimepiride
 <div class="columns medium-12">
 <div data-widget="treatment_report_section">
 <h2>Dosages</h2>
-<p class="helptext">Based on patients currently taking Glimepiride</p>
+<p class="helptext">Based on patients currently taking Bupropion</p>
 <table class="tbl-default-layout tbl-divided">
 <colgroup>
 <col class="medium-10">
@@ -718,145 +726,145 @@ Commonly reported side effects and conditions associated with Glimepiride
 <th></th>
 </tr>
 </thead>
-<tbody class="ajax-target compacted" data-url="/treatments/1420/additional_dosage_rows">
-<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="2 mg daily">
+<tbody class="ajax-target compacted" data-url="/treatments/1089/additional_dosage_rows">
+<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="300 mg daily">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-2 mg daily
+300 mg daily
 </th>
 <td class="numeric">
-<a title="See patients who are currently taking Glimepiride at this dosage" href="/patients/treatment/2635?dosage_string=2+mg+daily&amp;stopped=false">11</a>
+<a title="See patients who are currently taking Bupropion at this dosage" href="/patients/treatment/1089-bupropion-side-effects-and-efficacy?dosage_string=300+mg+daily&amp;stopped=false">189</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 25.58139534883721%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 22.798552472858866%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-11</small></span></li></ul>
+189</small></span></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="4 mg twice daily">
+<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="150 mg daily">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-4 mg twice daily
+150 mg daily
 </th>
 <td class="numeric">
-<a title="See patients who are currently taking Glimepiride at this dosage" href="/patients/treatment/2635?dosage_string=4+mg+twice+daily&amp;stopped=false">8</a>
+<a title="See patients who are currently taking Bupropion at this dosage" href="/patients/treatment/1089-bupropion-side-effects-and-efficacy?dosage_string=150+mg+daily&amp;stopped=false">144</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 18.6046511627907%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 17.370325693606755%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-8</small></span></li></ul>
+144</small></span></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="1 mg daily">
+<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="100 mg daily">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-1 mg daily
+100 mg daily
 </th>
 <td class="numeric">
-<a title="See patients who are currently taking Glimepiride at this dosage" href="/patients/treatment/2635?dosage_string=1+mg+daily&amp;stopped=false">7</a>
+<a title="See patients who are currently taking Bupropion at this dosage" href="/patients/treatment/1089-bupropion-side-effects-and-efficacy?dosage_string=100+mg+daily&amp;stopped=false">67</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 16.27906976744186%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 8.082026537997587%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-7</small></span></li></ul>
+67</small></span></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="4 mg daily">
+<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="300 mg/24 hours daily">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-4 mg daily
+300 mg/24 hours daily
 </th>
 <td class="numeric">
-<a title="See patients who are currently taking Glimepiride at this dosage" href="/patients/treatment/2635?dosage_string=4+mg+daily&amp;stopped=false">6</a>
+<a title="See patients who are currently taking Bupropion at this dosage" href="/patients/treatment/1089-bupropion-side-effects-and-efficacy?dosage_string=300+mg%2F24+hours+daily&amp;stopped=false">64</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 13.953488372093023%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 7.720144752714114%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-6</small></span></li></ul>
+64</small></span></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="2 mg twice daily">
+<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="450 mg daily">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-2 mg twice daily
+450 mg daily
 </th>
 <td class="numeric">
-<a title="See patients who are currently taking Glimepiride at this dosage" href="/patients/treatment/2635?dosage_string=2+mg+twice+daily&amp;stopped=false">3</a>
+<a title="See patients who are currently taking Bupropion at this dosage" href="/patients/treatment/1089-bupropion-side-effects-and-efficacy?dosage_string=450+mg+daily&amp;stopped=false">56</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 6.976744186046512%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 6.7551266586248495%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-3</small></span></li></ul>
+56</small></span></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="8 mg daily">
+<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="75 mg daily">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-8 mg daily
+75 mg daily
 </th>
 <td class="numeric">
-<a title="See patients who are currently taking Glimepiride at this dosage" href="/patients/treatment/2635?dosage_string=8+mg+daily&amp;stopped=false">2</a>
+<a title="See patients who are currently taking Bupropion at this dosage" href="/patients/treatment/1089-bupropion-side-effects-and-efficacy?dosage_string=75+mg+daily&amp;stopped=false">44</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 4.651162790697675%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 5.307599517490953%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-2</small></span></li></ul>
+44</small></span></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="1 mg twice daily">
+<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="150 mg twice daily">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-1 mg twice daily
+150 mg twice daily
 </th>
 <td class="numeric">
-<a title="See patients who are currently taking Glimepiride at this dosage" href="/patients/treatment/2635?dosage_string=1+mg+twice+daily&amp;stopped=false">1</a>
+<a title="See patients who are currently taking Bupropion at this dosage" href="/patients/treatment/1089-bupropion-side-effects-and-efficacy?dosage_string=150+mg+twice+daily&amp;stopped=false">39</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 2.3255813953488373%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 4.704463208685163%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-1</small></span></li></ul>
+39</small></span></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="3 mg daily">
+<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="200 mg daily">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-3 mg daily
+200 mg daily
 </th>
 <td class="numeric">
-<a title="See patients who are currently taking Glimepiride at this dosage" href="/patients/treatment/2635?dosage_string=3+mg+daily&amp;stopped=false">1</a>
+<a title="See patients who are currently taking Bupropion at this dosage" href="/patients/treatment/1089-bupropion-side-effects-and-efficacy?dosage_string=200+mg+daily&amp;stopped=false">30</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 2.3255813953488373%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 3.6188178528347406%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-1</small></span></li></ul>
+30</small></span></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="2.5 mg twice daily">
+<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="100 mg twice daily">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-2.5 mg twice daily
+100 mg twice daily
 </th>
 <td class="numeric">
-<a title="See patients who are currently taking Glimepiride at this dosage" href="/patients/treatment/2635?dosage_string=2.5+mg+twice+daily&amp;stopped=false">1</a>
+<a title="See patients who are currently taking Bupropion at this dosage" href="/patients/treatment/1089-bupropion-side-effects-and-efficacy?dosage_string=100+mg+twice+daily&amp;stopped=false">29</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 2.3255813953488373%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 3.4981905910735827%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-1</small></span></li></ul>
+29</small></span></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="6 mg daily">
+<tr class="top-n yah-receiver" data-yah-key="dosage" data-yah-value="150 mg/24 hours daily">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-6 mg daily
+150 mg/24 hours daily
 </th>
 <td class="numeric">
-<a title="See patients who are currently taking Glimepiride at this dosage" href="/patients/treatment/2635?dosage_string=6+mg+daily&amp;stopped=false">1</a>
+<a title="See patients who are currently taking Bupropion at this dosage" href="/patients/treatment/1089-bupropion-side-effects-and-efficacy?dosage_string=150+mg%2F24+hours+daily&amp;stopped=false">28</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 2.3255813953488373%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 3.3775633293124248%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-1</small></span></li></ul>
+28</small></span></li></ul>
 </td>
 </tr>
 
@@ -864,7 +872,7 @@ Commonly reported side effects and conditions associated with Glimepiride
 </table>
 <p class="show toggle">
 <a class="content-toggle" data-fn-click="treatment_report_section.toggle_compacted" href="#">See all
-<strong>12 dosages</strong>
+<strong>69 dosages</strong>
 <span class="loading" style="display: none;"></span>
 </a></p>
 <p class="hide toggle" style="display: none;">
@@ -875,7 +883,7 @@ Commonly reported side effects and conditions associated with Glimepiride
 
 </div>
 <div class="columns medium-12">
-<h2>Why patients stopped taking Glimepiride</h2>
+<h2>Why patients stopped taking Bupropion</h2>
 <p class="helptext">Multiple reasons could be selected</p>
 <table class="tbl-default-layout tbl-divided">
 <colgroup>
@@ -889,32 +897,18 @@ Commonly reported side effects and conditions associated with Glimepiride
 <th></th>
 </thead>
 <tbody>
-<tr class="yah-receiver" data-yah-key="stop_reason" data-yah-value="4">
-<th scope="row">
-<span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-Doctor&#39;s advice
-</th>
-<td class="numeric">
-<a title="See patients who stopped taking Glimepiride for this reason" href="/patients/treatment/2635?stop_reason=4">21</a>
-</td>
-<td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 55.26315789473684%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
-<small class="is-tooltip" role="tooltip">
-21</small></span></li></ul>
-</td>
-</tr>
 <tr class="yah-receiver" data-yah-key="stop_reason" data-yah-value="1">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
 Did not seem to work
 </th>
 <td class="numeric">
-<a title="See patients who stopped taking Glimepiride for this reason" href="/patients/treatment/2635?stop_reason=1">11</a>
+<a title="See patients who stopped taking Bupropion for this reason" href="/patients/treatment/1089-bupropion-side-effects-and-efficacy?stop_reason=1">659</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 28.94736842105263%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 40.88089330024814%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-11</small></span></li></ul>
+659</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="stop_reason" data-yah-value="5">
@@ -923,26 +917,26 @@ Did not seem to work
 Side effects too severe
 </th>
 <td class="numeric">
-<a title="See patients who stopped taking Glimepiride for this reason" href="/patients/treatment/2635?stop_reason=5">6</a>
+<a title="See patients who stopped taking Bupropion for this reason" href="/patients/treatment/1089-bupropion-side-effects-and-efficacy?stop_reason=5">556</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 15.789473684210526%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 34.49131513647643%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-6</small></span></li></ul>
+556</small></span></li></ul>
 </td>
 </tr>
-<tr class="yah-receiver" data-yah-key="stop_reason" data-yah-value="7">
+<tr class="yah-receiver" data-yah-key="stop_reason" data-yah-value="4">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-Course of treatment ended
+Doctor&#39;s advice
 </th>
 <td class="numeric">
-<a title="See patients who stopped taking Glimepiride for this reason" href="/patients/treatment/2635?stop_reason=7">2</a>
+<a title="See patients who stopped taking Bupropion for this reason" href="/patients/treatment/1089-bupropion-side-effects-and-efficacy?stop_reason=4">427</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 5.2631578947368425%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 26.488833746898262%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-2</small></span></li></ul>
+427</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="stop_reason" data-yah-value="6">
@@ -951,12 +945,26 @@ Course of treatment ended
 Other
 </th>
 <td class="numeric">
-<a title="See patients who stopped taking Glimepiride for this reason" href="/patients/treatment/2635?stop_reason=6">2</a>
+<a title="See patients who stopped taking Bupropion for this reason" href="/patients/treatment/1089-bupropion-side-effects-and-efficacy?stop_reason=6">281</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 5.2631578947368425%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 17.431761786600497%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-2</small></span></li></ul>
+281</small></span></li></ul>
+</td>
+</tr>
+<tr class="yah-receiver" data-yah-key="stop_reason" data-yah-value="7">
+<th scope="row">
+<span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
+Course of treatment ended
+</th>
+<td class="numeric">
+<a title="See patients who stopped taking Bupropion for this reason" href="/patients/treatment/1089-bupropion-side-effects-and-efficacy?stop_reason=7">92</a>
+</td>
+<td>
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 5.707196029776675%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<small class="is-tooltip" role="tooltip">
+92</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="stop_reason" data-yah-value="2">
@@ -965,23 +973,51 @@ Other
 Expense
 </th>
 <td class="numeric">
-<a title="See patients who stopped taking Glimepiride for this reason" href="/patients/treatment/2635?stop_reason=2">1</a>
+<a title="See patients who stopped taking Bupropion for this reason" href="/patients/treatment/1089-bupropion-side-effects-and-efficacy?stop_reason=2">84</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 2.6315789473684212%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 5.2109181141439205%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-1</small></span></li></ul>
+84</small></span></li></ul>
+</td>
+</tr>
+<tr class="yah-receiver" data-yah-key="stop_reason" data-yah-value="3">
+<th scope="row">
+<span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
+Personal research
+</th>
+<td class="numeric">
+<a title="See patients who stopped taking Bupropion for this reason" href="/patients/treatment/1089-bupropion-side-effects-and-efficacy?stop_reason=3">71</a>
+</td>
+<td>
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 4.4044665012406945%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<small class="is-tooltip" role="tooltip">
+71</small></span></li></ul>
+</td>
+</tr>
+<tr class="yah-receiver" data-yah-key="stop_reason" data-yah-value="8">
+<th scope="row">
+<span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
+Change in health plan coverage
+</th>
+<td class="numeric">
+<a title="See patients who stopped taking Bupropion for this reason" href="/patients/treatment/1089-bupropion-side-effects-and-efficacy?stop_reason=8">44</a>
+</td>
+<td>
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 2.729528535980149%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<small class="is-tooltip" role="tooltip">
+44</small></span></li></ul>
 </td>
 </tr>
 </tbody>
 </table>
 
-<a href="/patients/treatment/1420-glimepiride-side-effects-and-efficacy?stopped=true">See
+<a href="/patients/treatment/1089-bupropion-side-effects-and-efficacy?stopped=true">See
 all
-<strong>38 patients</strong>
+<strong>1612 patients</strong>
 
 who&#39;ve
-stopped taking Glimepiride
+stopped taking Bupropion
 </a></div>
 </div>
 </div>
@@ -990,7 +1026,7 @@ stopped taking Glimepiride
 <div class="row">
 <div class="columns medium-12">
 <h3 class="tertiary-title">
-Currently taking Glimepiride
+Currently taking Bupropion
 </h3>
 <table class="tbl-default-layout tbl-divided">
 <colgroup>
@@ -1004,18 +1040,32 @@ Currently taking Glimepiride
 <th></th>
 </thead>
 <tbody>
+<tr class="yah-receiver" data-yah-key="duration_current" data-yah-value="0">
+<th scope="row">
+<span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
+Less than 1 month
+</th>
+<td class="numeric">
+<a title="See patients who have been taking Bupropion for this long" href="/patients/treatment/1089-bupropion-side-effects-and-efficacy?max_duration=2629746&amp;min_duration=0">3</a>
+</td>
+<td>
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 0.3588516746411483%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<small class="is-tooltip" role="tooltip">
+3</small></span></li></ul>
+</td>
+</tr>
 <tr class="yah-receiver" data-yah-key="duration_current" data-yah-value="2629746">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
 1 - 6 months
 </th>
 <td class="numeric">
-<a title="See patients who have been taking Glimepiride for this long" href="/patients/treatment/2635?max_duration=15778476&amp;min_duration=2629746">4</a>
+<a title="See patients who have been taking Bupropion for this long" href="/patients/treatment/1089-bupropion-side-effects-and-efficacy?max_duration=15778476&amp;min_duration=2629746">39</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 9.30232558139535%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 4.6650717703349285%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-4</small></span></li></ul>
+39</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="duration_current" data-yah-value="15778476">
@@ -1024,12 +1074,12 @@ Currently taking Glimepiride
 6 months - 1 year
 </th>
 <td class="numeric">
-<a title="See patients who have been taking Glimepiride for this long" href="/patients/treatment/2635?max_duration=31556952&amp;min_duration=15778476">4</a>
+<a title="See patients who have been taking Bupropion for this long" href="/patients/treatment/1089-bupropion-side-effects-and-efficacy?max_duration=31556952&amp;min_duration=15778476">95</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 9.30232558139535%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 11.363636363636363%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-4</small></span></li></ul>
+95</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="duration_current" data-yah-value="31556952">
@@ -1038,12 +1088,12 @@ Currently taking Glimepiride
 1 - 2 years
 </th>
 <td class="numeric">
-<a title="See patients who have been taking Glimepiride for this long" href="/patients/treatment/2635?max_duration=63113904&amp;min_duration=31556952">3</a>
+<a title="See patients who have been taking Bupropion for this long" href="/patients/treatment/1089-bupropion-side-effects-and-efficacy?max_duration=63113904&amp;min_duration=31556952">114</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 6.976744186046512%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 13.636363636363637%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-3</small></span></li></ul>
+114</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="duration_current" data-yah-value="63113904">
@@ -1052,12 +1102,12 @@ Currently taking Glimepiride
 2 - 5 years
 </th>
 <td class="numeric">
-<a title="See patients who have been taking Glimepiride for this long" href="/patients/treatment/2635?max_duration=157784760&amp;min_duration=63113904">12</a>
+<a title="See patients who have been taking Bupropion for this long" href="/patients/treatment/1089-bupropion-side-effects-and-efficacy?max_duration=157784760&amp;min_duration=63113904">222</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 27.906976744186046%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 26.555023923444978%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-12</small></span></li></ul>
+222</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="duration_current" data-yah-value="157784760">
@@ -1066,12 +1116,12 @@ Currently taking Glimepiride
 5 - 10 years
 </th>
 <td class="numeric">
-<a title="See patients who have been taking Glimepiride for this long" href="/patients/treatment/2635?max_duration=315569520&amp;min_duration=157784760">13</a>
+<a title="See patients who have been taking Bupropion for this long" href="/patients/treatment/1089-bupropion-side-effects-and-efficacy?max_duration=315569520&amp;min_duration=157784760">197</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 30.232558139534884%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 23.564593301435405%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-13</small></span></li></ul>
+197</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="duration_current" data-yah-value="315569520">
@@ -1080,12 +1130,12 @@ Currently taking Glimepiride
 10 years or more
 </th>
 <td class="numeric">
-<a title="See patients who have been taking Glimepiride for this long" href="/patients/treatment/2635?min_duration=315569520">6</a>
+<a title="See patients who have been taking Bupropion for this long" href="/patients/treatment/1089-bupropion-side-effects-and-efficacy?min_duration=315569520">167</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 13.953488372093023%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 19.976076555023923%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-6</small></span></li></ul>
+167</small></span></li></ul>
 </td>
 </tr>
 </tbody>
@@ -1094,7 +1144,7 @@ Currently taking Glimepiride
 </div>
 <div class="columns medium-12">
 <h3 class="tertiary-title">
-Stopped taking Glimepiride
+Stopped taking Bupropion
 </h3>
 <table class="tbl-default-layout tbl-divided">
 <colgroup>
@@ -1114,12 +1164,12 @@ Stopped taking Glimepiride
 Less than 1 month
 </th>
 <td class="numeric">
-<a title="See patients who took Glimepiride for this long" href="/patients/treatment/2635?max_duration=2629746&amp;min_duration=0&amp;stopped=true">6</a>
+<a title="See patients who took Bupropion for this long" href="/patients/treatment/1089-bupropion-side-effects-and-efficacy?max_duration=2629746&amp;min_duration=0&amp;stopped=true">357</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 15.789473684210526%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 22.146401985111662%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-6</small></span></li></ul>
+357</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="duration_stopped" data-yah-value="2629746">
@@ -1128,12 +1178,12 @@ Less than 1 month
 1 - 6 months
 </th>
 <td class="numeric">
-<a title="See patients who took Glimepiride for this long" href="/patients/treatment/2635?max_duration=15778476&amp;min_duration=2629746&amp;stopped=true">8</a>
+<a title="See patients who took Bupropion for this long" href="/patients/treatment/1089-bupropion-side-effects-and-efficacy?max_duration=15778476&amp;min_duration=2629746&amp;stopped=true">357</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 21.05263157894737%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 22.146401985111662%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-8</small></span></li></ul>
+357</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="duration_stopped" data-yah-value="15778476">
@@ -1142,12 +1192,12 @@ Less than 1 month
 6 months - 1 year
 </th>
 <td class="numeric">
-<a title="See patients who took Glimepiride for this long" href="/patients/treatment/2635?max_duration=31556952&amp;min_duration=15778476&amp;stopped=true">7</a>
+<a title="See patients who took Bupropion for this long" href="/patients/treatment/1089-bupropion-side-effects-and-efficacy?max_duration=31556952&amp;min_duration=15778476&amp;stopped=true">234</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 18.42105263157895%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 14.516129032258064%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-7</small></span></li></ul>
+234</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="duration_stopped" data-yah-value="31556952">
@@ -1156,12 +1206,12 @@ Less than 1 month
 1 - 2 years
 </th>
 <td class="numeric">
-<a title="See patients who took Glimepiride for this long" href="/patients/treatment/2635?max_duration=63113904&amp;min_duration=31556952&amp;stopped=true">8</a>
+<a title="See patients who took Bupropion for this long" href="/patients/treatment/1089-bupropion-side-effects-and-efficacy?max_duration=63113904&amp;min_duration=31556952&amp;stopped=true">230</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 21.05263157894737%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 14.267990074441688%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-8</small></span></li></ul>
+230</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="duration_stopped" data-yah-value="63113904">
@@ -1170,12 +1220,12 @@ Less than 1 month
 2 - 5 years
 </th>
 <td class="numeric">
-<a title="See patients who took Glimepiride for this long" href="/patients/treatment/2635?max_duration=157784760&amp;min_duration=63113904&amp;stopped=true">8</a>
+<a title="See patients who took Bupropion for this long" href="/patients/treatment/1089-bupropion-side-effects-and-efficacy?max_duration=157784760&amp;min_duration=63113904&amp;stopped=true">282</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 21.05263157894737%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 17.49379652605459%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-8</small></span></li></ul>
+282</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="duration_stopped" data-yah-value="157784760">
@@ -1184,12 +1234,26 @@ Less than 1 month
 5 - 10 years
 </th>
 <td class="numeric">
-<a title="See patients who took Glimepiride for this long" href="/patients/treatment/2635?max_duration=315569520&amp;min_duration=157784760&amp;stopped=true">2</a>
+<a title="See patients who took Bupropion for this long" href="/patients/treatment/1089-bupropion-side-effects-and-efficacy?max_duration=315569520&amp;min_duration=157784760&amp;stopped=true">127</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 5.2631578947368425%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 7.878411910669975%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-2</small></span></li></ul>
+127</small></span></li></ul>
+</td>
+</tr>
+<tr class="yah-receiver" data-yah-key="duration_stopped" data-yah-value="315569520">
+<th scope="row">
+<span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
+10 years or more
+</th>
+<td class="numeric">
+<a title="See patients who took Bupropion for this long" href="/patients/treatment/1089-bupropion-side-effects-and-efficacy?min_duration=315569520&amp;stopped=true">64</a>
+</td>
+<td>
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 3.970223325062035%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<small class="is-tooltip" role="tooltip">
+64</small></span></li></ul>
 </td>
 </tr>
 </tbody>
@@ -1223,12 +1287,12 @@ Always
 
 </th>
 <td class="numeric">
-<a href="/treatment_evaluations/browse?attribute=adherence&amp;brand=false&amp;id=1420&amp;value=3">73</a>
+<a href="/treatment_evaluations/browse?attribute=adherence&amp;brand=false&amp;id=1089&amp;value=3">1888</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 82.95454545454545%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 78.34024896265561%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-73 evaluations from 61 patients</small></span></li></ul>
+1888 evaluations from 1426 patients</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="adherence" data-yah-value="2">
@@ -1239,12 +1303,12 @@ Usually
 
 </th>
 <td class="numeric">
-<a href="/treatment_evaluations/browse?attribute=adherence&amp;brand=false&amp;id=1420&amp;value=2">9</a>
+<a href="/treatment_evaluations/browse?attribute=adherence&amp;brand=false&amp;id=1089&amp;value=2">357</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 10.227272727272727%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 14.813278008298756%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-9 evaluations from 9 patients</small></span></li></ul>
+357 evaluations from 291 patients</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="adherence" data-yah-value="1">
@@ -1255,12 +1319,12 @@ Sometimes
 
 </th>
 <td class="numeric">
-<a href="/treatment_evaluations/browse?attribute=adherence&amp;brand=false&amp;id=1420&amp;value=1">2</a>
+<a href="/treatment_evaluations/browse?attribute=adherence&amp;brand=false&amp;id=1089&amp;value=1">52</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 2.272727272727273%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 2.1576763485477177%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-2 evaluations from 2 patients</small></span></li></ul>
+52 evaluations from 45 patients</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="adherence" data-yah-value="0">
@@ -1271,12 +1335,12 @@ Never
 taken as prescribed
 </th>
 <td class="numeric">
-<a href="/treatment_evaluations/browse?attribute=adherence&amp;brand=false&amp;id=1420&amp;value=0">4</a>
+<a href="/treatment_evaluations/browse?attribute=adherence&amp;brand=false&amp;id=1089&amp;value=0">113</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 4.545454545454546%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 4.6887966804979255%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-4 evaluations from 4 patients</small></span></li></ul>
+113 evaluations from 109 patients</small></span></li></ul>
 </td>
 </tr>
 </tbody>
@@ -1305,12 +1369,12 @@ hard to take
 
 </th>
 <td class="numeric">
-<a href="/treatment_evaluations/browse?attribute=burden&amp;brand=false&amp;id=1420&amp;value=3">2</a>
+<a href="/treatment_evaluations/browse?attribute=burden&amp;brand=false&amp;id=1089&amp;value=3">82</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 2.272727272727273%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 3.4024896265560165%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-2 evaluations from 2 patients</small></span></li></ul>
+82 evaluations from 77 patients</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="burden" data-yah-value="2">
@@ -1321,12 +1385,12 @@ hard to take
 
 </th>
 <td class="numeric">
-0
+<a href="/treatment_evaluations/browse?attribute=burden&amp;brand=false&amp;id=1089&amp;value=2">147</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 0.0%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 6.0995850622406635%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-0 evaluations from 0 patients</small></span></li></ul>
+147 evaluations from 134 patients</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="burden" data-yah-value="1">
@@ -1337,12 +1401,12 @@ hard to take
 
 </th>
 <td class="numeric">
-<a href="/treatment_evaluations/browse?attribute=burden&amp;brand=false&amp;id=1420&amp;value=1">10</a>
+<a href="/treatment_evaluations/browse?attribute=burden&amp;brand=false&amp;id=1089&amp;value=1">341</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 11.363636363636363%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 14.149377593360995%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-10 evaluations from 10 patients</small></span></li></ul>
+341 evaluations from 280 patients</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="burden" data-yah-value="0">
@@ -1353,12 +1417,12 @@ hard to take
 
 </th>
 <td class="numeric">
-<a href="/treatment_evaluations/browse?attribute=burden&amp;brand=false&amp;id=1420&amp;value=0">76</a>
+<a href="/treatment_evaluations/browse?attribute=burden&amp;brand=false&amp;id=1089&amp;value=0">1840</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 86.36363636363636%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 76.34854771784232%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-76 evaluations from 63 patients</small></span></li></ul>
+1840 evaluations from 1390 patients</small></span></li></ul>
 </td>
 </tr>
 </tbody>
@@ -1391,12 +1455,12 @@ $200+
 
 </th>
 <td class="numeric">
-0
+<a href="/treatment_evaluations/browse?attribute=cost&amp;brand=false&amp;id=1089&amp;value=5">15</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 0.0%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 0.6224066390041494%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-0 evaluations from 0 patients</small></span></li></ul>
+15 evaluations from 15 patients</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="cost" data-yah-value="4">
@@ -1407,12 +1471,12 @@ $100-199
 
 </th>
 <td class="numeric">
-<a href="/treatment_evaluations/browse?attribute=cost&amp;brand=false&amp;id=1420&amp;value=4">2</a>
+<a href="/treatment_evaluations/browse?attribute=cost&amp;brand=false&amp;id=1089&amp;value=4">26</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 2.272727272727273%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 1.0788381742738589%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-2 evaluations from 2 patients</small></span></li></ul>
+26 evaluations from 21 patients</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="cost" data-yah-value="3">
@@ -1423,12 +1487,12 @@ $50-99
 
 </th>
 <td class="numeric">
-0
+<a href="/treatment_evaluations/browse?attribute=cost&amp;brand=false&amp;id=1089&amp;value=3">86</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 0.0%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 3.5684647302904566%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-0 evaluations from 0 patients</small></span></li></ul>
+86 evaluations from 66 patients</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="cost" data-yah-value="2">
@@ -1439,12 +1503,12 @@ $25-49
 
 </th>
 <td class="numeric">
-<a href="/treatment_evaluations/browse?attribute=cost&amp;brand=false&amp;id=1420&amp;value=2">1</a>
+<a href="/treatment_evaluations/browse?attribute=cost&amp;brand=false&amp;id=1089&amp;value=2">175</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 1.1363636363636365%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 7.261410788381743%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-1 evaluation from 1 patient</small></span></li></ul>
+175 evaluations from 138 patients</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="cost" data-yah-value="1">
@@ -1455,12 +1519,12 @@ $25-49
 
 </th>
 <td class="numeric">
-<a href="/treatment_evaluations/browse?attribute=cost&amp;brand=false&amp;id=1420&amp;value=1">43</a>
+<a href="/treatment_evaluations/browse?attribute=cost&amp;brand=false&amp;id=1089&amp;value=1">1161</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 48.86363636363637%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 48.17427385892116%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-43 evaluations from 42 patients</small></span></li></ul>
+1161 evaluations from 805 patients</small></span></li></ul>
 </td>
 </tr>
 <tr class="yah-receiver" data-yah-key="cost" data-yah-value="0">
@@ -1471,12 +1535,12 @@ Not specified
 
 </th>
 <td class="numeric">
-<a href="/treatment_evaluations/browse?attribute=cost&amp;brand=false&amp;id=1420&amp;value=0">42</a>
+<a href="/treatment_evaluations/browse?attribute=cost&amp;brand=false&amp;id=1089&amp;value=0">947</a>
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 47.72727272727273%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 39.29460580912863%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-42 evaluations from 30 patients</small></span></li></ul>
+947 evaluations from 797 patients</small></span></li></ul>
 </td>
 </tr>
 </tbody>
@@ -1495,7 +1559,7 @@ Not specified
 Patients
 <strong>started</strong>
 taking
-Glimepiride
+Bupropion
 <strong>after stopping:</strong>
 </p>
 <table class="tbl-default-layout tbl-divided">
@@ -1511,90 +1575,90 @@ Glimepiride
 <th></th>
 </tr>
 </thead>
-<tbody class="ajax-target compacted" data-url="/treatments/1420/additional_treatment_switch_rows?direction=switched_from">
-<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_from_treatment" data-yah-value="221" foo="bar">
+<tbody class="ajax-target compacted" data-url="/treatments/1089/additional_treatment_switch_rows?direction=switched_from">
+<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_from_treatment" data-yah-value="256" foo="bar">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-Metformin
+Sertraline
 <small class="comma-delimited">
-(<span>Glucophage</span>)
+(<span>Zoloft</span>)
 </small>
 </th>
 <td class="numeric">
-16
+95
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 72.72727272727273%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 19.308943089430894%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-16</small></span></li></ul>
+95</small></span></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_from_treatment" data-yah-value="27130" foo="bar">
+<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_from_treatment" data-yah-value="1090" foo="bar">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-Dulaglutide
+Fluoxetine
 <small class="comma-delimited">
-(<span>Trulicity</span>)
+(<span>Prozac</span>)
 </small>
 </th>
 <td class="numeric">
-1
+91
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 4.545454545454546%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 18.495934959349594%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-1</small></span></li></ul>
+91</small></span></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_from_treatment" data-yah-value="1456" foo="bar">
+<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_from_treatment" data-yah-value="1091" foo="bar">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-Glipizide
+Venlafaxine
 <small class="comma-delimited">
-(<span>Glipizide ER</span>)
+(<span>Effexor XR</span>)
 </small>
 </th>
 <td class="numeric">
-1
+73
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 4.545454545454546%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 14.83739837398374%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-1</small></span></li></ul>
+73</small></span></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_from_treatment" data-yah-value="14683" foo="bar">
+<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_from_treatment" data-yah-value="390" foo="bar">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-Glyburide-Metformin
+Citalopram
 <small class="comma-delimited">
-(<span>Glucovance</span>)
+(<span>Celexa</span>)
 </small>
 </th>
 <td class="numeric">
-1
+52
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 4.545454545454546%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 10.56910569105691%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-1</small></span></li></ul>
+52</small></span></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_from_treatment" data-yah-value="4849" foo="bar">
+<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_from_treatment" data-yah-value="2421" foo="bar">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-Metformin-pioglitazone
+Duloxetine
 <small class="comma-delimited">
-(<span>Actoplus Met</span>)
+(<span>Cymbalta</span>)
 </small>
 </th>
 <td class="numeric">
-1
+48
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 4.545454545454546%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 9.75609756097561%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-1</small></span></li></ul>
+48</small></span></li></ul>
 </td>
 </tr>
 
@@ -1602,7 +1666,7 @@ Metformin-pioglitazone
 </table>
 <p class="show toggle">
 <a class="content-toggle" data-fn-click="treatment_report_section.toggle_compacted" href="#">Show all
-<strong>7 treatments</strong>
+<strong>56 treatments</strong>
 patients report switching from
 <span class="loading" style="display: none;"></span>
 </a></p>
@@ -1620,7 +1684,7 @@ patients report switching from
 Patients
 <strong>stopped</strong>
 taking
-Glimepiride
+Bupropion
 and
 <strong>switched to:</strong>
 </p>
@@ -1637,90 +1701,90 @@ and
 <th></th>
 </tr>
 </thead>
-<tbody class="ajax-target compacted" data-url="/treatments/1420/additional_treatment_switch_rows?direction=switched_to">
-<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_to_treatment" data-yah-value="221" foo="bar">
+<tbody class="ajax-target compacted" data-url="/treatments/1089/additional_treatment_switch_rows?direction=switched_to">
+<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_to_treatment" data-yah-value="2421" foo="bar">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-Metformin
+Duloxetine
 <small class="comma-delimited">
-(<span>Glucophage</span>)
+(<span>Cymbalta</span>)
 </small>
 </th>
 <td class="numeric">
-5
+52
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 38.46153846153846%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 15.476190476190476%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-5</small></span></li></ul>
+52</small></span></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_to_treatment" data-yah-value="23458" foo="bar">
+<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_to_treatment" data-yah-value="256" foo="bar">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-Exenatide
+Sertraline
 <small class="comma-delimited">
-(<span>Byetta</span>)
+(<span>Zoloft</span>)
 </small>
 </th>
 <td class="numeric">
-3
+50
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 23.076923076923077%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 14.880952380952381%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-3</small></span></li></ul>
+50</small></span></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_to_treatment" data-yah-value="27051" foo="bar">
+<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_to_treatment" data-yah-value="1091" foo="bar">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-Liraglutide
+Venlafaxine
 <small class="comma-delimited">
-(<span>Victoza</span>)
+(<span>Effexor XR</span>)
 </small>
 </th>
 <td class="numeric">
-3
+36
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 23.076923076923077%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 10.714285714285714%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-3</small></span></li></ul>
+36</small></span></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_to_treatment" data-yah-value="26109" foo="bar">
+<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_to_treatment" data-yah-value="390" foo="bar">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-Canagliflozin
+Citalopram
 <small class="comma-delimited">
-(<span>Invokana</span>)
+(<span>Celexa</span>)
 </small>
 </th>
 <td class="numeric">
-1
+32
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 7.6923076923076925%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 9.523809523809524%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-1</small></span></li></ul>
+32</small></span></li></ul>
 </td>
 </tr>
-<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_to_treatment" data-yah-value="28510" foo="bar">
+<tr class="top-n yah-receiver" data-initialize="treatment_overview_report.compute_yah" data-yah-key="switched_to_treatment" data-yah-value="1090" foo="bar">
 <th scope="row">
 <span class="if-yah-js" style="display: none;"><span class="you-indicator-wrapper "><span class="icon you-indicator is-hidden-visually">This item is relevant to you: </span></span></span>
-Canagliflozin-metformin
+Fluoxetine
 <small class="comma-delimited">
-(<span>Invokamet</span>)
+(<span>Prozac</span>)
 </small>
 </th>
 <td class="numeric">
-1
+31
 </td>
 <td>
-<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 7.6923076923076925%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
+<ul class="sandwich-chart bar-graph-wrapper" role="img"><li class="bar-graph-item default-bar-color" style="width: 9.226190476190476%"><span class="block has-tooltip" style="height: 100%" tabindex="0">
 <small class="is-tooltip" role="tooltip">
-1</small></span></li></ul>
+31</small></span></li></ul>
 </td>
 </tr>
 
@@ -1728,7 +1792,7 @@ Canagliflozin-metformin
 </table>
 <p class="show toggle">
 <a class="content-toggle" data-fn-click="treatment_report_section.toggle_compacted" href="#">Show all
-<strong>13 treatments</strong>
+<strong>48 treatments</strong>
 patients report switching to
 <span class="loading" style="display: none;"></span>
 </a></p>
@@ -1745,7 +1809,7 @@ patients report switching to
 <div class="content-panel">
 <small class="helptext">
 Last updated:
-<time datetime="2018-05-02T13:28:46+00:00">May  2, 2018</time>
+<time datetime="2018-05-02T16:59:22+00:00">May  2, 2018</time>
 </small>
 
 </div>
@@ -1756,22 +1820,78 @@ Last updated:
 Patient Evaluations
 </h2>
 <p>
-<a href="/treatment_evaluations/browse?brand=f&amp;id=1420-glimepiride-side-effects-and-efficacy">See all
+<a href="/treatment_evaluations/browse?brand=f&amp;id=1089-bupropion-side-effects-and-efficacy">See all
 <strong>
-75
+1,835
 patient
 evaluations
 </strong>
 </a></p>
 <hr>
 <div class="media-object margin-bottom">
-<div class="media-item"><a class="avatar-link" id="avatar-TheWorshipper" href="//s3.amazonaws.com/uploads.patientslikeme.com/avatars/11071-original.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180502%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20180502T051953Z&amp;X-Amz-Expires=604800&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=29f08e835863321ddd9787a7b9cb991264fb768bccfcc08a636feee02195dc3f"><img title="TheWorshipper" src="//s3.amazonaws.com/uploads.patientslikeme.com/avatars/11071-thumb.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180502%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20180502T051953Z&amp;X-Amz-Expires=604800&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=e42f0c578060a08f5b44d66bc27de609f80065b94353f3bcea54c4cf3f815b8c" alt="11071 thumb" /></a></div>
+<div class="media-item"><a class="avatar-link" id="avatar-LadySirona" href="//s3.amazonaws.com/uploads.patientslikeme.com/avatars/97627-original.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180502%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20180502T051448Z&amp;X-Amz-Expires=604800&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=2fe968835c5f7594e75e417c0968ec12385127a0c998318b99b18bf9eebcc428"><img title="LadySirona" src="//s3.amazonaws.com/uploads.patientslikeme.com/avatars/97627-thumb.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180502%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20180502T051448Z&amp;X-Amz-Expires=604800&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=67bde1b5fa405791c1fe06bab0dde622b5d30b813e1fca883b18b80cedf77af6" alt="97627 thumb" /></a></div>
 <div class="media-content">
-<h2><a href="/members/50120">TheWorshipper</a></h2>
+<h2><a href="/members/617282">LadySirona</a></h2>
 <p>
-4 mg daily
+300 mg daily
 <br>
-since Dec 19, 2016
+since Apr 11, 2018
+</p>
+</div>
+</div>
+<ul class="user-eval-summary">
+<li class="efficacy margin-bottom-quarter">
+<span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span>
+Perceived effectiveness
+<span class="purpose">for major depressive disorder:</span>
+<strong>Major</strong>
+</li>
+<li class="side-effects margin-bottom">
+<span class="led-light led-light-side-effects"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
+Side effects:
+<strong>None</strong>
+</li>
+<li class="advice">
+<a href="/treatment_evaluations/226429">See full evaluation</a>
+</li>
+</ul>
+<hr>
+<div class="media-object margin-bottom">
+<div class="media-item"><a class="avatar-link" id="avatar-CupcakeKitten" href="//s3.amazonaws.com/uploads.patientslikeme.com/avatars/76997-original.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180502%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20180502T051448Z&amp;X-Amz-Expires=604800&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=695a0e444dd5544ec8b366778767e6d05ba65225287d8f858efbcad81d9c7a7a"><img title="CupcakeKitten" src="//s3.amazonaws.com/uploads.patientslikeme.com/avatars/76997-thumb.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180502%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20180502T051448Z&amp;X-Amz-Expires=604800&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=c1c8c7929c3f3a44dd7aaeaafd28f672c3682f52fc3dbbd4945564a61aaddc2c" alt="76997 thumb" /></a></div>
+<div class="media-content">
+<h2><a href="/members/473261">CupcakeKitten</a></h2>
+<p>
+100 mg twice daily
+<br>
+since Jan 12, 2018
+</p>
+</div>
+</div>
+<ul class="user-eval-summary">
+<li class="efficacy margin-bottom-quarter">
+<span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-off"></span>
+Perceived effectiveness
+<span class="purpose">for chronic fatigue:</span>
+<strong>Moderate</strong>
+</li>
+<li class="side-effects margin-bottom">
+<span class="led-light led-light-side-effects"></span><span class="led-light led-light-side-effects"></span><span class="led-light led-light-side-effects"></span><span class="led-light led-light-side-effects"></span>
+Side effects:
+<strong>Severe</strong>
+</li>
+<li class="advice">
+<a href="/treatment_evaluations/222372">See full evaluation</a>
+</li>
+</ul>
+<hr>
+<div class="media-object margin-bottom">
+<div class="media-item"><a class="avatar-link" id="avatar-hummingbird" href="//s3.amazonaws.com/uploads.patientslikeme.com/avatars/3951-original.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180502%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20180502T051448Z&amp;X-Amz-Expires=604800&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=2eed766b5beb81eca0033cb4884c37387f1841e489b7029976ffdc4fae39f7f4"><img title="hummingbird" src="//s3.amazonaws.com/uploads.patientslikeme.com/avatars/3951-thumb.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180502%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20180502T051448Z&amp;X-Amz-Expires=604800&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=d1777fa79561d4a7e3ad2419a5623b3f826fe4c44715b175762c654e2b647711" alt="3951 thumb" /></a></div>
+<div class="media-content">
+<h2><a href="/members/12632">hummingbird</a></h2>
+<p>
+300 mg/24 hours daily
+<br>
+since Dec 15, 2017
 </p>
 </div>
 </div>
@@ -1779,74 +1899,18 @@ since Dec 19, 2016
 <li class="efficacy margin-bottom-quarter">
 <span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
 Perceived effectiveness
-<span class="purpose">for diabetes type 2:</span>
+<span class="purpose">for depressed mood:</span>
 <strong>Slight</strong>
 </li>
 <li class="side-effects margin-bottom">
-<span class="led-light led-light-side-effects"></span><span class="led-light led-light-side-effects"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
+<span class="led-light led-light-side-effects"></span><span class="led-light led-light-side-effects"></span><span class="led-light led-light-side-effects"></span><span class="led-light led-light-side-effects"></span>
 Side effects:
-<strong>Mild</strong>
+<strong>Severe</strong>
 </li>
 <li class="advice">
 <strong>Advice/Tips</strong>
-I think Glimepiride was helping my diabetic numbers and then for some reason I started craving carbohydrates.
-<a href="/treatment_evaluations/187555">See full evaluation</a>
-</li>
-</ul>
-<hr>
-<div class="media-object margin-bottom">
-<div class="media-item"><a class="avatar-link" id="avatar-milkway" href="https://dy82vckl8b34w.cloudfront.net/assets/portrait_default-440d4e5a55a40a72b4933e658e9f46a6aef54c4723af934ad5db47043d6212bb.svg"><img title="milkway" src="https://dy82vckl8b34w.cloudfront.net/assets/portrait_default_thumb-440d4e5a55a40a72b4933e658e9f46a6aef54c4723af934ad5db47043d6212bb.svg" alt="Portrait default thumb" /></a></div>
-<div class="media-content">
-<h2><a href="/members/448472">milkway</a></h2>
-<p>
-2 mg twice daily
-<br>
-since Aug 19, 2015
-</p>
-</div>
-</div>
-<ul class="user-eval-summary">
-<li class="efficacy margin-bottom-quarter">
-<span class="led-light led-light-off"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
-Perceived effectiveness
-<span class="purpose">for diabetes type 2:</span>
-<strong>Can&#39;t tell</strong>
-</li>
-<li class="side-effects margin-bottom">
-<span class="led-light led-light-side-effects"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
-Side effects:
-<strong>None</strong>
-</li>
-<li class="advice">
-<a href="/treatment_evaluations/149535">See full evaluation</a>
-</li>
-</ul>
-<hr>
-<div class="media-object margin-bottom">
-<div class="media-item"><a class="avatar-link" id="avatar-Bibs4me" href="//s3.amazonaws.com/uploads.patientslikeme.com/avatars/75708-original.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180502%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20180502T051953Z&amp;X-Amz-Expires=604800&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=0421dbf4bcda5e2a5fd09ec9cf487e02b3a5d1479eac1794413e06fb55a17839"><img title="Bibs4me" src="//s3.amazonaws.com/uploads.patientslikeme.com/avatars/75708-thumb.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180502%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20180502T051953Z&amp;X-Amz-Expires=604800&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=c36ad4f0348b2539559b338e35fde4c1552ed7725b8cf1830386befb812a75e9" alt="75708 thumb" /></a></div>
-<div class="media-content">
-<h2><a href="/members/139312">Bibs4me</a></h2>
-<p>
-4 mg daily
-<br>
-since May 15, 2015
-</p>
-</div>
-</div>
-<ul class="user-eval-summary">
-<li class="efficacy margin-bottom-quarter">
-<span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
-Perceived effectiveness
-<span class="purpose">for diabetes type 2:</span>
-<strong>Slight</strong>
-</li>
-<li class="side-effects margin-bottom">
-<span class="led-light led-light-side-effects"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
-Side effects:
-<strong>None</strong>
-</li>
-<li class="advice">
-<a href="/treatment_evaluations/148041">See full evaluation</a>
+If you are taking the generic extended release make sure it is not dose dumping - releasing too much medicine at once causing side effects.  My MS doctor, PC...
+<a href="/treatment_evaluations/221538">See full evaluation</a>
 </li>
 </ul>
 
@@ -1854,12 +1918,12 @@ Side effects:
 </aside>
 <aside class="glass-panel margin-top" role="complementary">
 <div class="sidebar" id="sect-forum-sidebar">
-<h2>What are people saying about Glimepiride?</h2>
+<h2>What are people saying about Bupropion?</h2>
 <p>
 There are
-<strong>3 topics</strong>
+<strong>12 topics</strong>
 in our forum about
-Glimepiride.
+Bupropion.
 </p>
 <p>
 <a href="/users/sign_in">Sign in</a>
@@ -1880,33 +1944,33 @@ to view the forums.
 <div class="row" id="filters-wrapper">
 <div class="filters_results columns large-16 medium-16">
 <h2>
-6 patient evaluations
+188 patient evaluations
 for
-Glimepiride
+Bupropion
 </h2>
 </div>
 <div class="filters_sort_by columns large-8 medium-8 align-right">
 Sort by:
 <a data-popup-id="evaluations-sort-by" class="button menu-opener" data-fn-click="open_popup" href="#">Most recent</a>
 <ul data-popup-type="menu" data-popup-width="150" id="evaluations-sort-by" style="display: none">
-<li><a href="/treatments/show/1420-glimepiride-side-effects-and-efficacy?sort=helpfulness#evaluations">Helpfulness</a></li>
-<li><a href="/treatments/show/1420-glimepiride-side-effects-and-efficacy?sort=most-recent#evaluations">Most Recent</a></li>
+<li><a href="/treatments/show/1089-bupropion-side-effects-and-efficacy?sort=helpfulness#evaluations">Helpfulness</a></li>
+<li><a href="/treatments/show/1089-bupropion-side-effects-and-efficacy?sort=most-recent#evaluations">Most Recent</a></li>
 </ul>
 </div>
 </div>
 </div>
-<div data-treatment-id="1420" id="evaluations-list">
+<div data-treatment-id="1089" id="evaluations-list">
 <div class="content-panel">
 <div class="evaluation-group is-divided">
 <div class="row padding-vertical margin-top">
 <div class="columns medium-5">
-<div data-react-class="ProfileSummaryPropsContainer" data-react-props="{&quot;profileUrl&quot;:&quot;/members/50120&quot;,&quot;showUsername&quot;:true,&quot;avatarUrl&quot;:&quot;//s3.amazonaws.com/uploads.patientslikeme.com/avatars/11071-thumb.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180502%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20180502T051953Z\u0026X-Amz-Expires=604800\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=e42f0c578060a08f5b44d66bc27de609f80065b94353f3bcea54c4cf3f815b8c&quot;,&quot;briefBio&quot;:&quot;I worship (hold in high esteem); truth, forgiveness, compassion, endurance, patience, mercy, grace, charity, tenderness, strength, wisdom, kindness, justice ...&quot;,&quot;country&quot;:&quot;United States&quot;,&quot;currentUserId&quot;:null,&quot;deceased&quot;:false,&quot;deleted&quot;:false,&quot;firstDiagnosisDate&quot;:2007,&quot;fullAvatarUrl&quot;:&quot;//s3.amazonaws.com/uploads.patientslikeme.com/avatars/11071-full.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180502%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20180502T051953Z\u0026X-Amz-Expires=604800\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=8fd16bd73a476d93e706ede9e3088b7ec4c5bd52c08756cc757454df2a0a6df0&quot;,&quot;genders&quot;:[],&quot;isAdmin&quot;:false,&quot;isSignedIn&quot;:false,&quot;lastActivityTime&quot;:&quot;11 minutes ago&quot;,&quot;preferredPronouns&quot;:&quot;male&quot;,&quot;primaryConditionName&quot;:&quot;schizoaffective disorder&quot;,&quot;secondaryConditionNames&quot;:[&quot;bipolar II disorder&quot;,&quot;major depressive disorder&quot;,&quot;schizophrenia&quot;,&quot;bipolar disorder&quot;,&quot;diabetes type 2&quot;,&quot;obstructive sleep apnea&quot;,&quot;obesity&quot;,&quot;high blood pressure (hypertension)&quot;,&quot;borderline personality disorder&quot;,&quot;gastroesophageal reflux disease&quot;,&quot;erectile dysfunction&quot;,&quot;psychosis disorder&quot;,&quot;generalized anxiety disorder&quot;,&quot;vitamin B12 deficiency&quot;,&quot;degenerative disc disease&quot;,&quot;carpal tunnel syndrome&quot;,&quot;plantar fasciitis&quot;,&quot;residual schizophrenia&quot;,&quot;paranoid schizophrenia&quot;,&quot;hypogonadism&quot;,&quot;bipolar I disorder&quot;,&quot;nail fungus&quot;,&quot;insomnia&quot;,&quot;high cholesterol (hypercholesterolemia)&quot;,&quot;heavy metal toxicity&quot;,&quot;chronic mercury poisoning&quot;,&quot;umbilical hernia&quot;,&quot;twisted bowel (intestinal volvulus)&quot;,&quot;rheumatoid arthritis&quot;,&quot;asthma&quot;,&quot;allergic asthma&quot;,&quot;lymphoma of the conjunctiva&quot;,&quot;concussion&quot;],&quot;sex&quot;:&quot;M&quot;,&quot;state&quot;:&quot;CA&quot;,&quot;title&quot;:&quot;&quot;,&quot;userAge&quot;:60,&quot;userId&quot;:50120,&quot;userIsFollowing&quot;:false,&quot;userName&quot;:&quot;TheWorshipper&quot;}"></div>
+<div data-react-class="ProfileSummaryPropsContainer" data-react-props="{&quot;profileUrl&quot;:&quot;/members/617282&quot;,&quot;showUsername&quot;:true,&quot;avatarUrl&quot;:&quot;//s3.amazonaws.com/uploads.patientslikeme.com/avatars/97627-thumb.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180502%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20180502T051449Z\u0026X-Amz-Expires=604800\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=2ce7c6648f95103c31f26527f1ac54e632790c429907f2f36eb0ee9074bfc514&quot;,&quot;briefBio&quot;:&quot;I am a Nurse but needed to retire, i am now trying to do internet marketing. &quot;,&quot;country&quot;:&quot;United States&quot;,&quot;currentUserId&quot;:null,&quot;deceased&quot;:false,&quot;deleted&quot;:false,&quot;firstDiagnosisDate&quot;:1985,&quot;fullAvatarUrl&quot;:&quot;//s3.amazonaws.com/uploads.patientslikeme.com/avatars/97627-full.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180502%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20180502T051449Z\u0026X-Amz-Expires=604800\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=d86ceb02db741dc3390c7680b4a928c63af8bb33773652425aa51e705b1e432a&quot;,&quot;genders&quot;:[&quot;Female&quot;],&quot;isAdmin&quot;:false,&quot;isSignedIn&quot;:false,&quot;lastActivityTime&quot;:&quot;about 3 weeks ago&quot;,&quot;preferredPronouns&quot;:&quot;female&quot;,&quot;primaryConditionName&quot;:&quot;bipolar disorder&quot;,&quot;secondaryConditionNames&quot;:[&quot;major depressive disorder&quot;,&quot;dissociative identity disorder&quot;,&quot;post-traumatic stress disorder&quot;,&quot;concussion&quot;,&quot;generalized anxiety disorder&quot;,&quot;panic disorder&quot;,&quot;persistent depressive disorder (dysthymia)&quot;,&quot;traumatic brain injury&quot;,&quot;attention deficit disorder&quot;,&quot;post-traumatic headache&quot;,&quot;narcolepsy&quot;,&quot;osteoarthritis&quot;,&quot;gastritis&quot;,&quot;stuttering&quot;,&quot;anorexia nervosa&quot;,&quot;post-concussion syndrome&quot;,&quot;borderline personality disorder&quot;],&quot;sex&quot;:&quot;F&quot;,&quot;state&quot;:&quot;CA&quot;,&quot;title&quot;:null,&quot;userAge&quot;:59,&quot;userId&quot;:617282,&quot;userIsFollowing&quot;:false,&quot;userName&quot;:&quot;LadySirona&quot;}"></div>
 
 </div>
 <div class="eval-details columns medium-19">
 <h3 class="tertiary-title">
-Dec 19, 2016
-<span class="helptext">(Started Nov 30, 2015)</span>
+Apr 11, 2018
+<span class="helptext">(Started May 15, 2017)</span>
 </h3>
 <div class="margin-bottom-quarter"><ul class="okgo">
 <li>
@@ -1915,9 +1979,9 @@ Dec 19, 2016
 <span>Effectiveness</span>
 </div>
 <div class="columns small-16 medium-18 large-20">
-<span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
-Slight
-<span class="helptext">(for diabetes type 2)</span>
+<span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span>
+Major
+<span class="helptext">(for major depressive disorder)</span>
 </div>
 </div>
 </li>
@@ -1927,9 +1991,8 @@ Slight
 <span>Side effects</span>
 </div>
 <div class="columns small-16 medium-18 large-20">
-<span class="led-light led-light-side-effects"></span><span class="led-light led-light-side-effects"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
-Mild
-<span class="helptext">(craving carbs)</span>
+<span class="led-light led-light-side-effects"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
+None
 </div>
 </div>
 </li>
@@ -1959,12 +2022,91 @@ Not at all hard to take
 </div>
 <div class="margin-bottom-quarter">
 <strong>Dosage:</strong>
-4 mg
+300 mg
 Daily
 </div>
 <div class="margin-bottom-quarter">
-<strong>Advice & Tips:</strong>
-I think Glimepiride was helping my diabetic numbers and then for some reason I started craving carbohydrates.
+<strong>Cost:</strong>
+$200+ monthly
+</div>
+<hr>
+<ul class="list-inline" data-widget="helpful_marks">
+<li>
+<span class="icon-thumb icon-spacer align-text-bottom icon"></span>
+<span class="text-smallest">0</span>
+<span class="is-hidden-visually">helpful marks</span>
+</li>
+<li>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="evaluation-group is-divided">
+<div class="row padding-vertical margin-top">
+<div class="columns medium-5">
+<div data-react-class="ProfileSummaryPropsContainer" data-react-props="{&quot;profileUrl&quot;:&quot;/members/473261&quot;,&quot;showUsername&quot;:true,&quot;avatarUrl&quot;:&quot;//s3.amazonaws.com/uploads.patientslikeme.com/avatars/76997-thumb.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180502%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20180502T051449Z\u0026X-Amz-Expires=604800\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=5bb9bc5294055f80addd9e954decc950b5d418fe65ad874329c5a4aca70ff0c0&quot;,&quot;briefBio&quot;:null,&quot;country&quot;:&quot;United States&quot;,&quot;currentUserId&quot;:null,&quot;deceased&quot;:false,&quot;deleted&quot;:false,&quot;firstDiagnosisDate&quot;:2013,&quot;fullAvatarUrl&quot;:&quot;//s3.amazonaws.com/uploads.patientslikeme.com/avatars/76997-full.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180502%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20180502T051449Z\u0026X-Amz-Expires=604800\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=c7fe5e1055bdb7a1d0e4b5f1194d182a86528c4034514ad844a02d8e84b753fc&quot;,&quot;genders&quot;:[&quot;Female&quot;],&quot;isAdmin&quot;:false,&quot;isSignedIn&quot;:false,&quot;lastActivityTime&quot;:&quot;about 12 hours ago&quot;,&quot;preferredPronouns&quot;:&quot;female&quot;,&quot;primaryConditionName&quot;:&quot;avoidant personality disorder&quot;,&quot;secondaryConditionNames&quot;:[&quot;major depressive disorder&quot;,&quot;generalized anxiety disorder&quot;,&quot;social anxiety disorder&quot;,&quot;borderline personality disorder&quot;,&quot;gastroesophageal reflux disease&quot;,&quot;psychogenic non-epileptic seizures&quot;,&quot;vitamin D deficiency&quot;,&quot;vitamin B12 deficiency&quot;,&quot;hypothyroidism&quot;,&quot;persistent depressive disorder (dysthymia)&quot;],&quot;sex&quot;:&quot;F&quot;,&quot;state&quot;:&quot;TX&quot;,&quot;title&quot;:null,&quot;userAge&quot;:26,&quot;userId&quot;:473261,&quot;userIsFollowing&quot;:false,&quot;userName&quot;:&quot;CupcakeKitten&quot;}"></div>
+
+</div>
+<div class="eval-details columns medium-19">
+<h3 class="tertiary-title">
+Jan 12, 2018
+<span class="helptext">(Started Jun 30, 2017)</span>
+</h3>
+<div class="margin-bottom-quarter"><ul class="okgo">
+<li>
+<div class="row">
+<div class="columns small-8 medium-6 large-4">
+<span>Effectiveness</span>
+</div>
+<div class="columns small-16 medium-18 large-20">
+<span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-off"></span>
+Moderate
+<span class="helptext">(for chronic fatigue)</span>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="columns small-8 medium-6 large-4">
+<span>Side effects</span>
+</div>
+<div class="columns small-16 medium-18 large-20">
+<span class="led-light led-light-side-effects"></span><span class="led-light led-light-side-effects"></span><span class="led-light led-light-side-effects"></span><span class="led-light led-light-side-effects"></span>
+Severe
+<span class="helptext">(vomiting, nausea)</span>
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="columns small-8 medium-6 large-4">
+<span>Adherence</span>
+</div>
+<div class="columns small-16 medium-18 large-20">
+<span class="led-light led-light-adherence"></span><span class="led-light led-light-adherence"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
+Sometimes
+</div>
+</div>
+</li>
+<li>
+<div class="row">
+<div class="columns small-8 medium-6 large-4">
+<span>Burden</span>
+</div>
+<div class="columns small-16 medium-18 large-20">
+<span class="led-light led-light-burden"></span><span class="led-light led-light-burden"></span><span class="led-light led-light-burden"></span><span class="led-light led-light-burden"></span>
+Very hard to take
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="margin-bottom-quarter">
+<strong>Dosage:</strong>
+100 mg
+Twice daily
 </div>
 <div class="margin-bottom-quarter">
 <strong>Cost:</strong>
@@ -1987,91 +2129,13 @@ I think Glimepiride was helping my diabetic numbers and then for some reason I s
 <div class="evaluation-group is-divided">
 <div class="row padding-vertical margin-top">
 <div class="columns medium-5">
-<div data-react-class="ProfileSummaryPropsContainer" data-react-props="{&quot;profileUrl&quot;:&quot;/members/448472&quot;,&quot;showUsername&quot;:true,&quot;avatarUrl&quot;:&quot;https://dy82vckl8b34w.cloudfront.net/assets/portrait_default_thumb-440d4e5a55a40a72b4933e658e9f46a6aef54c4723af934ad5db47043d6212bb.svg&quot;,&quot;briefBio&quot;:null,&quot;country&quot;:&quot;China&quot;,&quot;currentUserId&quot;:null,&quot;deceased&quot;:false,&quot;deleted&quot;:false,&quot;firstDiagnosisDate&quot;:2012,&quot;fullAvatarUrl&quot;:&quot;https://dy82vckl8b34w.cloudfront.net/assets/portrait_default-440d4e5a55a40a72b4933e658e9f46a6aef54c4723af934ad5db47043d6212bb.svg&quot;,&quot;genders&quot;:[],&quot;isAdmin&quot;:false,&quot;isSignedIn&quot;:false,&quot;lastActivityTime&quot;:&quot;about 2 years ago&quot;,&quot;preferredPronouns&quot;:null,&quot;primaryConditionName&quot;:&quot;diabetes type 2&quot;,&quot;secondaryConditionNames&quot;:[&quot;non-alcoholic fatty liver disease&quot;,&quot;strep throat&quot;,&quot;systemic lupus erythematosus&quot;,&quot;lung cancer&quot;],&quot;sex&quot;:&quot;M&quot;,&quot;state&quot;:&quot;&quot;,&quot;title&quot;:null,&quot;userAge&quot;:49,&quot;userId&quot;:448472,&quot;userIsFollowing&quot;:false,&quot;userName&quot;:&quot;milkway&quot;}"></div>
+<div data-react-class="ProfileSummaryPropsContainer" data-react-props="{&quot;profileUrl&quot;:&quot;/members/12632&quot;,&quot;showUsername&quot;:true,&quot;avatarUrl&quot;:&quot;//s3.amazonaws.com/uploads.patientslikeme.com/avatars/3951-thumb.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180502%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20180502T051449Z\u0026X-Amz-Expires=604800\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=48075d0b7fe5294dbe8b79e3b31948eecb7d3feaecb405d88794e66b9722719b&quot;,&quot;briefBio&quot;:null,&quot;country&quot;:&quot;United States&quot;,&quot;currentUserId&quot;:null,&quot;deceased&quot;:false,&quot;deleted&quot;:false,&quot;firstDiagnosisDate&quot;:2006,&quot;fullAvatarUrl&quot;:&quot;//s3.amazonaws.com/uploads.patientslikeme.com/avatars/3951-full.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180502%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20180502T051449Z\u0026X-Amz-Expires=604800\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=005a623d086547c3e0002fa86f0c2943fcaa7c558ce5f83529aa580e1f23ab0d&quot;,&quot;genders&quot;:[],&quot;isAdmin&quot;:false,&quot;isSignedIn&quot;:false,&quot;lastActivityTime&quot;:&quot;about 4 months ago&quot;,&quot;preferredPronouns&quot;:null,&quot;primaryConditionName&quot;:&quot;multiple sclerosis&quot;,&quot;secondaryConditionNames&quot;:[&quot;transverse myelitis&quot;,&quot;sinus infection (sinusitis)&quot;,&quot;urinary incontinence&quot;,&quot;asthma&quot;,&quot;optic neuritis&quot;,&quot;pregnancy&quot;,&quot;insomnia&quot;],&quot;sex&quot;:&quot;F&quot;,&quot;state&quot;:&quot;CA&quot;,&quot;title&quot;:&quot;&quot;,&quot;userAge&quot;:49,&quot;userId&quot;:12632,&quot;userIsFollowing&quot;:false,&quot;userName&quot;:&quot;hummingbird&quot;}"></div>
 
 </div>
 <div class="eval-details columns medium-19">
 <h3 class="tertiary-title">
-Aug 19, 2015
-<span class="helptext">(Started Jul 01, 2014)</span>
-</h3>
-<div class="margin-bottom-quarter"><ul class="okgo">
-<li>
-<div class="row">
-<div class="columns small-8 medium-6 large-4">
-<span>Effectiveness</span>
-</div>
-<div class="columns small-16 medium-18 large-20">
-<span class="led-light led-light-off"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
-Can&#39;t tell
-<span class="helptext">(for diabetes type 2)</span>
-</div>
-</div>
-</li>
-<li>
-<div class="row">
-<div class="columns small-8 medium-6 large-4">
-<span>Side effects</span>
-</div>
-<div class="columns small-16 medium-18 large-20">
-<span class="led-light led-light-side-effects"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
-None
-</div>
-</div>
-</li>
-<li>
-<div class="row">
-<div class="columns small-8 medium-6 large-4">
-<span>Adherence</span>
-</div>
-<div class="columns small-16 medium-18 large-20">
-<span class="led-light led-light-adherence"></span><span class="led-light led-light-adherence"></span><span class="led-light led-light-adherence"></span><span class="led-light led-light-adherence"></span>
-Always
-</div>
-</div>
-</li>
-<li>
-<div class="row">
-<div class="columns small-8 medium-6 large-4">
-<span>Burden</span>
-</div>
-<div class="columns small-16 medium-18 large-20">
-<span class="led-light led-light-burden"></span><span class="led-light led-light-burden"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
-A little hard to take
-</div>
-</div>
-</li>
-</ul>
-</div>
-<div class="margin-bottom-quarter">
-<strong>Dosage:</strong>
-2 mg
-Twice daily
-</div>
-<hr>
-<ul class="list-inline" data-widget="helpful_marks">
-<li>
-<span class="icon-thumb icon-spacer align-text-bottom icon"></span>
-<span class="text-smallest">0</span>
-<span class="is-hidden-visually">helpful marks</span>
-</li>
-<li>
-</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="evaluation-group is-divided">
-<div class="row padding-vertical margin-top">
-<div class="columns medium-5">
-<div data-react-class="ProfileSummaryPropsContainer" data-react-props="{&quot;profileUrl&quot;:&quot;/members/139312&quot;,&quot;showUsername&quot;:true,&quot;avatarUrl&quot;:&quot;//s3.amazonaws.com/uploads.patientslikeme.com/avatars/75708-thumb.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180502%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20180502T051953Z\u0026X-Amz-Expires=604800\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=c36ad4f0348b2539559b338e35fde4c1552ed7725b8cf1830386befb812a75e9&quot;,&quot;briefBio&quot;:null,&quot;country&quot;:&quot;United States&quot;,&quot;currentUserId&quot;:null,&quot;deceased&quot;:false,&quot;deleted&quot;:false,&quot;firstDiagnosisDate&quot;:2006,&quot;fullAvatarUrl&quot;:&quot;//s3.amazonaws.com/uploads.patientslikeme.com/avatars/75708-full.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=1KGN9K9HFVT00RDVK1G2%2F20180502%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20180502T051953Z\u0026X-Amz-Expires=604800\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=a198a057d2613d5fa15d7750771b2fc07c614529096d151fd629d38978f9ee0d&quot;,&quot;genders&quot;:[],&quot;isAdmin&quot;:false,&quot;isSignedIn&quot;:false,&quot;lastActivityTime&quot;:&quot;1 week ago&quot;,&quot;preferredPronouns&quot;:null,&quot;primaryConditionName&quot;:&quot;diabetes type 2&quot;,&quot;secondaryConditionNames&quot;:[&quot;high blood pressure (hypertension)&quot;],&quot;sex&quot;:&quot;M&quot;,&quot;state&quot;:&quot;OH&quot;,&quot;title&quot;:null,&quot;userAge&quot;:48,&quot;userId&quot;:139312,&quot;userIsFollowing&quot;:false,&quot;userName&quot;:&quot;Bibs4me&quot;}"></div>
-
-</div>
-<div class="eval-details columns medium-19">
-<h3 class="tertiary-title">
-May 15, 2015
-<span class="helptext">(Started Jan 10, 2012)</span>
+Dec 15, 2017
+<span class="helptext">(Started Jun 01, 2006)</span>
 </h3>
 <div class="margin-bottom-quarter"><ul class="okgo">
 <li>
@@ -2082,7 +2146,7 @@ May 15, 2015
 <div class="columns small-16 medium-18 large-20">
 <span class="led-light led-light-efficacy"></span><span class="led-light led-light-efficacy"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
 Slight
-<span class="helptext">(for diabetes type 2)</span>
+<span class="helptext">(for depressed mood)</span>
 </div>
 </div>
 </li>
@@ -2092,8 +2156,9 @@ Slight
 <span>Side effects</span>
 </div>
 <div class="columns small-16 medium-18 large-20">
-<span class="led-light led-light-side-effects"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span><span class="led-light led-light-off"></span>
-None
+<span class="led-light led-light-side-effects"></span><span class="led-light led-light-side-effects"></span><span class="led-light led-light-side-effects"></span><span class="led-light led-light-side-effects"></span>
+Severe
+<span class="helptext">(insomnia, hot flashes, feeling tense or on edge, feeling feverish, facial flushing)</span>
 </div>
 </div>
 </li>
@@ -2123,8 +2188,12 @@ Not at all hard to take
 </div>
 <div class="margin-bottom-quarter">
 <strong>Dosage:</strong>
-4 mg
+300 mg/24 hours
 Daily
+</div>
+<div class="margin-bottom-quarter">
+<strong>Advice & Tips:</strong>
+If you are taking the generic extended release make sure it is not dose dumping - releasing too much medicine at once causing side effects.  My MS doctor, PCP, and I thought I was in menopause with all the hot flashes and fevers of 99.6!  Even kept going in to see if I had a UTI bc of the fevers!  What a waste of my time and money!!!
 </div>
 <div class="margin-bottom-quarter">
 <strong>Cost:</strong>
@@ -2151,15 +2220,15 @@ Daily
 <div class="columns large-8 medium-8 align-left">
 <small class="helptext">
 Last updated:
-<time datetime="2018-05-02T05:19:53+00:00">May  2, 2018</time>
+<time datetime="2018-05-02T05:14:49+00:00">May  2, 2018</time>
 </small>
 
 </div>
 <div class="columns large-16 medium-16">
 <span class="padding-horizontal">
-Showing 3 of 6 patient evaluations for Glimepiride
+Showing 3 of 188 patient evaluations for Bupropion
 </span>
-<div class="pagination inline-block"><a class="icon-only is-not-rwd previous_page" disabled="true"><span class="icon icon-director-left">Previous page</span></a> <em class="current">1</em> <a rel="next" href="/treatments/show/1420?page=2&amp;size=3&amp;stop_reason=1#evaluations">2</a> <a class="icon-only is-not-rwd next_page" rel="next" href="/treatments/show/1420?page=2&amp;size=3&amp;stop_reason=1#evaluations"><span class="icon icon-director-right">Next page</span></a></div>
+<div class="pagination inline-block"><a class="icon-only is-not-rwd previous_page" disabled="true"><span class="icon icon-director-left">Previous page</span></a> <em class="current">1</em> <a rel="next" href="/treatments/show/3769?page=2&amp;size=3&amp;stop_reason=1#evaluations">2</a> <a href="/treatments/show/3769?page=3&amp;size=3&amp;stop_reason=1#evaluations">3</a> <span class="gap">&hellip;</span> <a href="/treatments/show/3769?page=63&amp;size=3&amp;stop_reason=1#evaluations">63</a> <a class="icon-only is-not-rwd next_page" rel="next" href="/treatments/show/3769?page=2&amp;size=3&amp;stop_reason=1#evaluations"><span class="icon icon-director-right">Next page</span></a></div>
 </div>
 </div>
 </div>
@@ -2299,7 +2368,7 @@ PatientsLikeMe ®
   [].forEach(function(metric, index) {
     var event = metric[0];
     var params = metric[1];
-    var uniqid = "9c553739-8764-4b6a-92c6-8dfea2ee7615-" + index;
+    var uniqid = "f166b9ab-9a0d-451d-89cf-980ccc6bb104-" + index;
     if (window.sessionStorage['metric_event-' + uniqid] === undefined) {
       window.sessionStorage['metric_event-' + uniqid] = true;
       var metricEvent = {event: event, params: params};
