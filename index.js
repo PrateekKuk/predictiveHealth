@@ -6,6 +6,7 @@ var sideEffects = [];
 var sideEffectCount = {};
 var regimenDrugs = [];
 var sideEffectPercents = {};
+var sideEffectProbabilities = {};
 
 var dataPrep = function(){
     console.log(data);
@@ -13,7 +14,6 @@ var dataPrep = function(){
         availableTags.push(Object.keys(data[i]).toString());
     }
 }
-//TODO: Prevent from adding the same drug
 var addButtonClicked = function(){
     var searchBox = document.getElementById("search");
     var drugName = searchBox.value;
@@ -31,6 +31,7 @@ var addButtonClicked = function(){
         getAllSideEffects(drug,drugName);
         updateSideEffectsDiv(drug, drugName);
         regimenDrugs.push(drug);
+        calculateProbability();
     }
 
 }
@@ -46,7 +47,7 @@ var makeDrugCard = function(drug){
     
     var drugDiv = document.getElementById("drugs-body");
     var drugNameWithSpace = Object.keys(drug).toString();
-    var drugNameNoSpace = Object.keys(drug).toString().replace(" ","");
+    var drugNameNoSpace = Object.keys(drug).toString().replace(/\s/g,"");
     var drugCard = document.createElement("div");
     drugCard.setAttribute("id", drugNameNoSpace);
     drugCard.classList.add("card");
@@ -105,7 +106,7 @@ var removeDrug = function(drug,drugName) {
     }
     removeSideEffectsFromCount(drug, drugName);
     updateSideEffectsDiv(drug,drugName);
-    
+    calculateProbability();
 }
 //use this to get the side-effects for a drug
 var getSideEffectsForDrug = function(drug){
@@ -120,7 +121,7 @@ var getSideEffectsForDrug = function(drug){
     return returnEffects;
 }
 
-//function that updates the global side effects count
+//function that updates the global side effects count and percents
 var getAllSideEffects = function(drug, drugName){
     
     var drugNameWithSpace = Object.keys(drug).toString();
@@ -147,6 +148,7 @@ var getAllSideEffects = function(drug, drugName){
     console.log(sideEffectCount);
 }
 
+//this updates side-effect count and percents
 var removeSideEffectsFromCount = function(drug,drugName){
     var drugSideEffects = getSideEffectsForDrug(drug);
     for(var j = 0; j<drugSideEffects.length; j++){
@@ -169,6 +171,64 @@ var removeSideEffectsFromCount = function(drug,drugName){
     updateSideEffectsDiv(drug,drugName);
 }
 
+var calculateProbability = function(){
+    var sideEffects = Object.keys(sideEffectPercents);
+    sideEffectProbabilities = {};
+    
+    for(var i = 0; i < sideEffects.length; i++){
+        var sideEffectHolder = sideEffectPercents[sideEffects[i]];
+        var probValue;
+        if(sideEffectHolder.length == 1){
+            var sideEffectDrugObj = sideEffectHolder[0];
+            probValue = sideEffectDrugObj[Object.keys(sideEffectDrugObj)];
+            sideEffectProbabilities[sideEffects[i]] = probValue;
+        }
+        else{
+            var tempProbHolder = []
+            var probSum = 0;
+            var totalProduct = 1;
+            var finalProb;
+            var unionProds = 0;
+            var sign;
+            if(sideEffectHolder.length%2 == 0){
+                sign = "even";
+            }else{
+                sign = "odd";
+            }
+            //going to populate all the prob in tempProbHolder for this sideEffect
+            for(var j = 0; j < sideEffectHolder.length; j++){
+                var sideEffectDrugObj2 = sideEffectHolder[j];
+                tempProbHolder.push((sideEffectDrugObj2[Object.keys(sideEffectDrugObj2)])/100);
+            }
+            //now that all probs are in tempProbHolder, we can apply formula
+            //P(E_A ∪ E_B) = P(E_A)+P(E_B)- P(E_A ∩ E_B)
+            //P(E_A ∩ E_B) = P(E_A)P(E_B). 
+            for(var k = 0; k < tempProbHolder.length;k++){
+                probSum += tempProbHolder[k];
+                totalProduct = totalProduct * tempProbHolder[k];
+                if(k+1 < tempProbHolder.length){
+                    for(var l = k; l<= tempProbHolder.length-(k+1); l++){
+                        if(l+1 < tempProbHolder.length){
+                            unionProds = unionProds + (tempProbHolder[l+1]*tempProbHolder[k]);
+                        }
+                    }
+                }
+            }
+            if(sign == "even"){
+                if(tempProbHolder.length == 2){
+                    finalProb = probSum - totalProduct;
+                }else{
+                    finalProb = probSum - unionProds - totalProduct;
+                }
+            }else{
+                finalProb = probSum - unionProds + totalProduct;
+            }
+            sideEffectProbabilities[sideEffects[i]] = finalProb*100;
+        }
+        
+    }
+
+}
 
 var updateSideEffectsDiv = function(drug, drugName){
     console.log("inside update side effects div");
