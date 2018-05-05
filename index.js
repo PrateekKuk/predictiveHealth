@@ -231,7 +231,6 @@ var calculateProbability = function(){
 }
 
 var updateSideEffectsDiv = function(drug, drugName){
-    console.log("inside update side effects div");
     var sideEffectListDiv = document.getElementById("regimen-side-effects");
     sideEffectListDiv.innerHTML = "";
 

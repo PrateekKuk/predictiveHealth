@@ -13,18 +13,19 @@
 
     
   
-    <title>Predictive Health</title>
+    <title>Sideview</title>
   </head>
 
-  <body>
+  <body style="background-image:url('images/landingbackground.png');background-size:1350px 700px;background-repeat:no-repeat">
 
+        
   	<!--
 		HTML markup for top bar
      -->
      <!-- Image and text -->
-    <nav class="navbar navbar-dark bg-dark sticky-top navbar-expand-lg navbar-container">
+    <nav class="navbar navbar-dark bg-dark sticky-top navbar-expand-lg navbar-container justify-content-center" style="height:78px">
         <a class="navbar-brand" href="#">
-            <i class="fas fa-briefcase-medical"></i> Predictive Health
+             <img src="images/sideview.png" class="img-fluid" alt="logo" style="max-height:68px">
         </a>
     </nav>
 
@@ -33,10 +34,11 @@
         HTML markup for choosing drugs
         TODO: as you click buttons/drugs the results below update
             so, each button will need a onclick to a function, but that button's id should be the drug name
- 	-->
+     -->
+
     <div id="search-container" class="container">
         <div class="row justify-content-center">
-            <div class="col-md-6">
+            <div class="col-md-6" style="padding-right:0px">
                 <form class="">
                     <div class="">
                         <input id="search" class="form-control search-box-container" type="search" placeholder="Search and add drugs to your regimen" aria-label="Search">
@@ -44,10 +46,21 @@
                 </form>
             </div>
             <div class="col-md-auto">
-                <button class="btn btn-primary" type="submit" onClick="addButtonClicked()">Add</button>
+                <button class="btn" type="submit" onClick="addButtonClicked()">Add</button>
             </div>
-         </div>
-     </div>
+        </div>
+    </div>
+
+
+    <!-- HTML markup for human body-->
+
+    <!-- <div id="bodyImage-container" class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-auto">
+                <img src="images/landingbackground.png" class="img-fluid" alt="Responsive image" style="max-height:550px;">
+            </div>
+        </div>
+    </div> -->
 
 	<!--
         HTML markup for choosing drugs

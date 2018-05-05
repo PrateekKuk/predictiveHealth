@@ -24,12 +24,21 @@
 	/* :root{
 	}; */
 }
+* {
+	font-family: 'Roboto', sans-serif !important;
+	font-size:17px;
+   }
 
 .navbar-container{
     margin-bottom:20px;
 }
 
-
+.btn{
+	background-color:#12FFD4 !important;
+	border-color:#C9C9C9;
+	font-family: 'Roboto', sans-serif !important;
+	color:#454545 !important;
+}
 .search-form{
 
 	justify-content:center;
