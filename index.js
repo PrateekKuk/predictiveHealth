@@ -29,9 +29,10 @@ var addButtonClicked = function(){
         var drugDiv = document.getElementById("drugs-container");
         drugDiv.classList.remove("hide");
         getAllSideEffects(drug,drugName);
-        updateSideEffectsDiv(drug, drugName);
         regimenDrugs.push(drug);
         calculateProbability();
+        updateSideEffectsDiv(drug, drugName);
+
     }
 
 }
@@ -51,7 +52,7 @@ var makeDrugCard = function(drug){
     var drugCard = document.createElement("div");
     drugCard.setAttribute("id", drugNameNoSpace);
     drugCard.classList.add("card");
-    drugCard.classList.add("col-sm-2");
+    drugCard.classList.add("col-sm-3");
     drugCard.classList.add("custom-card");      
     drugDiv.appendChild(drugCard);
 
@@ -59,26 +60,24 @@ var makeDrugCard = function(drug){
     cardBody.classList.add("card-body");
     drugCard.appendChild(cardBody);
 
-    var cardTitle = document.createElement("h5");
-    cardTitle.classList.add("card-title");
+    var cardTitle = document.createElement("span");
+    cardTitle.classList.add("card-text");
     cardTitle.innerHTML = Object.keys(drug).toString();
     cardBody.appendChild(cardTitle);
 
-    var cardInfo = document.createElement("p");
-    cardInfo.classList.add("card-text");
-    // var sideEffectsObj = drug[drugNameWithSpace];
-    // var sideEffectsList = Object.keys(sideEffectsObj).toString();
-    var sideEffectsList = getSideEffectsForDrug(drug);
-    console.log(sideEffectsList);
-    cardInfo.innerHTML = "Side Effects:" + "</br>" + sideEffectsList;
+    // var cardInfo = document.createElement("p");
+    // cardInfo.classList.add("card-text");
+    // // var sideEffectsObj = drug[drugNameWithSpace];
+    // // var sideEffectsList = Object.keys(sideEffectsObj).toString();
+    // var sideEffectsList = getSideEffectsForDrug(drug);
+    // cardInfo.innerHTML = "Side Effects:" + "</br>" + sideEffectsList;
     //cardBody.appendChild(cardInfo);
 
     var removeButton = document.createElement("button");
     removeButton.classList.add("btn");
-    removeButton.classList.add("btn-danger");
     removeButton.classList.add("custom-button-prop");
     removeButton.classList.add("float-right");
-    removeButton.innerHTML = '<i class="fas fa-trash-alt"></i>';
+    removeButton.innerHTML = '<i class="fas fa-minus"></i>';
     cardBody.appendChild(removeButton);
     removeButton.onclick = function() {
         removeDrug(drug,drugNameNoSpace);
@@ -97,8 +96,8 @@ var removeDrug = function(drug,drugName) {
         }
     }
     removeSideEffectsFromCount(drug, drugName);
-    updateSideEffectsDiv(drug,drugName);
     calculateProbability();
+    updateSideEffectsDiv(drug,drugName);
     var drugDiv = document.getElementById("drugs-body");
     if(drugDiv.childElementCount == 0){
         var drugCont = document.getElementById("drugs-container");
@@ -246,13 +245,14 @@ var updateSideEffectsDiv = function(drug, drugName){
         if(sideEffectCount[allSideEffects[i]] != 0){
             var effectDiv = document.createElement("div");
             effectDiv.classList.add("card");
+            // effectDiv.classList.add("custom-card");
             effectDiv.classList.add("col-lg-2");
             rowSpace.appendChild(effectDiv);
-
+            var sideEffectProbDisplay = sideEffectProbabilities[allSideEffects[i]];
             var effectDivbody = document.createElement("div");
             effectDivbody.classList.add("card-body");
             effectDivbody.innerHTML = "";
-            effectDivbody.innerHTML = (i+1)+"."+ "</br>" + allSideEffects[i];
+            effectDivbody.innerHTML = allSideEffects[i] + sideEffectProbDisplay;
             effectDiv.appendChild(effectDivbody);
             //sideEffectListDiv.innerHTML += allSideEffects[i];
             

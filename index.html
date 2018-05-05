@@ -16,7 +16,7 @@
     <title>Sideview</title>
   </head>
 
-  <body style="background-image:url('images/landingbackground.png');background-size:1350px 700px;background-repeat:no-repeat">
+  <body style="background-image:url('images/landingbackground.png');background-size:1300px 700px;background-repeat:no-repeat">
 
         
   	<!--
@@ -46,7 +46,7 @@
                 </form>
             </div>
             <div class="col-md-auto">
-                <button class="btn" type="submit" onClick="addButtonClicked()">Add</button>
+                <button id="add-btn" class="btn btn-primary" type="submit" onClick="addButtonClicked()">Add</button>
             </div>
         </div>
     </div>
@@ -68,7 +68,7 @@
             so, each button will need a onclick to a function, but that button's id should be the drug name
  	-->
      <div id="drugs-container" class="container hide">
-         <h4 id="drugs-header">Drugs in Regimen:</h4>
+         <h4 id="cont-header" >Regimen</h4>
          <div id="drugs-body" class="row drugs-body"></div>
      </div>
 
@@ -77,10 +77,11 @@
  	-->
 
    <div id="results-container" class="container hide">
-        <h4>Regimen Side-effects:</h4>
+        <h4 class="cont-header" >Side-effects*</h4>
         <div id="regimen-side-effects"></div>
-  </div>
+        <div id="disclaimer">*These percentages are estimates based on patient reported outcomes from patientlikeme.com. This is not medical advice.</div>
 
+  </div>
 
 	<!--
 		loading script references

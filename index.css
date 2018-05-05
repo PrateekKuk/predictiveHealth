@@ -16,33 +16,40 @@
 	--color-blue-hover:#c9ceeb;
 }
 
-@media (max-width:450px){
-	/* :root{
-	}; */
-}
-@media (max-width:750px){
-	/* :root{
-	}; */
-}
 * {
-	font-family: 'Roboto', sans-serif !important;
+	font-family: 'Roboto-light', sans-serif !important;
 	font-size:17px;
+	color:#454545;
    }
 
 .navbar-container{
     margin-bottom:20px;
 }
 
-.btn{
+#add-btn{
 	background-color:#12FFD4 !important;
 	border-color:#C9C9C9;
 	font-family: 'Roboto', sans-serif !important;
 	color:#454545 !important;
 }
+#add-btn:hover{
+
+	background-color:#C4FFF4 !important;
+}
+#disclaimer{
+	margin-top:60px;
+	font-size:12px;
+}
 .search-form{
 
 	justify-content:center;
 	margin-top:2em;
+}
+.custom-button-prop{
+	border:none;
+	background-color: none;
+	color:#C9C9C9;
+	padding-top:0px;
 }
 
 .search-box-container{
@@ -57,9 +64,23 @@
       margin-left:4px;
       margin-bottom: 10px;
   }
-  
+
+.card{
+	width:240px !important;
+}
+.col-sm-3{
+	width:270px !important;
+}
 .custom-card{
-    width: 18rem;
+	box-shadow: 0px 7px 10px #D5D5D5;
+	margin-right:10px;
+	margin-top:10px;
+	font-family: 'Roboto', sans-serif !important;
+	font-size:17px;
+	border-radius: 0.5em !important;
+	height:75px;
+	width: 260px;
+
 }
 .ui-menu-item-wrapper:hover{
     background: var(--color-bright-blue)!important;
@@ -73,6 +94,10 @@
 }
 #drugs-container{
     margin-left:20px;
-    margin-right:20px;
-    margin-top:10px;
+    /* margin-right:20px; */
+	margin-top:10px;
+	margin-bottom: 30px;
+}
+.cont-header{
+	margin-bottom:20px !important;
 }
