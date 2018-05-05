@@ -91,14 +91,6 @@ $("#search").autocomplete({
 
 var removeDrug = function(drug,drugName) {
     $("#"+drugName).remove();
-    var drugDiv = document.getElementById("drugs-body");
-    if(drugDiv.childElementCount == 0){
-        var drugDiv = document.getElementById("drugs-container");
-        drugDiv.classList.add("hide");
-
-        var resultsDiv = document.getElementById("results-container");
-        resultsDiv.classList.add("hide");
-    }
     for(var i = 0; i< regimenDrugs.length; i++){
         if(Object.keys(regimenDrugs[i]).toString() == Object.keys(drug).toString() ){
             regimenDrugs.splice(i,1);
@@ -107,6 +99,14 @@ var removeDrug = function(drug,drugName) {
     removeSideEffectsFromCount(drug, drugName);
     updateSideEffectsDiv(drug,drugName);
     calculateProbability();
+    var drugDiv = document.getElementById("drugs-body");
+    if(drugDiv.childElementCount == 0){
+        var drugCont = document.getElementById("drugs-container");
+        drugCont.classList.add("hide");
+
+        var resultsDiv = document.getElementById("results-container");
+        resultsDiv.classList.add("hide");
+    }
 }
 //use this to get the side-effects for a drug
 var getSideEffectsForDrug = function(drug){
