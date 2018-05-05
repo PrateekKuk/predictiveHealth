@@ -52,7 +52,7 @@ var makeDrugCard = function(drug){
     var drugCard = document.createElement("div");
     drugCard.setAttribute("id", drugNameNoSpace);
     drugCard.classList.add("card");
-    drugCard.classList.add("col-sm-3");
+    // drugCard.classList.add("col-sm-3");
     drugCard.classList.add("custom-card");      
     drugDiv.appendChild(drugCard);
 
@@ -245,14 +245,15 @@ var updateSideEffectsDiv = function(drug, drugName){
         if(sideEffectCount[allSideEffects[i]] != 0){
             var effectDiv = document.createElement("div");
             effectDiv.classList.add("card");
-            // effectDiv.classList.add("custom-card");
-            effectDiv.classList.add("col-lg-2");
+            effectDiv.classList.add("side-effect-card");
+            // effectDiv.classList.add("col-lg-2");
             rowSpace.appendChild(effectDiv);
             var sideEffectProbDisplay = sideEffectProbabilities[allSideEffects[i]];
             var effectDivbody = document.createElement("div");
             effectDivbody.classList.add("card-body");
             effectDivbody.innerHTML = "";
-            effectDivbody.innerHTML = allSideEffects[i] + sideEffectProbDisplay;
+            effectDivbody.innerHTML = allSideEffects[i] + '</br>' + "<span style='color:#454545'>" + sideEffectProbDisplay.toFixed(2).toString() + "</span>"
+                + "<span>%</span>";
             effectDiv.appendChild(effectDivbody);
             //sideEffectListDiv.innerHTML += allSideEffects[i];
             
