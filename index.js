@@ -7,7 +7,6 @@ var sideEffectCount = {};
 var regimenDrugs = [];
 var sideEffectPercents = {};
 var sideEffectProbabilities = {};
-var sortedProbabilities = {};
 
 
 var dataPrep = function(){
@@ -257,7 +256,8 @@ var updateSideEffectsDiv = function(drug, drugName){
     sideEffectListDiv.appendChild(rowSpace);
     var allSideEffects = Object.keys(sideEffectCount);
     var sideEffKeys = Object.keys(sideEffectProbabilities);
-    
+    var sortedProbabilities = {};
+
     //populating probArray with values
     var probArray = [];
     for(var h = 0; h < sideEffKeys.length; h++){
@@ -292,33 +292,32 @@ var updateSideEffectsDiv = function(drug, drugName){
     for(var x = 0; x<probArray.length; x++){
         for(y = 0; y<sideEffKeys.length; y++){
             if(sideEffKeys[y] in sortedProbabilities){
-                return;
             }else{
-            
-                if(probArray[x] == sideEffectProbabilities[sideEffKeys[y]]){
-                    
-                    var effectDiv = document.createElement("div");
-                    effectDiv.classList.add("card");
-                    effectDiv.classList.add("side-effect-card");
-                    // effectDiv.classList.add("col-lg-2");
-                    rowSpace.appendChild(effectDiv);
-                    var sideEffectProbDisplay = sideEffectProbabilities[sideEffKeys[y]];
-
-                    var effectDivbody = document.createElement("div");
-                    effectDivbody.classList.add("card-body");
-                    effectDivbody.innerHTML = "";
-                    effectDivbody.innerHTML = sideEffKeys[y] + '</br>' 
-                    + "<span style='color:#454545;font-size:24px'>" 
-                    + sideEffectProbDisplay.toFixed(2).toString() + "</span>"
-                        + "<span>%</span>";
-                    effectDiv.appendChild(effectDivbody);
-                    //sideEffectListDiv.innerHTML += allSideEffects[i];  
-                    
-                    sortedProbabilities[x] = sideEffKeys[y];
-
+                if(probArray[x] == sideEffectProbabilities[sideEffKeys[y]]){  
+                    sortedProbabilities[sideEffKeys[y]] = sideEffectProbabilities[sideEffKeys[y]];
                 }  
             }            
         }
+    }
+    var sortedProbKeys = Object.keys(sortedProbabilities);
+    for(var z = 0; z < sortedProbKeys.length; z++){
+        
+        var effectDiv = document.createElement("div");
+        effectDiv.classList.add("card");
+        effectDiv.classList.add("side-effect-card");
+        // effectDiv.classList.add("col-lg-2");
+        rowSpace.appendChild(effectDiv);
+        var sideEffectProbDisplay = sideEffectProbabilities[sortedProbKeys[z]];
+
+        var effectDivbody = document.createElement("div");
+        effectDivbody.classList.add("card-body");
+        effectDivbody.innerHTML = "";
+        effectDivbody.innerHTML = sortedProbKeys[z] + '</br>' 
+        + "<span style='color:#454545;font-size:24px'>" 
+        + sideEffectProbDisplay.toFixed(2).toString() + "</span>"
+            + "<span>%</span>";
+        effectDiv.appendChild(effectDivbody);
+        //sideEffectListDiv.innerHTML += allSideEffects[i];  
     }
 
 }
