@@ -7,6 +7,8 @@ var sideEffectCount = {};
 var regimenDrugs = [];
 var sideEffectPercents = {};
 var sideEffectProbabilities = {};
+var sortedProbabilities = {};
+
 
 var dataPrep = function(){
     console.log(data);
@@ -98,6 +100,7 @@ var removeDrug = function(drug,drugName) {
     removeSideEffectsFromCount(drug, drugName);
     calculateProbability();
     updateSideEffectsDiv(drug,drugName);
+    
     var drugDiv = document.getElementById("drugs-body");
     if(drugDiv.childElementCount == 0){
         var drugCont = document.getElementById("drugs-container");
@@ -229,6 +232,19 @@ var calculateProbability = function(){
 
 }
 
+var compare = function(a,b){
+    var move = 0;
+    if(a <b){
+        move = 1;
+    }
+    if(a == b){
+        move = 0;
+    }
+    if(a > b){
+        move = -1;
+    }
+    return move;
+}
 var updateSideEffectsDiv = function(drug, drugName){
     var sideEffectListDiv = document.getElementById("regimen-side-effects");
     sideEffectListDiv.innerHTML = "";
@@ -240,25 +256,71 @@ var updateSideEffectsDiv = function(drug, drugName){
     rowSpace.classList.add("row");
     sideEffectListDiv.appendChild(rowSpace);
     var allSideEffects = Object.keys(sideEffectCount);
+    var sideEffKeys = Object.keys(sideEffectProbabilities);
+    
+    //populating probArray with values
+    var probArray = [];
+    for(var h = 0; h < sideEffKeys.length; h++){
+        probArray.push(sideEffectProbabilities[sideEffKeys[h]]);
+    }   
+    probArray.sort(compare);
 
     for(var i=0;i<allSideEffects.length;i++){
         if(sideEffectCount[allSideEffects[i]] != 0){
-            var effectDiv = document.createElement("div");
-            effectDiv.classList.add("card");
-            effectDiv.classList.add("side-effect-card");
-            // effectDiv.classList.add("col-lg-2");
-            rowSpace.appendChild(effectDiv);
-            var sideEffectProbDisplay = sideEffectProbabilities[allSideEffects[i]];
-            var effectDivbody = document.createElement("div");
-            effectDivbody.classList.add("card-body");
-            effectDivbody.innerHTML = "";
-            effectDivbody.innerHTML = allSideEffects[i] + '</br>' + "<span style='color:#454545'>" + sideEffectProbDisplay.toFixed(2).toString() + "</span>"
-                + "<span>%</span>";
-            effectDiv.appendChild(effectDivbody);
-            //sideEffectListDiv.innerHTML += allSideEffects[i];
+            
+            // var effectDiv = document.createElement("div");
+            // effectDiv.classList.add("card");
+            // effectDiv.classList.add("side-effect-card");
+            // // effectDiv.classList.add("col-lg-2");
+            // rowSpace.appendChild(effectDiv);
+            // var sideEffectProbDisplay = sortedProbabilities[allSideEffects[i]];
+
+            // var effectDivbody = document.createElement("div");
+            // effectDivbody.classList.add("card-body");
+            // effectDivbody.innerHTML = "";
+            // effectDivbody.innerHTML = allSideEffects[i] + '</br>' 
+            // + "<span style='color:#454545;font-size:24px'>" 
+            // + sideEffectProbDisplay.toFixed(2).toString() + "</span>"
+            //     + "<span>%</span>";
+            // effectDiv.appendChild(effectDivbody);
+            // //sideEffectListDiv.innerHTML += allSideEffects[i];
             
         }else{
             delete sideEffectCount[allSideEffects[i]];
         }
     }
+    for(var x = 0; x<probArray.length; x++){
+        for(y = 0; y<sideEffKeys.length; y++){
+            if(sideEffKeys[y] in sortedProbabilities){
+                return;
+            }else{
+            
+                if(probArray[x] == sideEffectProbabilities[sideEffKeys[y]]){
+                    
+                    var effectDiv = document.createElement("div");
+                    effectDiv.classList.add("card");
+                    effectDiv.classList.add("side-effect-card");
+                    // effectDiv.classList.add("col-lg-2");
+                    rowSpace.appendChild(effectDiv);
+                    var sideEffectProbDisplay = sideEffectProbabilities[sideEffKeys[y]];
+
+                    var effectDivbody = document.createElement("div");
+                    effectDivbody.classList.add("card-body");
+                    effectDivbody.innerHTML = "";
+                    effectDivbody.innerHTML = sideEffKeys[y] + '</br>' 
+                    + "<span style='color:#454545;font-size:24px'>" 
+                    + sideEffectProbDisplay.toFixed(2).toString() + "</span>"
+                        + "<span>%</span>";
+                    effectDiv.appendChild(effectDivbody);
+                    //sideEffectListDiv.innerHTML += allSideEffects[i];  
+                    
+                    sortedProbabilities[x] = sideEffKeys[y];
+
+                }  
+            }            
+        }
+    }
+
 }
+
+
